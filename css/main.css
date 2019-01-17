@@ -185,11 +185,11 @@ th {
 }
 body {
   position: relative;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 14px;
+  font-family: Noto Serif TC, Noto Serif JP, serif;
+  font-size: 16px;
   line-height: 2;
-  color: #555;
-  background: #fff;
+  color: #574c57;
+  background: #fcfaf2;
 }
 @media (max-width: 767px) {
   body {
@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 1600px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h1,
@@ -216,7 +216,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Sawarabi Mincho', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif JP', Noto Serif TC, Noto Serif JP, serif;
 }
 h2,
 h3,
@@ -826,14 +826,14 @@ pre .javascript .function {
   color: #f0ad4e;
 }
 .post-body .note.danger {
-  border-left-color: #d9534f;
+  border-left-color: #6a8372;
 }
 .post-body .note.danger h2,
 .post-body .note.danger h3,
 .post-body .note.danger h4,
 .post-body .note.danger h5,
 .post-body .note.danger h6 {
-  color: #d9534f;
+  color: #6a8372;
 }
 .post-body .label {
   display: inline;
@@ -856,7 +856,7 @@ pre .javascript .function {
   background-color: #fcf6e1;
 }
 .post-body .label.danger {
-  background-color: #fae8eb;
+  background-color: #ebefec;
 }
 .post-body .tabs {
   position: relative;
@@ -967,7 +967,7 @@ pre .javascript .function {
   display: block;
   width: 22px;
   height: 2px;
-  background: #555;
+  background: #574c57;
   border-radius: 1px;
 }
 .btn-bar+.btn-bar {
@@ -1131,7 +1131,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Sawarabi Mincho', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Sawarabi Mincho', Noto Serif TC, Noto Serif JP, serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1219,7 +1219,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Noto Sans TC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif', Noto Serif TC, Noto Serif JP, serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1237,7 +1237,7 @@ pre .javascript .function {
 .post-body .figure .caption {
   margin: -20px auto 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
   font-weight: bold;
   line-height: 1;
@@ -1497,7 +1497,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Noto Sans TC', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Noto Serif', Noto Serif TC, Noto Serif JP, serif;
   font-size: 12px;
   text-align: center;
 }
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #46e434;
+  background: #fc0508;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2607,7 +2607,7 @@ hr {
   margin-top: 80px;
 }
 .header {
-  background: #f5f5f5;
+  background: #6a8372;
 }
 .header-inner {
   padding: 25px 0 20px;
@@ -2795,7 +2795,7 @@ hr {
 }
 @media (max-width: 767px) {
   .posts-expand .post-body {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 .posts-expand .post-body img {
@@ -2821,7 +2821,7 @@ hr {
 }
 .post-button a {
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   background: none;
   border: none;
   border-bottom: 2px solid #666;
@@ -2829,12 +2829,12 @@ hr {
 }
 @media (max-width: 767px) {
   .post-button a {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 1600px) {
   .post-button a {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .post-button a:hover {
