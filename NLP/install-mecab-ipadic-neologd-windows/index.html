@@ -1,0 +1,889 @@
+<!DOCTYPE html><html class="theme-next mist use-motion" lang="zh"><head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="google-site-verification" content="gLZLSWTnO8hT24ryFRSn0lvNmNc6FyBFgxb1qGWDoZo">
+
+
+
+  <meta name="msvalidate.01" content="A9F5FFA88C27690D5460020E3158CE9D">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Noto Serif TC:300,300italic,400,400italic,700,700italic|Yu Mincho:300,300italic,400,400italic,700,700italic|Yu Mincho:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext&display=swap" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/sword.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/sword.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/sword.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/sword.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="nlp,MeCab,windows,linux,ipadic,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd">
+<meta name="keywords" content="nlp,MeCab,windows,linux,ipadic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Window上安裝mecab-ipadic-NEologd">
+<meta property="og:url" content="https://take72k.tk/NLP/install-mecab-ipadic-neologd-windows/index.html">
+<meta property="og:site_name" content="竹林七閒">
+<meta property="og:description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd">
+<meta property="og:locale" content="zh">
+<meta property="og:image" content="https://i.imgur.com/HQm2qyz.png">
+<meta property="og:updated_time" content="2020-05-10T14:22:02.029Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Window上安裝mecab-ipadic-NEologd">
+<meta name="twitter:description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd">
+<meta name="twitter:image" content="https://i.imgur.com/HQm2qyz.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://take72k.tk/NLP/install-mecab-ipadic-neologd-windows/">
+
+
+
+
+
+  <title>在Window上安裝mecab-ipadic-NEologd | 竹林七閒</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-131269345-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="   //cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script src="/js/src/pjax/pjaxBase.js"></script> -->
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNWBLRD');</script>
+<!-- End Google Tag Manager -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNWBLRD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">竹林七閒</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">中二仔的胡言亂語</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-道標">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            道標
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://take72k.tk/NLP/install-mecab-ipadic-neologd-windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="たけ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="竹林七閒">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">在Window上安裝mecab-ipadic-NEologd</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-19T16:40:43+08:00">
+                2019-07-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/NLP/" itemprop="url" rel="index">
+                    <span itemprop="name">NLP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/NLP/install-mecab-ipadic-neologd-windows/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="NLP/install-mecab-ipadic-neologd-windows/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> total view
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">
+                  在Window上安裝或更新的另一種方法mecab-ipadic-NEologd
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <meta name="generator" content="Hexo 3.9.0"><h1 id="在Window上安裝mecab-ipadic-NEologd"><a href="#在Window上安裝mecab-ipadic-NEologd" class="headerlink" title="在Window上安裝mecab-ipadic-NEologd"></a>在Window上安裝mecab-ipadic-NEologd</h1><a id="more"></a>
+<p>今天的主角:<a href="https://github.com/neologd/mecab-ipadic-neologd" target="_blank" rel="noopener">ipadic萬能擴充包</a></p>
+<p>首先看了一下ReadMe，並沒有提到windows的安裝方法。<br>但這時可以注意到有ubuntu系統的指示，OK—</p>
+<ul>
+<li>On Ubuntu<figure class="highlight cmd"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file</span><br><span class="line">$ <span class="built_in">cd</span> mecab-ipadic-neologd</span><br><span class="line">$ ./bin/install-mecab-ipadic-neologd -n</span><br></pre></td></tr></tbody></table></figure>
+
+</li>
+</ul>
+<h2 id="在windows要怎麼弄來Ubuntu？"><a href="#在windows要怎麼弄來Ubuntu？" class="headerlink" title="在windows要怎麼弄來Ubuntu？"></a>在windows要怎麼弄來Ubuntu？</h2><ol>
+<li><p>VMBox<br>BJ4</p>
+</li>
+<li><p>Microsoft Store<br>window8以上導入的這個功能中，其實找的到Ubuntu，跟隨指示安裝後，便能得到一個Linux的視窗XD。這個部分之後可能會寫一下(？</p>
+</li>
+</ol>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>基本上照著Readme輸入之後便能順利獲取/更新mecab-ipadic-NEologd。</p>
+<figure class="highlight cmd"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file</span><br><span class="line">$ git clone --depth <span class="number">1</span> https://github.com/neologd/mecab-ipadic-neologd.git</span><br><span class="line">$ <span class="built_in">cd</span> mecab-ipadic-neologd</span><br><span class="line">$ ./bin/install-mecab-ipadic-neologd -n</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://i.imgur.com/HQm2qyz.png" alt></p>
+<h2 id="好了之後如何使用"><a href="#好了之後如何使用" class="headerlink" title="好了之後如何使用"></a>好了之後如何使用</h2><p>Ubuntu產生的檔案會放在<code>User/user/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_xxxxxxxxx/LocalState/rootfs/home/Ubuntu_Username/mecab-ipadic-neologd/build/</code></p>
+<p>為一個資料夾：<code>mecab-ipadic-2.7.0-20070801-neologd-current_date</code></p>
+<p>將此資料夾重新命名為<code>ipadic</code>並覆蓋<code>MeCab/dic</code>路徑下的同名檔案，替換便宣告完成囉！</p>
+<p>這時可以來試試看是否成功套用</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> MeCab</span><br><span class="line">t=MeCab.Tagger(<span class="string">"-Ochasen"</span>)</span><br><span class="line">t.parse(<span class="string">"ミリオンライブシアターデイズ"</span>)</span><br><span class="line">t.parse(<span class="string">'転生したらスライムだった件'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Output</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">'ミリオンライブシアターデイズ\tミリオンライブシアターデイズ\tミリオンライブシアターデイズ\t名詞-固有名詞-組織\t\t\nEOS\n'</span><br><span class="line">'転生したらスライムだった件\tテンセイシタラスライムダッタケン\t転生したらスライムだった件\t名詞-固有名詞-一般\t\t\nEOS\n'</span><br></pre></td></tr></tbody></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nlp/" rel="tag"># nlp</a>
+          
+            <a href="/tags/MeCab/" rel="tag"># MeCab</a>
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/ipadic/" rel="tag"># ipadic</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Scout/垂降授課/" rel="next" title="垂降授課">
+                <i class="fa fa-chevron-left"></i> 垂降授課
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/アイドルマスター/ShinyColors/バベルシティ・グレイス(Babel City Grace)/" rel="prev" title="【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯">
+                【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">たけ</p>
+              <p class="site-description motion-element" itemprop="description">不定期發布偶像大師相關文本翻譯</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#在Window上安裝mecab-ipadic-NEologd"><span class="nav-number">1.</span> <span class="nav-text">在Window上安裝mecab-ipadic-NEologd</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在windows要怎麼弄來Ubuntu？"><span class="nav-number">1.1.</span> <span class="nav-text">在windows要怎麼弄來Ubuntu？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安裝"><span class="nav-number">1.2.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好了之後如何使用"><span class="nav-number">1.3.</span> <span class="nav-text">好了之後如何使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">© <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">たけ</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> visitors
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> total view
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+<!-- <script type="text/javascript"   src="/js/src/pjax/category_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/opacity_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/motion_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/velocity.ui_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/velocity_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/bootstrap_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/scrollspy_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/utils_js.js" ></script>
+<script type="text/javascript"   src="/js/src/pjax/post-details_js.js" ></script> -->
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://take72k.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://take72k.tk/NLP/install-mecab-ipadic-neologd-windows/';
+          this.page.identifier = 'NLP/install-mecab-ipadic-neologd-windows/';
+          this.page.title = '在Window上安裝mecab-ipadic-NEologd';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://take72k.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
