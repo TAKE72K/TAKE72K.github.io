@@ -308,163 +308,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://take72k.github.io/EDA/cksxrccwl0001hs7kqmjcr2o8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="たけ">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="竹林七閒">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/EDA/cksxrccwl0001hs7kqmjcr2o8/" itemprop="url">trouble shooting of Concert exception--has not been extracted by IloAlgorithm</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-08-30T05:20:00+08:00">
-                2021-08-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/EDA/" itemprop="url" rel="index">
-                    <span itemprop="name">EDA</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/EDA/cksxrccwl0001hs7kqmjcr2o8/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="EDA/cksxrccwl0001hs7kqmjcr2o8/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <meta name="generator" content="Hexo 3.9.0"><h1 id="CPLEX最佳化：-VAR-has-not-been-extracted"><a href="#CPLEX最佳化：-VAR-has-not-been-extracted" class="headerlink" title="CPLEX最佳化： VAR has not been extracted"></a>CPLEX最佳化： VAR has not been extracted</h1><h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>在練習用cplex解placement位移最佳化時，雖然算出了object value，卻因為exception無法檢視值。</p>
-<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by IloAlgorithm 0x212faf0</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>變數沒有放入objective function或costraint，因此根本沒有被algorithm算到，何來有解而能取出？</p>
-<h2 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h2><p>重新檢視objective function的寫法，注意所有解的變數均因涵蓋。</p>
-<p>須注意將變數乘以0的操作一樣會導致這個例外，因為等於那個變數變成don’t care。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://take72k.github.io/EDA/corner_stitching/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1907,6 +1750,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://take72k.github.io/劍術/武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="たけ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="竹林七閒">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/劍術/武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證/" itemprop="url">武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-17T11:00:41+08:00">
+                2017-06-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/劍術/" itemprop="url" rel="index">
+                    <span itemprop="name">劍術</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/劍術/武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="劍術/武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>感覺有點失去了對人類的信任，經費見底了是吧。<br>為什麼納村有時有帶套，有時卻是沒帶套(手套)，這樣還要用魔彈，倫理上大丈夫？</p>
+<p>手套就是你的金鐘罩啊、納村大大！</p>
+<p>沒帶套的作品也能在台灣合法收看<br><img src="https://i.imgur.com/fati6d6.png" alt></p>
+<p>不好意思，除此之外真的沒有心得了，總之，這幾話是不為我所樂見的節奏。</p>
+<p>雖然原作的確也是如此，但個人要抱怨一下：天羽實在是被描繪得太強了(畢竟是女主？)。<br>佐烏、蘿莉學姊、THE BEAR一發擊沉，連師傅也在一個回合之內互換傷害之後被沉默，兵器術的使用者在此全倒。<br>接下來就是玄學—-拳法家之間的對決了，而那完全在我的守備範圍之外。</p>
+<p>總之，讓我們為佐鳥教授、蘿莉學姊、THE BEAR MY BRO及師傅大人祈求冥福。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/劍術/武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證/#more" rel="contents">
+              Read more »
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1957,7 +1961,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
