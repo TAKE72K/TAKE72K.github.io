@@ -1,0 +1,2906 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>竹林抄</title>
+        <link>https://example.com/</link>
+        <description>Recent content on 竹林抄</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>trouble shooting of Concert exception--has not been extracted by IloAlgorithm</title>
+        <link>https://example.com/EDA/cplexTroubleshooting/</link>
+        <pubDate>Mon, 30 Aug 2021 05:20:00 +0000</pubDate>
+        
+        <guid>https://example.com/EDA/cplexTroubleshooting/</guid>
+        <description>&lt;h1 id=&#34;cplex最佳化-var-has-not-been-extracted&#34;&gt;CPLEX最佳化： VAR has not been extracted&lt;/h1&gt;
+&lt;h2 id=&#34;問題&#34;&gt;問題&lt;/h2&gt;
+&lt;p&gt;在練習用cplex解placement位移最佳化時，雖然算出了object value，卻因為exception無法檢視值。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;Concert exception caught: IloExtractable &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt; IloNumVarI has not been extracted by IloAlgorithm 0x212faf0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+&lt;p&gt;變數沒有放入objective function或costraint，因此根本沒有被algorithm算到，何來有解而能取出？&lt;/p&gt;
+&lt;h2 id=&#34;解法&#34;&gt;解法&lt;/h2&gt;
+&lt;p&gt;重新檢視objective function的寫法，注意所有解的變數均應涵蓋。&lt;/p&gt;
+&lt;p&gt;須注意將變數乘以0的操作一樣會導致這個例外，因為等於那個變數變成don&amp;rsquo;t care。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
+        <link>https://example.com/EDA/corner_stitching/</link>
+        <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
+        
+        <guid>https://example.com/EDA/corner_stitching/</guid>
+        <description>&lt;h1 id=&#34;corner-stitching-a-data-structuring-technique--for-vlsi-layout-tools&#34;&gt;Corner Stitching: A Data-Structuring Technique  for VLSI Layout Tools&lt;/h1&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
+&lt;p&gt;Corner stitching是用來表現2D長方形的方法，有兩個優點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;能明確表現free space&lt;/li&gt;
+&lt;li&gt;將cell組織在一起&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;existing-mechanisms&#34;&gt;Existing Mechanisms&lt;/h2&gt;
+&lt;p&gt;這邊介紹一些現有的結構&lt;/p&gt;
+&lt;p&gt;Linked list&lt;/p&gt;
+&lt;p&gt;Bins&lt;/p&gt;
+&lt;p&gt;Neighbor Pointers&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>玉山記行</title>
+        <link>https://example.com/%E9%81%8A%E8%A8%98/MtJade/</link>
+        <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E9%81%8A%E8%A8%98/MtJade/</guid>
+        <description>&lt;img src="https://lh3.googleusercontent.com/pw/AM-JKLWHRueiA0_hXLfayDQ3jSWFCwyYvs9et9-Zr6CvRJTg7NjaGoDeUtA_-ljXAejq59AX31qA5rK24wq-6Kaw08wJK3AR5Gw4ov2OLDvdFKHGogPbrefTpyAQZz8Z1W64TufxuqhmJZLvRMdOHu9301C-zg=w2073-h1166-no?authuser=0" alt="Featured image of post 玉山記行" /&gt;&lt;h1 id=&#34;2020春玉山-進退之間的殘念之旅&#34;&gt;2020春玉山-進退之間的殘念之旅&lt;/h1&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://lh3.googleusercontent.com/pw/AM-JKLWHRueiA0_hXLfayDQ3jSWFCwyYvs9et9-Zr6CvRJTg7NjaGoDeUtA_-ljXAejq59AX31qA5rK24wq-6Kaw08wJK3AR5Gw4ov2OLDvdFKHGogPbrefTpyAQZz8Z1W64TufxuqhmJZLvRMdOHu9301C-zg=w2073-h1166-no?authuser=0&#34; &gt;
+		&lt;img src=&#34;https://lh3.googleusercontent.com/pw/AM-JKLWHRueiA0_hXLfayDQ3jSWFCwyYvs9et9-Zr6CvRJTg7NjaGoDeUtA_-ljXAejq59AX31qA5rK24wq-6Kaw08wJK3AR5Gw4ov2OLDvdFKHGogPbrefTpyAQZz8Z1W64TufxuqhmJZLvRMdOHu9301C-zg=w2073-h1166-no?authuser=0&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;流水帳寫起來放免得失憶&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;緣起&#34;&gt;緣起&lt;/h2&gt;
+&lt;p&gt;本來以為下次奔向山的懷抱會是暑假的事，但仍在放防疫假時──「幹春假要不要爬玉山？」「好R」──原來是學長組了一團待退(?)大四生，還有空位在四處找人分攤車錢。
+玉山標高3952，台灣最高，眾所皆知，上面有座排雲山莊，靠北難抽，許多人想攀登，卻都敗給籤運，無緣一親玉山芳澤。然而這是旺季的情況，也就是暑假及周末、國定連假，平日的排雲中籤率雖然不是有抽有中，但也有60%以上，比SSR好抽ㄌ。
+(準)菸酒生大隊就在疫情風雨飄搖中抽到了床位，確定4月能成行攀登玉山。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像J樣&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/0DPwHBG.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/0DPwHBG.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;啟程&#34;&gt;啟程&lt;/h2&gt;
+&lt;p&gt;時間走著走著來到4/6，帶著抽不到千早的絕望、前三日集訓擊劍的肌肉痠痛，整裝五點集合，驅車前往塔塔加鞍部。
+裝備大致和上次雪東主的一樣，只是因應水氣帶來的陰雨，特別多帶了一些保暖衣物及防水措施。這次只有兩天，且不需帶公糧，裝備因此而輕了許多。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;攻頂包：急救盒，求生盒，頭燈，哨子，72群旗，防水袋[千早、ジュリア娃娃]，防水袋[擔當官棒，ちえり、みおな推巾] (看看我都帶了什麼www)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;頂著清明時節的紛紛細雨，來到了登山口。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;走起&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/efFVVEd.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/efFVVEd.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+鳥占(?)&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Nvwfz9t.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Nvwfz9t.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;算小花絮的就是某人把登山杖忘在塔塔加小隊門口，我和他只好先目送其他6人先起登，等到下班接駁車順道送來才啟程上山。出發就全速衝0.5K真的頗累。&lt;/p&gt;
+&lt;h2 id=&#34;前峰&#34;&gt;前峰&lt;/h2&gt;
+&lt;p&gt;然後就來到2.7K的玉山前峰(3239m,百岳#69)登山口。
+只能說，幹，最幹那種。怎麼也想不到這是我們這趟登的唯一一座百岳。
+大概這輩子也只會登這一次前峰吧w。
+登山口距離山頂0.8K，這天雨路滑的0.8k，我們爬了1.5h，其中後0.4K尤其累人，陡上400m外還是石瀑，需手腳並用，相當耗體力。早知如此不如直衝排雲後攻西峰，不過這是後話。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;途中的雲海&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/wNy8KKG.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/wNy8KKG.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+登頂後當然是要(?&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/TI1ha4h.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/TI1ha4h.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;根據紀錄，我們共花了3.5h在前峰，原本希望早點到排雲能再撿個西峰的妄想隨之破滅。
+這時同隊中某位隊員的狀況不大好，更雪上加霜，使路程更慢。&lt;/p&gt;
+&lt;h2 id=&#34;趕路&#34;&gt;趕路&lt;/h2&gt;
+&lt;p&gt;下午4點整，我們只來到5k，和擔憂會趕不上排雲供餐報到時間(17:00-18:00)的某學長商量之後，我便決定和另一個還有體力的學弟先行趕往排雲山莊(8.5k)。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;霧裡的大峭壁&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/OCzLdGg.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/OCzLdGg.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之後就是一陣在逐漸變暗的霧中瘋狂趕路，不屑一顧地衝過大峭壁，拖著顫抖的腿，在17:30總算看見霧裡的排雲山莊，這時的我們甚至快沒有力氣爬上最後的之字步道。&lt;/p&gt;
+&lt;h2 id=&#34;排雲&#34;&gt;排雲&lt;/h2&gt;
+&lt;p&gt;(不過看人家單攻的登山口到排雲也才3h，雖然是輕裝，但果然我腳程不快w)
+然後開吃，能馬上吃到熱騰騰(不用自己煮的)晚餐真讚。值得一提的是香菜放題w。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;排雲(D2拍的)&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://lh3.googleusercontent.com/aYWb7xAKFXeS7g_P_b_XTYAvqCSpZr-oT0o9VzMm-q_eHsF9sUOFnAPJjfzRu4gUiC7gz1f-3h_NcWCgJ9G5KucPOPAi-SYyVnI0Kgrvz1xqT9Cv_t4_gqF0EtXEIijTQdtXx0UeXKZtkT9wHbNZvtJwsGafghQCo8B0ZedC_7SHrbFXyttqMYj_5Vi9bFtkIi2C6fIImUiC603cMGozU9CJOkmhbA2twLMewY9gSsxeBJKK0vjWDKLdTED5YnnXY8aZTM58sg5wTaIW0FsF-nD4sXM4qcncernXy4Xb5Qd6Ic1L4yude9wGlxe7lnsxL9Sht7yqRF0SO8Fcnoz7bZD2vTH9v4ilBCo8Gh41MQWrqI8s7KnRrwT2cIJkNbcfx45PWvbY2tJEghTytlSCIB3h3Krp0KjS7WTZqJhO6gE-2BS9OkQCaLv38oXWOVRdu7fiXDpdN7AGxBJfUrDL6Pp0jK7zCPNiQ6UIjW4phpiwmmaMfSxxLMZNME1oMAdtOMo6AMJQB4RYq-W4Zpbucg9e4xa1J7Nm6y53HRhkiQ2KZ01D3csGrw0c4osJOdHNBEAt85-4S9oIsy7aPtI_wTGPaAliG94BcvJBDHVUOM-vBBVPwZU2fRE-4i6x-sLb9wwJIM9kJzdiTvu36ACfsANIDyYeJvQ26BK5ms916e_AJHC_tIOPuAziW3K5Qg=w1470-h828-no?authuser=2&#34; &gt;
+		&lt;img src=&#34;https://lh3.googleusercontent.com/aYWb7xAKFXeS7g_P_b_XTYAvqCSpZr-oT0o9VzMm-q_eHsF9sUOFnAPJjfzRu4gUiC7gz1f-3h_NcWCgJ9G5KucPOPAi-SYyVnI0Kgrvz1xqT9Cv_t4_gqF0EtXEIijTQdtXx0UeXKZtkT9wHbNZvtJwsGafghQCo8B0ZedC_7SHrbFXyttqMYj_5Vi9bFtkIi2C6fIImUiC603cMGozU9CJOkmhbA2twLMewY9gSsxeBJKK0vjWDKLdTED5YnnXY8aZTM58sg5wTaIW0FsF-nD4sXM4qcncernXy4Xb5Qd6Ic1L4yude9wGlxe7lnsxL9Sht7yqRF0SO8Fcnoz7bZD2vTH9v4ilBCo8Gh41MQWrqI8s7KnRrwT2cIJkNbcfx45PWvbY2tJEghTytlSCIB3h3Krp0KjS7WTZqJhO6gE-2BS9OkQCaLv38oXWOVRdu7fiXDpdN7AGxBJfUrDL6Pp0jK7zCPNiQ6UIjW4phpiwmmaMfSxxLMZNME1oMAdtOMo6AMJQB4RYq-W4Zpbucg9e4xa1J7Nm6y53HRhkiQ2KZ01D3csGrw0c4osJOdHNBEAt85-4S9oIsy7aPtI_wTGPaAliG94BcvJBDHVUOM-vBBVPwZU2fRE-4i6x-sLb9wwJIM9kJzdiTvu36ACfsANIDyYeJvQ26BK5ms916e_AJHC_tIOPuAziW3K5Qg=w1470-h828-no?authuser=2&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt; 
+排雲晚餐&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/WfKARox.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/WfKARox.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;正想著學長他們會不會七點才到，沒想到前腳後腳的也趕在17:50抵達。
+某個人看起來都快掛一樣，幸好那位不舒服的隊員在某次大休時睡了一下便好轉，並不是我們所擔心的高山症。&lt;/p&gt;
+&lt;p&gt;吃完晚餐、鋪完睡袋，山莊已經是漆黑一片，山上沒有足夠的供電，公共空間的燈已經全部關閉，山友們也一一就寢，只餘下窗外的凜冽風聲。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://lh3.googleusercontent.com/m1EYwqbm0IAUMszJ5fRgSFIhwYHrIXghSzenZEZMmsyYgsFcQfUtjdk6Xjw4-ECINwhfHXboQkDNSN_rOkcrvGV--6DSdREiX9JHKM27M2xynFTtmOfhDmgD4DTvk6UTJaqLlzz2GnEhVCKkEcca6ALXiHILdrxeAn70SrFCZ9wLneCTPvNY3O1v8HiunUUqfp5mTIdGI1brUODlmZCsXLhMKGQEz7Mf7CY9umfT_oTCXoA5UgYwb0fU2qtG1onKd26QtKj6j9qvNbIWDpjoWLFNMGxJ8XXdnWBZstVZaPwhL54gf2qmJuV9-faGMaviqvZH2zWUyndTXdNfWE5yuPDWxB37eN0lzjYTiHjVN6MHkXuF7b3pvc40Vjf6IZ_oz_Gt-gL9xETpsqJXhCR-M0w1x64nykyxVQFur8A9XoSezCA-pyrjfVJKXDZm3nRP_vZyX4mskbKYBPFrii4hKd2-grdqZCU3BJH9YnMbu94nEP13mZp_4q8usNwfZjPvLUESBxjgfX7nzqNlZ0Qlx6IpdNJVw-mjdHL4FshQLxM2nRP79I7pIhsVnU0hpWnJrgxa8QLs99ckjPyD6p-vLJSmLqRdsIz1_uF96AHbrJ8jBQamW_ExF-4D9TZ76mj52IHw10m0KV-oxQz7VtfV6MefcZi_d3EUCzZCak3tJXw_rJtStqyz_Ik0TETCbuR99mDK6G0PD_zGZ79l11Ri8e_5hnT0kapXgPk532pxL18Wh4hUQlUntgTu=w1354-h903-no?authuser=0&#34; &gt;
+		&lt;img src=&#34;https://lh3.googleusercontent.com/m1EYwqbm0IAUMszJ5fRgSFIhwYHrIXghSzenZEZMmsyYgsFcQfUtjdk6Xjw4-ECINwhfHXboQkDNSN_rOkcrvGV--6DSdREiX9JHKM27M2xynFTtmOfhDmgD4DTvk6UTJaqLlzz2GnEhVCKkEcca6ALXiHILdrxeAn70SrFCZ9wLneCTPvNY3O1v8HiunUUqfp5mTIdGI1brUODlmZCsXLhMKGQEz7Mf7CY9umfT_oTCXoA5UgYwb0fU2qtG1onKd26QtKj6j9qvNbIWDpjoWLFNMGxJ8XXdnWBZstVZaPwhL54gf2qmJuV9-faGMaviqvZH2zWUyndTXdNfWE5yuPDWxB37eN0lzjYTiHjVN6MHkXuF7b3pvc40Vjf6IZ_oz_Gt-gL9xETpsqJXhCR-M0w1x64nykyxVQFur8A9XoSezCA-pyrjfVJKXDZm3nRP_vZyX4mskbKYBPFrii4hKd2-grdqZCU3BJH9YnMbu94nEP13mZp_4q8usNwfZjPvLUESBxjgfX7nzqNlZ0Qlx6IpdNJVw-mjdHL4FshQLxM2nRP79I7pIhsVnU0hpWnJrgxa8QLs99ckjPyD6p-vLJSmLqRdsIz1_uF96AHbrJ8jBQamW_ExF-4D9TZ76mj52IHw10m0KV-oxQz7VtfV6MefcZi_d3EUCzZCak3tJXw_rJtStqyz_Ik0TETCbuR99mDK6G0PD_zGZ79l11Ri8e_5hnT0kapXgPk532pxL18Wh4hUQlUntgTu=w1354-h903-no?authuser=0&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Md6kxEU.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Md6kxEU.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+        </item>
+        <item>
+        <title>京アニ放火事件 献花台がつなぐ思い</title>
+        <link>https://example.com/news/Thought-TUNAGU-with-Bouquets/</link>
+        <pubDate>Fri, 06 Sep 2019 16:34:34 +0000</pubDate>
+        
+        <guid>https://example.com/news/Thought-TUNAGU-with-Bouquets/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;from NHK web
+&lt;a class=&#34;link&#34; href=&#34;https://www3.nhk.or.jp/news/html/20190902/k10012059881000.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www3.nhk.or.jp/news/html/20190902/k10012059881000.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;日本だけでなく世界中の人たちが途絶えることなく、連日、そこを訪れていました。
+京都市の京都アニメーションの第１スタジオ近くに設置された献花台です。事件２日後から撤去される８月25日までの37日間、亡くなった人たちとファンの思いをつなぐ場所になっていました。
+追悼の祈り、感謝の気持ち、再興への願いなど、献花台には訪れた人たちのさまざまな思いがありました。（取材班記者 谷口碧 海老塚恵 新地生佳）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不僅日本、來自世界各地的人不曾停止造訪那個地方。
+那裡是京都市京都動畫公司第一工作室附近設置的獻花台。自事件發生後兩日開始到8月25日撤除的37日間，成為聯繫故人與愛好者思念的地方。
+追悼的祈禱、感激的心情、復興的願望&amp;hellip;&amp;hellip;獻花台承載著到訪者各式各樣的想法。（取材班記者 谷口碧 海老塚恵 新地生佳）&lt;/p&gt;
+&lt;h2 id=&#34;献花は自然に始まった獻花自然而然地開始&#34;&gt;献花は自然に始まった　|　獻花自然而然地開始&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_03.jpg&#34; &gt;
+		&lt;img src=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_03.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;事件照片&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;事件照片&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;source : &lt;a class=&#34;link&#34; href=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_03.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_03.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;事件は７月18日、京都市伏見区の京都アニメーションの第一スタジオで起きました。
+押し入ってきた男がガソリンをまいて放火し、社員70人のうち35人が死亡、34人が重軽傷を負いました。いまも、重いやけどで入院している３人の社員は命の危険もある状態で、懸命の治療が続けられています。
+日本のアニメーションを支えてきた多くの人たちの命が一瞬で奪われた凄惨（せいさん）な事件。
+現場では翌日から手を合わせる人たちの姿が見られ、献花が自然と始まりました。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;事件發生於7月18日、京都市伏見區京都動畫公司的第一工作室。
+闖入的男子潑灑汽油並放火，造成社員70人中35人死亡、34人輕重傷。現在仍有3名重傷社員有生命危險，接受搶救中。
+這是一瞬間奪走許多支撐日本動畫產業的生命的淒慘事件。
+現場在隔日便能看到雙手合十的人們、自發地獻花。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_04.jpg&#34; &gt;
+		&lt;img src=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_04.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;事件照片&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;事件照片&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;source : &lt;a class=&#34;link&#34; href=&#34;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_04.jpg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www3.nhk.or.jp/news/html/20190902/K10012059881_1909021016_1909021126_01_04.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;２日後には第１スタジオから南に100メートルほど離れた京阪電鉄六地蔵駅近くに、京都アニメーションが献花台を設置しました。私たちは取材にご承諾していただけた方々、一人一人にその思いを伺いました。
+多くの人たちは何気ない日常を美しく描いた京アニの数々の作品に救われたと感謝の気持ちを話しました。その一部の声です&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{% cq %}仕事がつらいときも「けいおん！」を見て、なんとか心を保つことができた。生きる支えだった
+工作辛苦時看一下K-ON，
+&lt;strong&gt;20代男性&lt;/strong&gt;{% endcq %}{% cq %}&lt;/p&gt;
+&lt;p&gt;「いじめにあっていた学生時代、作品が救いの手となり、仲間や居場所を与えてくれた」（20代男性）&lt;/p&gt;
+&lt;p&gt;「京アニはほかの会社にはない繊細な作画描写がすばらしく、水や楽器など表現が難しいところも美しく再現してくれるアニメーターがいっぱいいた」（20代女性）&lt;/p&gt;
+&lt;p&gt;「京アニの作品が自分がアニメの仕事に就くきっかけになった。同じ仕事をする仲間の命が失われたことは本当に悔しい」（20代男性）&lt;/p&gt;
+&lt;p&gt;「冥福を祈らないといけない。でも焼け焦げた建物をみるのはつらい。だから日が沈んで見えなくなってから来ました。現実は受け入れられていない」（50代男性）{% endcq %}&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>雪山記行</title>
+        <link>https://example.com/%E9%81%8A%E8%A8%98/MtSylvia/</link>
+        <pubDate>Fri, 16 Aug 2019 22:37:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E9%81%8A%E8%A8%98/MtSylvia/</guid>
+        <description>&lt;img src="https://1.bp.blogspot.com/-XZ-PHuMcB38/XVbF-o9wYhI/AAAAAAAAI-4/kdz_OOI-wawS99bQmdA9AldYDfePQWJdQCKgBGAs/s1600/DSCPDC_0002_BURST20190813051651683.JPG" alt="Featured image of post 雪山記行" /&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://1.bp.blogspot.com/-XZ-PHuMcB38/XVbF-o9wYhI/AAAAAAAAI-4/kdz_OOI-wawS99bQmdA9AldYDfePQWJdQCKgBGAs/s1600/DSCPDC_0002_BURST20190813051651683.JPG&#34; &gt;
+		&lt;img src=&#34;https://1.bp.blogspot.com/-XZ-PHuMcB38/XVbF-o9wYhI/AAAAAAAAI-4/kdz_OOI-wawS99bQmdA9AldYDfePQWJdQCKgBGAs/s1600/DSCPDC_0002_BURST20190813051651683.JPG&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;緣起&#34;&gt;緣起&lt;/h2&gt;
+&lt;p&gt;大略記錄一下這次散步的始末。
+該從哪講起呢&amp;hellip;
+社團傳承完之後，屏東髮量偏少的學長便突然問我要不要去爬山──
+東主之旅於焉展開。&lt;/p&gt;
+&lt;h2 id=&#34;關於山以及路線&#34;&gt;關於山、以及路線&lt;/h2&gt;
+&lt;p&gt;雪山主峰海拔3886M，僅次於玉山，是台灣第二高峰，山上可見冰河遺跡的圈谷，以及高海拔才有的冷杉純林。整體來講，是座又高又漂亮的山~~
+而且挺平易近人的，最受歡迎的雪東主線是A級路線，即使是初心者也能爬，全程10.9K，並有兩個住宿點。
+然而不得不提的是，雪東主這條路線爬升高度十分的大，需要由2000爬升到近4000，對體能是一挑戰R。&lt;/p&gt;
+&lt;h2 id=&#34;紀錄&#34;&gt;紀錄&lt;/h2&gt;
+&lt;h3 id=&#34;d1&#34;&gt;D1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;13:17 0K 大水池起登
+14:58 2K 七卡山莊&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;雪主線前2k是不斷的之字向上，爬升約400M，不符合人體工學的木階、石階消磨著體力與興致，領隊的機掰人學長大概抱怨了三次為何不是電扶梯。
+在不斷的幹聲中七卡在望，今天的進度於此達成~~
+順便嘴一下觀光救國團，晚上一群進來通鋪，然後就開始大聲喧嘩，輕裝仔體力真好啊，還想開趴是吧。
+兩個低能高中生他ㄇ一直聊，被人上去嘴一波直接軟掉。真的當山屋是度假小木屋喔？呵呵&lt;/p&gt;
+&lt;h3 id=&#34;d2&#34;&gt;D2&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;07:06 2K 七卡山莊
+09:02 4K 哭坡前觀景台
+10:46 5K 雪山東峰
+12:41 7K 369山莊&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前一天是適應，今天則正式進入山的領域。在哭坡，遠傳已經沒有距離了──只有遠傳、沒有訊號。
+救國團如影隨形，我們少不了邊走邊嘴，順便嘲笑不需背公糧仍被我們追上的觀光客們。真不巧，山上也會遇到三寶。
+哭坡是段500m上升400m的路，真令人痛哭流涕，之後是三個上下，便到了東峰。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;thisis a draft&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+        </item>
+        <item>
+        <title>【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯</title>
+        <link>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</link>
+        <pubDate>Mon, 22 Jul 2019 22:16:24 +0000</pubDate>
+        
+        <guid>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</guid>
+        <description>&lt;img src="https://www.lantis.jp/shinycolors/releaseinfo/img/LACM-14783.jpg" alt="Featured image of post 【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯" /&gt;&lt;h2 id=&#34;バベルシティグレイスbabel-city-grace&#34;&gt;バベルシティ・グレイス(Babel City Grace)&lt;/h2&gt;
+&lt;p&gt;歌：&lt;!-- raw HTML omitted --&gt;アンティーカ&lt;!-- raw HTML omitted --&gt;
+作詞：真崎エリカ
+作曲／編曲：南田健吾&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://www.lantis.jp/shinycolors/releaseinfo/img/LACM-14783.jpg&#34; &gt;
+		&lt;img src=&#34;https://www.lantis.jp/shinycolors/releaseinfo/img/LACM-14783.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;專輯封面&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;專輯封面&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.ptt.cc/bbs/IdolMaster/M.1563804987.A.075.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.ptt.cc/bbs/IdolMaster/M.1563804987.A.075.html&lt;/a&gt;
+也有發在ptt版上
+[name=take]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ソラは遠くて　居るのはただ虚ろな太陽
+淀んだ空気の中で
+言葉が、ココロが、隔てられて　霞んで見えない
+双眼鏡を覗いても&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;遙遠的天空中有的僅是
+停滯空氣裡的空洞太陽 
+言語、以及心意被隔離
+即使以雙筒望遠鏡窺視
+也仍朦朧不清&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;でも1つだけ　残されてる
+ボクらを繋ぐモノ
+蒸気を見せる　時を待ってる
+さあ始めようか
+錆び付いた運命の鍵を回して！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但僅此唯一、仍殘留著的
+聯繫彼此之物
+靜靜等待 蒸氣顯現之時
+來啊開始吧
+轉動鏽跡斑斑的命運之鑰！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ignite Our Song! 急げ灯すんだ
+“ウタ”という世界を変えてく　Flame
+孤独に冷えたハート　
+永久機関に出来るのさ　いつだって&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Believe Our Song!
+キミとボクを結ぶライン
+伝って奔るよ　Phrase
+希望…聴こえる？
+バベルシティ・グレイス
+響いてくどこまでも&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;點燃樂曲 急遽亮起的 
+是名為歌聲 改變世界的炙炎
+讓伶仃中冷落的心
+也能化作永動機 無論何時&lt;/p&gt;
+&lt;p&gt;相信歌聲！ 連結你我譜線上 
+奔馳走告的樂句裡
+能聽見嗎、耳畔的希望？
+巴比倫恩典(Babel City Grace)，無處不響起&lt;/p&gt;
+&lt;h3 id=&#34;game-ver-end&#34;&gt;(Game ver. end)&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;独りぼっちじゃ　ネガイだって瓦礫になってく
+行き先が分からずに
+小さな焔は　寂しさ抱き呼吸していたよ
+旅立つ日ユメ見ながら&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;孤身一人、即使心願也碎作瓦礫
+而不知目的地
+渺小火炎、懷抱寂寞呼吸著
+一面夢著啟程的那一天&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;そうそして「今日」時が来たよ
+ボクらが出会う時
+震えている　胸のコアは
+もう稼働中だよ
+恐れずに未来の航海図広げて！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;而那一天到來了
+那吾等相會的時刻
+震動、顫抖 胸中的核
+已經在運作了
+去無懼地開拓未來的海圖&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Resonance Our Song!ここで鳴り響く
+“オト”には宿るよ無限の　Brave
+曇った視界の向こう　
+一直線に突き抜けてゆくように&lt;/p&gt;
+&lt;p&gt;Arise Our Song!諦めで塗りつぶされた
+時代を変えるよ　Blaze
+今…奏でる
+New Frontier Bless
+幕開けの声となれ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;共鳴歌聲！ 在此奏響
+聲音裡寄宿 那無限的勇敢
+就像要一直線衝出
+陰霾所密布視野的彼端&lt;/p&gt;
+&lt;p&gt;高昂我聲！ 那是能改變
+這遺棄而被塗改時代的烈焰
+現在 已經奏起&amp;hellip;
+新世界祝福
+成為揭開序幕的響聲吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;熱を持って爆ぜるメロディ
+さあ始めようか
+錆び付いた運命の鍵を回して！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;滿載著熱情 爆發的旋律
+來啊開始吧
+轉動爬上鏽跡的命運之鑰！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ignite Our Song! 急げ灯すんだ
+“ウタ”という世界を変えてく　Flame
+孤独に冷えたハート　
+永久機関にしてゆくよ　
+&lt;strong&gt;“アンティーカ”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Believe Our Song! キミとボクを結ぶライン
+伝って奔るよ　Phrase
+希望…聴こえる？
+バベルシティ・グレイス
+響いてく彼方へと―――&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;點燃樂曲 急遽亮起的
+那名為歌 改變世界的光燄
+讓伶仃中冷落的心
+也能化作永動機 直到亙古&lt;/p&gt;
+&lt;p&gt;相信歌聲！連結你我譜線上 
+奔馳走告的樂句裡
+能否聽見、耳畔的希望？
+巴比倫恩典(Babel City Grace)，向彼方傳去&lt;/p&gt;
+&lt;h2 id=&#34;心得雜&#34;&gt;心得、雜&lt;/h2&gt;
+&lt;p&gt;バベルシティ・グレイス是アンティーカ的第一首曲子。
+「將胸口躁動的火焰化作歌曲、孤獨的淚煉成祈願，為生鏽的世界帶來革命」，這首曲彷
+彿便呼應著官網的團體介紹。&lt;/p&gt;
+&lt;p&gt;回歸正題——這首或許連神都會畏懼的革命曲，名字揭示的是巴別塔神話，來自舊約聖經
+創世記第11章的故事。&lt;/p&gt;
+&lt;p&gt;那時巴比倫城(バベルシティ)的人們，為了發揚威名、不被分散，便建築了一座通天高塔
+。神見了卻憂心人們就此無所不能，便搗毀了塔、打亂語言，使人分散到世界各地。&lt;/p&gt;
+&lt;p&gt;歌詞第一句的ソラ想必便代表巴比倫的人們想到達的高處，太陽便是盤踞天上的空洞神明
+吧？
+而アンティーカ則是象徵人類的啟蒙(時代)，用蒸汽的熱量，去溫暖失去神的威光而冷卻
+的人心、去推動時代的齒輪。
+大家應該都有注意到L&amp;rsquo;Antica標誌中的i，是鑰匙的模樣，想必便是是不斷出現的命運之
+鑰。&lt;/p&gt;
+&lt;p&gt;Grace可以聯想到Amazing Grace，神給予的恩惠，而這首歌則是代替神給予人類慰藉的少
+女們，所唱出的、在胸口騷動的火焰。&lt;/p&gt;
+&lt;p&gt;其實挺中二的呢，不過中二也是懷有夢想的另一個名詞罷了。當初那些在已經確立的體制下，高唱人道、正義的人們，對當時的世界而言又何嘗不是中二呢？
+然而當真正挺身去推翻荒唐的現實，夢想便不只是夢想/中二，而是偉大的革命情操。&lt;/p&gt;
+&lt;p&gt;有錯誤請不吝指正，以上。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在Window上安裝mecab-ipadic-NEologd</title>
+        <link>https://example.com/NLP/install-mecab-ipadic-neologd-windows/</link>
+        <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
+        
+        <guid>https://example.com/NLP/install-mecab-ipadic-neologd-windows/</guid>
+        <description>&lt;h1 id=&#34;在window上安裝mecab-ipadic-neologd&#34;&gt;在Window上安裝mecab-ipadic-NEologd&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;今天的主角:&lt;a class=&#34;link&#34; href=&#34;https://github.com/neologd/mecab-ipadic-neologd&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ipadic萬能擴充包&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;首先看了一下ReadMe，並沒有提到windows的安裝方法。
+但這時可以注意到有ubuntu系統的指示，OK&amp;mdash;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On Ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cmd=&#34; data-lang=&#34;cmd=&#34;&gt;$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file
+$ cd mecab-ipadic-neologd
+$ ./bin/install-mecab-ipadic-neologd -n
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;在windows要怎麼弄來ubuntu&#34;&gt;在windows要怎麼弄來Ubuntu？&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;VMBox
+BJ4&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Microsoft Store 
+window8以上導入的這個功能中，其實找的到Ubuntu，跟隨指示安裝後，便能得到一個Linux的視窗XD。這個部分之後可能會寫一下(？&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;安裝&#34;&gt;安裝&lt;/h2&gt;
+&lt;p&gt;基本上照著Readme輸入之後便能順利獲取/更新mecab-ipadic-NEologd。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-cmd=&#34; data-lang=&#34;cmd=&#34;&gt;$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file
+$ git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
+$ cd mecab-ipadic-neologd
+$ ./bin/install-mecab-ipadic-neologd -n
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/HQm2qyz.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/HQm2qyz.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;好了之後如何使用&#34;&gt;好了之後如何使用&lt;/h2&gt;
+&lt;p&gt;Ubuntu產生的檔案會放在&lt;code&gt;User/user/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_xxxxxxxxx/LocalState/rootfs/home/Ubuntu_Username/mecab-ipadic-neologd/build/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;為一個資料夾：&lt;code&gt;mecab-ipadic-2.7.0-20070801-neologd-current_date&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;將此資料夾重新命名為&lt;code&gt;ipadic&lt;/code&gt;並覆蓋&lt;code&gt;MeCab/dic&lt;/code&gt;路徑下的同名檔案，替換便宣告完成囉！&lt;/p&gt;
+&lt;p&gt;這時可以來試試看是否成功套用&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-python=&#34; data-lang=&#34;python=&#34;&gt;import MeCab
+t=MeCab.Tagger(&amp;quot;-Ochasen&amp;quot;)
+t.parse(&amp;quot;ミリオンライブシアターデイズ&amp;quot;)
+t.parse(&#39;転生したらスライムだった件&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&#39;ミリオンライブシアターデイズ\tミリオンライブシアターデイズ\tミリオンライブシアターデイズ\t名詞-固有名詞-組織\t\t\nEOS\n&#39;
+&#39;転生したらスライムだった件\tテンセイシタラスライムダッタケン\t転生したらスライムだった件\t名詞-固有名詞-一般\t\t\nEOS\n&#39;
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>垂降授課</title>
+        <link>https://example.com/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</link>
+        <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</guid>
+        <description>&lt;h1 id=&#34;垂降授課&#34;&gt;垂降授課&lt;/h1&gt;
+&lt;h2 id=&#34;垂降四要素&#34;&gt;垂降四要素&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;垂降者、垂降繩、固定點、確保&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;垂降繩結&#34;&gt;垂降繩結&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;雙八結(Figure-eight loop knot)&lt;!-- raw HTML omitted --&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/0hL6tuv.gif&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/0hL6tuv.gif&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+功能：連結勾環、固定點
+打法：直接、回穿
+別稱：弗萊明圈結(Flemish loop)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;丁字褲、四角褲
+功能：以扁帶打結包覆臀部、代替安全吊帶
+注意：
+跪姿打才能完整包覆身體
+扁帶不要扭繩以免有空隙&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;普魯士結(Prussik knot)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/I35TtY7.gif&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/I35TtY7.gif&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+功能：架繩、確保、普魯士攀登、普魯士爬樹
+特點：可雙邊受力(
+注意：普魯士繩直徑應小於主繩一半&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;克氏結(Klemheist)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/gXWFcDV.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/gXWFcDV.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+功能：代替普魯士結做攀登
+特點：只能受向下的力、摩擦力大於普魯士結&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;巴爾曼結(Bachmann knot)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/5SSPt1O.gif&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/5SSPt1O.gif&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+功能：暫時固定繩結
+特點：用力仍會滑動&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;義大利半扣(Munter hitch)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/uZS6U65.gif&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/uZS6U65.gif&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+功能：增加摩擦力、無制動垂降
+特點：易扭繩
+注意：左或右制動、制動端不可與卡榫同側&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水結(Water knot)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/qPRK1oA.gif&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/qPRK1oA.gif&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;用途：常用於將扁帶繫打成環，或是兩條扁帶連接之用
+注意：不可扭繩、兩邊留至少10公分&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;垂降裝備&#34;&gt;垂降裝備&lt;/h2&gt;
+&lt;h3 id=&#34;鉤環carabiner&#34;&gt;鉤環(carabiner)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;形狀：O扣(oOval)、D扣(D)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/mmctD7D.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/mmctD7D.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;Oval&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;Oval&lt;/figcaption&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/XkgFfUO.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/XkgFfUO.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34;D&#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;D&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卡榫：有鎖(手動、自動)、無鎖&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;功能：架繩、連接吊帶&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：不可摔、卡榫不可鎖死、到底後回轉半圈&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;制動器&#34;&gt;制動器&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;八字環
+優點：價格低、操作容易、不會有機械故障
+缺點：易扭繩
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/0HyMJ1f.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/0HyMJ1f.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ATC(豬鼻子)
+優點：可以雙繩垂降、不易扭繩、制動優於八字環
+缺點：快速下降易過熱、對繩子直徑有要求
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/2BJIM85.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/2BJIM85.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reversino
+優點：能自動制動、制動優於ATC
+缺點：快速下降易過熱、對繩子直徑有要求、方向不能裝錯
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/D0hTNx9.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/D0hTNx9.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;垂降繩&#34;&gt;垂降繩&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;靜力繩：延展性低不能吸收衝擊，用於垂降、救難，不適合攀登。&lt;/li&gt;
+&lt;li&gt;動力繩：延展性較佳，可以吸收墜落的衝擊。&lt;/li&gt;
+&lt;li&gt;扁帶：又稱傘帶，扁平不適合當主繩&lt;/li&gt;
+&lt;li&gt;普魯士繩：普魯士攀登、確保，直徑要小於主繩的一半。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;垂降流程&#34;&gt;垂降流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;檢查裝備&lt;/li&gt;
+&lt;li&gt;尋找固定點、架繩&lt;/li&gt;
+&lt;li&gt;確認主繩、固定點穩固&lt;/li&gt;
+&lt;li&gt;穿吊帶、將鉤環連結吊帶，到牆邊以主繩與制動器連結&lt;/li&gt;
+&lt;li&gt;檢查裝備、下方確保準備&lt;/li&gt;
+&lt;li&gt;與確保者溝通確認。垂降者：準備垂降 確保者：確保完成 垂降者：開始垂降 確保者：請垂降&lt;/li&gt;
+&lt;li&gt;垂降者靠近牆邊，非慣用手為導向手抓主繩上方、慣用手為制動手放置腰間並抓緊繩子&lt;/li&gt;
+&lt;li&gt;垂降姿勢為半坐姿，雙腳微彎倒退走，制動手放繩控制速度&lt;/li&gt;
+&lt;li&gt;著地後蹲下卸下裝備&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;普魯士攀登&#34;&gt;普魯士攀登&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;檢查裝備&lt;/li&gt;
+&lt;li&gt;尋找固定點、架繩&lt;/li&gt;
+&lt;li&gt;確認主繩、固定點穩固&lt;/li&gt;
+&lt;li&gt;穿吊帶、取兩條普魯士繩圈在主繩上打普魯士結，靠上面的以鉤環連結吊帶與制動器連結&lt;/li&gt;
+&lt;li&gt;檢查裝備&lt;/li&gt;
+&lt;li&gt;將上方繩圈上推，然後重心轉移至上方繩圈&lt;/li&gt;
+&lt;li&gt;將下方繩圈上拉，然後將踩下方繩圈將重心轉移，將上方繩圈上推&lt;/li&gt;
+&lt;li&gt;重複6、7直到抵達上方&lt;/li&gt;
+&lt;li&gt;到達上方後卸下裝備&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>D/zeal 主演廣播劇 天国の鳥 中文翻譯</title>
+        <link>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</link>
+        <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</guid>
+        <description>&lt;img src="https://i.imgur.com/kqKhJD9.jpg" alt="Featured image of post D/zeal 主演廣播劇 天国の鳥 中文翻譯" /&gt;&lt;h1 id=&#34;dzeal-主演廣播劇-天国の鳥-中文翻譯&#34;&gt;D/zeal 主演廣播劇 天国の鳥 中文翻譯&lt;/h1&gt;
+&lt;p&gt;tags: &lt;code&gt;ミリシタ&lt;/code&gt; &lt;code&gt;偶像大師&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/ZphT02a.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/ZphT02a.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.amazon.co.jp/IDOLM-STER-MILLION-GENERATION-Zeal/dp/B07JVXV3VJ&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;叢林入口&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;freezing&#34;&gt;Freezing&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;司儀&lt;/strong&gt;
+第九屆百萬夢想鋼琴比賽，參賽者15號、最上靜香小姐。
+演奏曲：孟德爾頌作品54號，『莊嚴變奏曲』。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+(深深吸氣）&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;BGM(Variations sérieuses, Op. 54)
+{%youtube H9qEIcgSXLU%}&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;encounter&#34;&gt;Encounter&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;翼&lt;/strong&gt;
+靜香，恭喜妳榮獲亞軍～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+謝謝，也許是多虧了妳來幫我加油。
+&lt;strong&gt;翼&lt;/strong&gt;
+嘿嘿。想看靜香在比賽上彈鋼琴的樣子好久了，在舞台上演奏的靜香超帥氣的，讓我覺得於有榮焉～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+哎呀哎呀，真.的.喔。
+&lt;strong&gt;翼&lt;/strong&gt;
+厚、妳很無聊ㄟ。
+不過竟然能得獎，妳的鋼琴真的很強呢。
+&lt;strong&gt;靜香&lt;/strong&gt;
+沒有啦&amp;hellip;&amp;hellip;而且一開始還有失誤。
+&lt;strong&gt;翼&lt;/strong&gt;
+失誤了還亞軍？果然是才能的勝利～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+才能什麼的&amp;hellip;&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+啊對了，妳爸跟妳媽呢？一定很高興吧！
+&lt;strong&gt;靜香&lt;/strong&gt;
+難說&amp;hellip;雖然還沒見到他們，沒有拿到冠軍，我想大概是失望吧。
+&lt;strong&gt;翼&lt;/strong&gt;
+咦？
+&lt;strong&gt;靜香&lt;/strong&gt;
+他們現在大概在跟老師打招呼&amp;hellip;嗯？
+&lt;strong&gt;翼&lt;/strong&gt;
+怎麼了？
+&lt;strong&gt;靜香&lt;/strong&gt;
+那個人，感覺從剛剛開始就一直看著這裡&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+嗯？啊啊啊，那個髮型好帥！
+不過不像鋼琴大賽的感覺呢&amp;hellip;難道是&amp;hellip;
+鋼琴家靜香的跟蹤狂之類的？
+&lt;strong&gt;靜香&lt;/strong&gt;
+怎麼可能，我完全沒頭緒啊。
+&lt;strong&gt;翼&lt;/strong&gt;
+嗯？等等，那個人我好像有印象&amp;hellip;
+啊！過來了！ 
+&lt;strong&gt;靜香&lt;/strong&gt;
+翼，我們走吧！
+&lt;strong&gt;??&lt;/strong&gt;
+等等！
+(抓住)
+&lt;strong&gt;翼&lt;/strong&gt;
+喂，這位大姊！？
+&lt;strong&gt;??&lt;/strong&gt;
+妳是最上靜香對吧。
+&lt;strong&gt;靜香&lt;/strong&gt;
+呃&amp;hellip;沒錯我是..
+&lt;strong&gt;??&lt;/strong&gt;
+我找你有事。
+妳，要不要和我一起唱歌？
+&lt;strong&gt;靜香、翼&lt;/strong&gt;
+嗯？
+&lt;strong&gt;翼&lt;/strong&gt;
+咦咦咦咦！ 
+&lt;strong&gt;靜香&lt;/strong&gt;
+唱歌？這裡是鋼琴比賽的會場喔？是不是有什麼誤──
+&lt;strong&gt;??&lt;/strong&gt;
+我沒有誤會，最上靜香，你的歌是必要的。
+&lt;strong&gt;靜香&lt;/strong&gt;
+&amp;hellip;不懂你到底在講什麼，我根本不認識你。
+走吧，翼。
+&lt;strong&gt;翼&lt;/strong&gt;
+等等等一下啦～～&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;??&lt;/strong&gt;
+啊&amp;hellip;被逃掉了嗎&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[name=たけ 應該都知道??是ジュリア吧，跟麗花的部分直接上名字。]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(上車聲)
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+開車吧。
+&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/wanoji67/status/1078263683296374784&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;想像圖&lt;/a&gt;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+麗，跟在那邊搭一樣的車不行嗎？
+這台新車很難找讓我有點困擾&amp;hellip;
+&lt;strong&gt;麗花&lt;/strong&gt;
+我喜歡這台喔，很好開、坐起來也很舒服。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+&lt;del&gt;懸吊太軟&lt;/del&gt;
+軟綿綿的讓我無法平靜&amp;hellip;
+&lt;strong&gt;麗花&lt;/strong&gt;
+唉呀？不過你說另一台「嘎搭嘎搭」的很吵對吧？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+唔&amp;hellip;呃，我是在說這台很難找！
+&lt;strong&gt;麗花&lt;/strong&gt;
+是是，那──要裝個警示燈嗎？很顯眼、而且塞車一定也可以暢行無阻。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+沒興趣，而且擅自裝上那個不太妙吧？
+&lt;strong&gt;麗花&lt;/strong&gt;
+好像是這樣呢。可惜～～
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+&amp;hellip;&amp;hellip;知道就不要亂講啦&amp;hellip;..
+&lt;strong&gt;麗花&lt;/strong&gt;
+所以結果怎樣啦？有說上話嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+沒辦法，被警戒了。
+嗯，再試試啦。&lt;/p&gt;
+&lt;h2 id=&#34;stranger&#34;&gt;Stranger&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;翼&lt;/strong&gt;
+絕對沒有搞錯，那個紅色頭髮的人是ジュリアーノ唷！
+&lt;strong&gt;靜香&lt;/strong&gt;
+恩&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+你看，這本雜誌上也有對吧！天才吉他手、音樂製作人、搖滾樂團Blue Zeal的團長兼主唱，三年前在英國出道，在那邊超有名喔！
+最近回到日本，馬上就要舉辦凱旋演唱會了！
+&lt;strong&gt;靜香&lt;/strong&gt;
+呃&amp;hellip;不過名字寫著「ジュリア」欸？不是ジュリアーノ&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+嗯，是ジュリア喔，ジュリアーノ是小～名～
+&lt;strong&gt;靜香&lt;/strong&gt;
+是&amp;hellip;是喔&amp;hellip;
+那&amp;hellip;那個ジュリア小姐為什麼要找我搭話呢？
+&lt;strong&gt;翼&lt;/strong&gt;
+不知道，但網路上說她好像是這附近出身的喔！
+或許住得很近，母校什麼的和我們一樣也說不定！
+&lt;strong&gt;靜香&lt;/strong&gt;
+哪裡出身也好，昨天大概也只是搞錯了什麼，應該不會再見面了吧？
+&lt;strong&gt;翼&lt;/strong&gt;
+唉──為什麼這樣命運般的邂逅，靜香不會感到心動啊&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+為什麼翼你這麼興奮啊&amp;hellip;
+&lt;em&gt;(開門聲，導播請下花蓮王登場曲)&lt;/em&gt;
+&lt;strong&gt;??&lt;/strong&gt;
+找到了！打探出班級費了一番功夫啊。
+每個都只看到我的臉就跑走，我是怪物喔？
+&lt;strong&gt;靜香&lt;/strong&gt;
+你&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+果然是ジュリアーノ！
+欸，你是Blue Zealジュリア小姐對吧？
+能跟我握手嗎？啊、還有簽名也&amp;hellip;順便來個擁抱！
+&lt;strong&gt;靜香&lt;/strong&gt;
+翼、等等&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哎呀抱歉啦小貓咪，現在是私人時間，接下來也請多多支持～～
+&lt;strong&gt;翼&lt;/strong&gt;
+呀啊啊啊啊！ジュリアーノ！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我有事要找的是妳，最上靜香。
+&lt;strong&gt;靜香&lt;/strong&gt;
+又..又來？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+回覆，思考過了嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+回覆&amp;hellip;？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;妳，要不要和我一起唱歌？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那個，是認真的嗎？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ジュリア&lt;/strong&gt;
+比認真還認真，正經八百！
+哎呀，在這裡講那個有點&amp;hellip;換個地方吧？
+&lt;strong&gt;靜香&lt;/strong&gt;
+講&amp;hellip;換是要換到哪？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+車站出來有店對吧？可以慢慢聊的地方。
+好、走吧！
+&lt;strong&gt;靜香&lt;/strong&gt;
+等、等一下，不行啦！還要上課、而且妳是什麼人&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+就跟剛剛那邊的小喵咪講的一樣喔。
+我是ジュリア，音樂家，然後大概就跟雜誌上寫的一樣──看過了吧。
+&lt;strong&gt;靜香&lt;/strong&gt;
+呃&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+然後，還要自我介紹什麼好呢？生日？血型？喜歡的類型？
+&lt;strong&gt;靜香&lt;/strong&gt;
+不是這麼回事&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我認識妳姊千早，這樣可以嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+千早姊姊&amp;hellip;姊姊的事妳為什麼&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+那個&amp;hellip;下午是自修課，所以靜香妳跟ジュリア小姐去吧，看你們好像有很多話要講。
+放學前的班會我會幫妳蒙混過去的。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+決定了吧，謝啦小喵咪～～
+&lt;strong&gt;翼&lt;/strong&gt;
+嘿嘿，不客氣～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+喂&amp;hellip;翼！
+等一下啦ジュリア小姐，不要這樣拉我&amp;hellip;.我去、我去就是了！
+厚妳沒聽到嗎&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;服務生&lt;/strong&gt;
+讓您久等了，這邊是您的冰淇淋汽水跟咖啡。
+&lt;strong&gt;靜香&lt;/strong&gt;
+不換個座位嗎&amp;hellip;這邊從外面看一清二楚耶？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我不在意就是。
+&lt;strong&gt;靜香&lt;/strong&gt;
+我很在意！大白天的、還穿著制服，感覺一直被人盯著。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+堂堂正正的不用去在意他人啦，第一次翹課嗎，優等生？
+&lt;strong&gt;靜香&lt;/strong&gt;
+嗚呃&amp;hellip;只是要揶揄的話我要回去了！
+咖啡的錢我會付！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+等一下啦，千早的事這樣就好嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+像妳這樣的不良少女不可能跟姊姊是朋友。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我是她朋友&amp;hellip;不，甚至比朋友更&amp;hellip;
+千，曾經是我的夥伴。
+&lt;strong&gt;靜香&lt;/strong&gt;
+妳&amp;hellip;到底&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我跟千高中時組過BAND，Blue Zeal初代主唱是她。
+雖然不同班，但最常跟她一起。
+只要有時間就練習，演出也&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+等&amp;hellip;請等一下！你在說什麼？樂團？我姊才不知道什麼樂團，從來沒聽她講過！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+她知道，只是瞞著家人，也瞞著妳。
+&lt;strong&gt;靜香&lt;/strong&gt;
+瞞著我？這不可能！
+姐姐可是以鋼琴家為目標喔？每天忙著練琴、功課也&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+24小時都監視著她嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+那種事、我不知道&amp;hellip;
+但姐姐發生事故的地方，為什麼在車站的另一邊──
+我曾想過&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+那邊是去Live House的半路上，那一天，千原本要唱Blue Zeal的演出、原本是這樣的。
+可能比完比賽趕著過來，才發生事故的。
+&lt;strong&gt;靜香&lt;/strong&gt;
+樂團的、演出？
+那&amp;hellip;姐姐會死掉不就是因為妳！
+而且是怎樣？為了代替姊姊要我唱歌？妳還真敢講啊冰鳥！
+大概、我也當不了姐姐的代替品&amp;hellip;完全沒在學聲樂，鋼琴也只是那樣&amp;hellip;
+我沒有像姐姐那樣的才能！
+從那天起，為了想像姊姊一樣拼命的努力了，但是&amp;hellip;
+即使這樣還是完全追不上&amp;hellip;
+不一樣&amp;hellip;我和姐姐是不一樣的&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我沒有說要妳成為千的代替品，我是被妳的聲音迷住了。
+妳的聲音有力量&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+請不要隨便亂講！也沒聽過我唱歌就&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+有聽過&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+滿口謊言！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+千用鋼琴伴奏著，唱了不少對吧？我聽過那個。
+&lt;strong&gt;靜香&lt;/strong&gt;
+為什麼妳知道那種事&amp;hellip;
+&amp;hellip;我要回去了，果然不該跟著過來的。
+咖啡的錢。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+靜香！
+&lt;strong&gt;靜香&lt;/strong&gt;
+不要隨便叫我！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+不是&amp;hellip;這是Blue Zeal的凱旋演唱會門票，如果有興趣的話&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+就算給我也不會去&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+妳收下就好。
+&lt;strong&gt;靜香&lt;/strong&gt;
+嘖&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;快步出門&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ジュリア&lt;/strong&gt;
+唉&amp;hellip;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;麗花&lt;/strong&gt;
+難攻不落的感覺呢。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+沒啦&amp;hellip;我也蠻習慣好強的女孩子了。
+&lt;strong&gt;麗花&lt;/strong&gt;
+簡直像姊姊～～
+對了，妳愛喝的冰淇淋汽水融化囉，不喝嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+要喝啦，等一下。
+&lt;strong&gt;麗花&lt;/strong&gt;
+不喝的話我就收下囉！哇，氣泡的聲音！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我要喝啦！
+&lt;strong&gt;麗花&lt;/strong&gt;
+喔！好ㄘ！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+啊啊不要吃我的冰啦ㄎㄅ嗚嗚嗚嗚嗚！&lt;/p&gt;
+&lt;h2 id=&#34;reminiscence&#34;&gt;Reminiscence&lt;/h2&gt;
+&lt;p&gt;(此處電話)
+&lt;strong&gt;翼&lt;/strong&gt;
+欸！一起進去咖啡廳了！？
+真好啊靜香、真好真好～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+才不好累&amp;hellip;
+我不是說我生氣馬上就出來了嗎？
+才不是很高興地聊天呢。
+&lt;strong&gt;翼&lt;/strong&gt;
+但4，在咖啡廳吵架這種事交情不好是做不出來的，這已經是約會了吧？
+真好啊～～
+&lt;strong&gt;靜香&lt;/strong&gt;
+為什麼會變約會啊==
+&lt;strong&gt;翼&lt;/strong&gt;
+然後ㄋ然後ㄋ，講了什麼事啊？
+&lt;strong&gt;靜香&lt;/strong&gt;
+沒什麼&amp;hellip;說ジュリア是姐姐的同屆這樣&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+果然是這種關係啊！
+也就是說我們是ジュリア的學妹對吧。
+&lt;strong&gt;靜香&lt;/strong&gt;
+但是這樣的關係是&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+和那個天才吉他手同校嗎&amp;hellip;
+或許之後我們這屆又會出現很厲害的樂團也說不定──啊或許是我？或是靜香！？
+&lt;strong&gt;靜香&lt;/strong&gt;
+不可能不可能，我啊&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+又來，明明是鋼琴大賽亞軍～～
+如果真的變那樣，我什麼忙都可以幫妳喔！
+&lt;strong&gt;靜香&lt;/strong&gt;
+唉&amp;hellip;沒事要講了吧？我要掛囉。
+&lt;strong&gt;翼&lt;/strong&gt;
+唉呦──靜香好冷淡喔&amp;hellip;
+明明還有很多事沒聽妳講的說&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+抱歉&amp;hellip;但是我累了&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+枉費我幫妳代點名的說&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+呵呵&amp;hellip;那不是翼妳自己講要的？
+&lt;strong&gt;翼&lt;/strong&gt;
+是這樣沒錯啦&amp;hellip;
+那明天，一定要跟我講後續喔！
+&lt;strong&gt;靜香&lt;/strong&gt;
+嗯&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+啊，忘了講！
+靜香，要去Blue Zeal的演唱會嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+Blue Zeal？呃&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+ジュリア小姐的樂團，雜誌上也有寫說這次要辦演唱會對吧？
+想說如果你要去就來買個票。
+&lt;strong&gt;靜香&lt;/strong&gt;
+抱歉&amp;hellip;等等&amp;hellip;拜託。
+&lt;strong&gt;翼&lt;/strong&gt;
+靜香？
+嗯，我知道了。
+有精神時再來商量喔。
+&lt;strong&gt;靜香&lt;/strong&gt;
+嗯，謝謝&amp;hellip;
+晚安，翼。
+&lt;strong&gt;翼&lt;/strong&gt;
+好──明天見。
+(掛電話)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+唉&amp;hellip;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原本打算忘記今天的事，完全沒辦法把記憶從腦海趕出去。
+ジュリア小姐的事、姐姐的事&amp;hellip;.好！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;姐姐的房間&amp;hellip;已經好久沒進來過了。
+雖然幫傭有幫忙清理，一直沒在使用的房間有種疏遠感。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;那個人──ジュリア小姐的話，我不完全相信，但是&amp;hellip;
+如果姊姊真的瞞著我玩樂團，一定會留下什麼東西。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;沒有&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;這裡也&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;果然&amp;hellip;沒有嗎&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(弄掉樂譜聲)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+啊！得放回去才行。
+咦？這份樂譜&amp;hellip;不是古典樂&amp;hellip;和吉他的兩聲部&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[name=TAKE72K 這句沒聽清楚==]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不對，是樂團的曲子！
+手寫的註解也是姊姊的字！
+──啦啦啦啦──啦──&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[name=TAKE72K 聽千早清唱，尊]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+不愧是姐姐，感覺變成創作歌手了呢！
+發售的話大暢銷也說不定！
+啊！哪天組姊妹團體出道如何？
+我來當主唱&amp;hellip;沒～～&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+這首是&amp;hellip;姊姊好像在玩一樣彈著的曲子。
+常常在旁邊唱著&amp;hellip;
+嗚嗚嗚嗚嗚&amp;hellip;
+姊姊&amp;hellip;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;麗花&lt;/strong&gt;
+還不回去嗎？一直繞著遠路都晚了。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+抱歉，很懷念啊。
+這個盒子，是以前的Blue Zeal用的東西
+&lt;strong&gt;麗花&lt;/strong&gt;
+我成為經紀人之前的事對吧
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+嗯。我們還只是高中生樂團，只靠著感情嘶吼著、為了怎樣都不得已的事哭著、向著夢想全心全意地衝刺，那時真的很快樂。
+千走了、抱著不退轉的決意去了英國、出道，才第一次知道，那傢伙在那時就已經是連專家都自慚形穢的天才。
+或許我也只是一直追著千也說不定。
+如果是千的話應該能去到更厲害的地方、向廣大的世界展露天分。
+所以&amp;hellip;
+在我到達那裏之前，絕不能停止飛翔。
+&lt;strong&gt;麗花&lt;/strong&gt;
+&amp;hellip;難受嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+不難受喔，只是有時&amp;hellip;會變得寂寞&amp;hellip;
+就是這樣。
+&lt;strong&gt;麗花&lt;/strong&gt;
+是嗎。
+一直──在尋找吧？
+能將羽翼相合、比翼雙飛的人。&lt;/p&gt;
+&lt;h2 id=&#34;ignition&#34;&gt;Ignition&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;STAFF A&lt;/strong&gt;
+Blue Zeal凱旋公演「Fly High」&lt;del&gt;飛高高&lt;/del&gt;入場券已經全部完售！
+&lt;strong&gt;STAFF B&lt;/strong&gt;
+請排隊的盡量往前，一排四個，麻煩一排四個！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;STAFF C&lt;/strong&gt;
+請出示您的票券。
+&lt;strong&gt;靜香&lt;/strong&gt;
+啊！好。
+&lt;strong&gt;STAFF C&lt;/strong&gt;
+這樣就OK了。
+&lt;strong&gt;靜香&lt;/strong&gt;
+謝謝。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;搖滾樂團的演唱會&amp;hellip;雖然是第一次參加──
+竟然這麼多人啊！打扮奇葩的人也好多！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(撞到)
+&lt;strong&gt;靜香&lt;/strong&gt;
+啊，不好意思！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;粉絲&lt;/strong&gt;
+喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔 喔喔 喔喔喔 喔喔！！&lt;strong&gt;！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ジュリア&lt;/strong&gt;
+&lt;strong&gt;ARE YOU &lt;a class=&#34;link&#34; href=&#34;https://dic.nicovideo.jp/a/ready%21%21&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;READY!!&lt;/a&gt;？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;粉絲&lt;/strong&gt;
+喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔 喔喔 喔喔喔 喔喔！！&lt;strong&gt;！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ジュリア&lt;/strong&gt;
+OK！WE ARE──BLUEEEEEEEEE ZEALLLLLL！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;粉絲&lt;/strong&gt;
+喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔 喔喔 喔喔喔 喔喔！！&lt;strong&gt;！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;STAFF D&lt;/strong&gt;
+往車站方面的路十分壅塞，往西口的地下道也可以走！
+&lt;strong&gt;靜香&lt;/strong&gt;
+糟糕，哭太多了…
+看現場真的太好了！
+&lt;strong&gt;翼&lt;/strong&gt;
+真的超帥的對吧！下次的演出絕對也要來！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+搖滾樂團的演出，真的超熱血的！
+雖然有做心理準備了，但心臟還在砰砰跳著。
+不知道能不能和ジュリア小姐說話呢？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;阿？在這扇門的深處嗎…
+「非相關人士禁止進入」…如果說是認識的人的話總是能…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;保全&lt;/strong&gt;
+你是粉絲？母湯喔跑進來這裡。
+&lt;strong&gt;靜香&lt;/strong&gt;
+啊那個…不好意思！但是我是…
+&lt;strong&gt;？？&lt;/strong&gt;
+最上…靜香小妹妹？
+&lt;strong&gt;靜香&lt;/strong&gt;
+是的…
+&lt;strong&gt;？？&lt;/strong&gt;
+啊啊，妳來了呀，太好了！
+ジュリア會很開心的吧！
+&lt;strong&gt;靜香&lt;/strong&gt;
+您是…
+&lt;strong&gt;？？&lt;/strong&gt;
+保全先生，這位是ジュリア的朋友所以沒問題喔。
+來吧，一起走吧，靜香。
+我帶你去後台。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;ジュリア&lt;/strong&gt;
+麗！你晃去哪啊？想說要乾杯等你好久了。
+&lt;strong&gt;麗花&lt;/strong&gt;
+抱歉，但作為賠禮，我把靜香帶來了！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+欸？哇啊啊啊啊，靜香妳有來喔！
+&lt;strong&gt;靜香&lt;/strong&gt;
+…我是不能來嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+那種事我可沒說，是嗎&amp;hellip;妳來了嘛！
+好，聽著，不要跑回去喔，在那邊等我一下下。
+&lt;strong&gt;靜香&lt;/strong&gt;
+好&amp;hellip;等一下，妳要去哪？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+交際，馬上就回來。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+我改天再來就好。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+為什麼？
+&lt;strong&gt;靜香&lt;/strong&gt;
+是不是打擾你們了&amp;hellip;
+感覺在你們開心的時候&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+開玩笑！今天妳有來是我最開心的事！
+&lt;strong&gt;靜香&lt;/strong&gt;
+くっ&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哎呀，如果沒有來我也會過去的。
+演唱會、看了嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+是的。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+被震撼了嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+是的。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哈哈，太老實了吧。
+&lt;strong&gt;靜香&lt;/strong&gt;
+因為真的是這樣。只是&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+嗯？
+&lt;strong&gt;靜香&lt;/strong&gt;
+不演奏嗎？這份樂譜──姊姊的曲子。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+千的曲子？啊！
+&amp;hellip;
+喂&amp;hellip;這是&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+在姐姐的房間裡找到的。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+&amp;hellip;
+&amp;hellip;
+原來如此嗎&amp;hellip;是由妳找到的嗎&amp;hellip;
+好懷念啊&amp;hellip;千的字。
+&lt;strong&gt;靜香&lt;/strong&gt;
+想著或許能聽到這首曲子所以來了。
+現在已經不再演奏了嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+不&amp;hellip;
+是不曾演奏過啊&amp;hellip;
+還未完成啊。
+&lt;strong&gt;靜香&lt;/strong&gt;
+欸？為什麼？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+因為原本應該第一次唱的那一天，千走了。
+&lt;strong&gt;靜香&lt;/strong&gt;
+！！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+這首曲子，是和千兩個人一起作的。
+我彈著吉他、千敲著鋼琴。
+&lt;strong&gt;靜香&lt;/strong&gt;
+是&amp;hellip;
+看著樂譜，好像聽姐姐彈過。
+現在──也聽了ジュリア小姐的吉他、還有歌聲。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+是嗎&amp;hellip;你還記得其他的嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+欸？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+妳聽過吧？自己的歌聲。
+&lt;strong&gt;靜香&lt;/strong&gt;
+！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+千不在了，這首曲子該和誰唱讓我迷惘著。
+但是現在，我的心裡已經決定了。
+靜香，我不會和妳以外的人唱。
+&lt;strong&gt;靜香&lt;/strong&gt;
+那個&amp;hellip;
+為什麼？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我一直在尋找能讓這首曲子完成的聲音，聽了一大堆試音帶、也去Live House找了，找的累了、也曾有放棄過。
+不過，回過神來耳朵總是從聽到的聲音尋找著歌聲。
+在那個時候，我遇到了。
+在千留下的練習音源裡，混著的私人錄音。
+國中左右的女孩只伴著鋼琴唱著的、紀念照般的錄音。
+想著大概是搞錯了吧&amp;hellip;
+但是，那就是和著千的鋼琴、唱著這首曲子的妳的聲音。
+&lt;strong&gt;靜香&lt;/strong&gt;
+！那時候的&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+聽到的瞬間就明白了、如同大夢初醒、恍然大悟，一切的一切都連結在一起了。
+我一直都搞錯了&amp;hellip;被千騙了也說不定。
+這不是我和千一起唱的曲子，靜香，這是我和妳的曲子啊。
+&lt;strong&gt;靜香&lt;/strong&gt;
+！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我不再發呆了，隔天就通了一堆電話、把預定全都取消，想著即使拋下一切也不得不去。
+靜香，為了得到妳。
+&lt;strong&gt;靜香&lt;/strong&gt;
+那個&amp;hellip;為什麼？
+為什麼那麼執著呢？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+對什麼？
+對音樂？對這首曲子？對妳？
+&lt;strong&gt;靜香&lt;/strong&gt;
+全部！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+全部&amp;hellip;為什麼呢&amp;hellip;
+原因&amp;hellip;根本沒有啊。
+&lt;strong&gt;靜香&lt;/strong&gt;
+沒有&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+只是想飛而已。
+我想飛，不管多遠都想試著飛翔。
+鳥向天空展翅，還需要原因嗎？
+你對自己想飛的願望，還能有什麼藉口嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+&amp;hellip;
+&amp;hellip;
+我沒有學過唱歌&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我知道。
+&lt;strong&gt;靜香&lt;/strong&gt;
+也完全沒基礎&amp;hellip;是個外行人喔？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+我來教你啊。
+&lt;strong&gt;靜香&lt;/strong&gt;
+這樣真的&amp;hellip;可以嗎？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+歡迎之至。
+&lt;strong&gt;靜香&lt;/strong&gt;
+厚&amp;hellip;會變怎樣&amp;hellip;我不知道喔！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+妳才是，做好覺悟了吧！
+已經，不會再放妳走了。&lt;/p&gt;
+&lt;h2 id=&#34;new-song&#34;&gt;New Song&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;觀眾&lt;/strong&gt;
+安可！安可！安可！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;靜香&lt;/strong&gt;
+哈──哈──
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哈──哈──
+安可囉！超越前一瞬間的我們，不管何處都能飛去──我和妳一起的話。
+來吧，&lt;strong&gt;靜&lt;/strong&gt;。
+走吧！
+&lt;strong&gt;靜香&lt;/strong&gt;
+嗯，ジュリア！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;觀眾&lt;/strong&gt;
+喔喔 喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔！&lt;/p&gt;
+&lt;h2 id=&#34;interlude&#34;&gt;Interlude&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;麗花&lt;/strong&gt;
+&lt;em&gt;國王下山來點名點到哪一塊我、就、吃！
+──孔子孔子下山來點名風乎舞雩詠而歸！&lt;/em&gt;
+決定！那──我就選這個萊姆葡萄口味的。
+&lt;strong&gt;翼&lt;/strong&gt;
+真好啊──
+原本有點想搶萊姆葡萄的&amp;hellip;
+但是我果然還是&amp;hellip;這個草莓口味的！
+&lt;strong&gt;靜香&lt;/strong&gt;
+怎麼了啊？麗花小姐、翼。
+&lt;strong&gt;麗花&lt;/strong&gt;
+呀──靜香，現在在選慰勞品收到的乳酪蛋糕棒口味。
+&lt;strong&gt;翼&lt;/strong&gt;
+有很多種選起來也很好玩。
+&lt;strong&gt;麗花&lt;/strong&gt;
+靜香要哪個？
+&lt;strong&gt;靜香&lt;/strong&gt;
+那&amp;hellip;給我可可口味的ㄅ。
+&lt;strong&gt;麗花&lt;/strong&gt;
+好──
+也就是說製作人的是原味對吧，普通的感覺～～
+&lt;strong&gt;翼&lt;/strong&gt;
+然後──ジュリアーノ要什麼口味？
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哈啊&amp;hellip;嗚呃呃呃呃呃&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+ジュリア小姐大概暫時母湯&amp;hellip;剛剛以來就一直是那個狀態。
+&lt;strong&gt;翼&lt;/strong&gt;
+ジュリアーノ發生了什麼事嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+剛剛一直跟我在收錄&amp;hellip;那個&amp;hellip;
+壁咚然後「小喵咪」連發的場景。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+「小喵咪」&amp;hellip;是撒毀啊？
+不擅長輕飄飄那種，但是這個又&amp;hellip;嗚&amp;hellip;
+&lt;strong&gt;翼&lt;/strong&gt;
+帥哥模式的ジュリアーノ，真的很帥氣喔！
+明明就沒有必要害羞的～～
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+啊啊啊感覺超不好的，我自己完全看不下去！
+&lt;strong&gt;麗花&lt;/strong&gt;
+那──ジュリア的部分也由我來好好宣傳吧！
+各位，ジュリア這周也在逼近女孩子喔！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+住手，我可沒拜託妳這種事！
+&lt;strong&gt;靜香&lt;/strong&gt;
+ジュリア小姐振作點，接下來是演唱會部分的收錄了。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+嗯嗯啊啊，得拿出氣勢來。
+&lt;strong&gt;翼&lt;/strong&gt;
+不過，演唱會部分只會採用動作，不唱也可以──製作人剛剛是這樣說的喔。
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+雖然這樣說，但靜從排演時就認真在唱，我也不好偷懶。
+&lt;strong&gt;靜香&lt;/strong&gt;
+請不要說的好像是我的錯一樣！
+認真做是當然的，ジュリア小姐還不是唱了！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+哎呀妳看她臉怎麼這麼兇&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+我普通的講話而已！
+&lt;strong&gt;翼&lt;/strong&gt;
+嗯～～ジュリアーノ跟靜香，感情變好了呢～～
+&lt;strong&gt;ジュリア、靜香&lt;/strong&gt;
+有嗎？
+&lt;strong&gt;靜香&lt;/strong&gt;
+總之，用「講『小喵咪』好害羞」來當作演技不認真的理由是不行的&amp;hellip;而且、我也是很害羞的&amp;hellip;
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+知道了&amp;hellip;知道了所以不要再讓我想起來&amp;hellip;
+&lt;strong&gt;靜香&lt;/strong&gt;
+夠了！我先過去了！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+希──茲──&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;翼&lt;/strong&gt;
+哎呀～～感覺再陪她們鬧下去就太蠢ㄌ，趕快來吃乳酪蛋糕吧。
+&lt;strong&gt;麗花&lt;/strong&gt;
+沒關係，因為消沉著的ジュリア也很可愛！
+&lt;strong&gt;ジュリア&lt;/strong&gt;
+くっーー，我也不願意啊！&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性</title>
+        <link>https://example.com/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</link>
+        <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</guid>
+        <description>&lt;h1 id=&#34;移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性10年間の縦断的資料に基づいて&#34;&gt;移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性:―10年間の縦断的資料に基づいて―&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;巽申直(茨城大学)、野村知弘(水戸市立見川小学校)、村山勤治(滋賀大学)、小田佳子(金沢大学大学院)、富樫泰一(茨城大学)、服部恒明(茨城大学)
+&lt;a class=&#34;link&#34; href=&#34;https://ci.nii.ac.jp/naid/130004573858&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Article&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;
+&lt;p&gt;這篇論文的目的為分析全日本劍道選手權優勝者宮崎正裕先生的動作。使用二元線性直接轉換法，追蹤測量選手的運動。
+這使我們能夠分析兩者在試合間的距離(間合)。
+分布曲線顯示出兩種主要的間合類型：鍔迫り合い、一足一刀。&lt;!-- raw HTML omitted --&gt;
+經分析了47場試合(1990-1999)，我們歸納出：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;宮崎先生的鍔迫り合い、一足一刀出現率為低相關，與大部分選手相同。&lt;/li&gt;
+&lt;li&gt;從一足一刀發動的攻擊及防守動作數高於其他選手。&lt;/li&gt;
+&lt;li&gt;在一足一刀的對抗時間顯低於其他選手。亦即其初始攻擊動作遠早於其他選手。&lt;/li&gt;
+&lt;li&gt;宮崎先生的一足一刀百分比逐年上升，但自一足一刀發動的攻擊數逐年減少。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>上段の構えからの剣道打撃動作における指力の発揮過程の分析</title>
+        <link>https://example.com/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</link>
+        <pubDate>Thu, 10 Aug 2017 19:09:55 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</guid>
+        <description>&lt;h1 id=&#34;上段の構えからの剣道打撃動作における指力の発揮過程の分析&#34;&gt;上段の構えからの剣道打撃動作における指力の発揮過程の分析&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;林 邦夫、堀山 健治、山本 高司
+中京大学
+&lt;a class=&#34;link&#34; href=&#34;https://doi.org/10.11214/budo1968.18.3_24&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Article&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;摘要&#34;&gt;摘要&lt;/h2&gt;
+&lt;p&gt;本文主要探討劍道於擊中手、面時左手所展現的用力分析。&lt;/p&gt;
+&lt;p&gt;作者分別紀錄三位受試者左臂關節角度，左手食指、中指、無名指、小指的施力。
+歸納出下列結論：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;無論是打面或打手，都會完全伸展手肘。&lt;/li&gt;
+&lt;li&gt;左小指及無名指擊中目標前0.11~0.12sec指力最大。食指在小指及無名指達到最大時開始增加力量，在擊中時最大。中指在小指及無名指達到峰值之後幾乎同時開始施力，在第一次峰值之後加力打擊。亦即中指施力值在小指或無名指和食指之間。&lt;/li&gt;
+&lt;li&gt;打撃動作中各指最大施力對最大握力各指力施力比例：
+面:小指139-202%、無名指100-120%
+手:小指181-240%、無名指95-105%&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;手之內&#34;&gt;手之內&lt;/h2&gt;
+&lt;p&gt;期望這篇論文能解明上段的用力模式，以增進左片手擊面、擊手的效率。
+甚至單手連擊不是夢。
+然而這些練習還需要再設計。
+有點類似拔刀道的波浪狀發力。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證</title>
+        <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</link>
+        <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
+        <description>&lt;img src="https://i.imgur.com/ZMDKMDW.png" alt="Featured image of post 武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證" /&gt;&lt;p&gt;感覺有點失去了對人類的信任，經費見底了是吧。
+為什麼納村有時有帶套，有時卻是沒帶套(手套)，這樣還要用魔彈，倫理上大丈夫？&lt;/p&gt;
+&lt;p&gt;手套就是你的金鐘罩啊、納村大大！&lt;/p&gt;
+&lt;p&gt;沒帶套的作品也能在台灣合法收看
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/fati6d6.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/fati6d6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不好意思，除此之外真的沒有心得了，總之，這幾話是不為我所樂見的節奏。&lt;/p&gt;
+&lt;p&gt;雖然原作的確也是如此，但個人要抱怨一下：天羽實在是被描繪得太強了(畢竟是女主？)。
+佐烏、蘿莉學姊、THE BEAR一發擊沉，連師傅也在一個回合之內互換傷害之後被沉默，兵器術的使用者在此全倒。
+接下來就是玄學&amp;mdash;-拳法家之間的對決了，而那完全在我的守備範圍之外。&lt;/p&gt;
+&lt;p&gt;總之，讓我們為佐鳥教授、蘿莉學姊、THE BEAR MY BRO及師傅大人祈求冥福。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;接下來已經不會再有「劍術」的戰鬥，剩下的是拔刀齋對拳法家。
+先來聊聊「居合」這東西。&lt;/p&gt;
+&lt;p&gt;以我鍵盤居劍超過87年、觀看過無數筆戰的經驗，硬要戰居劍的人還著實不少&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;激烈程度只比「KENDO VS FENCING」低一些。
+BUT，我是不戰的(如果想看筆戰請自己找)。&lt;/p&gt;
+&lt;p&gt;居劍的相異，只在於&lt;strong&gt;初始狀態&lt;/strong&gt;的差別。&lt;/p&gt;
+&lt;p&gt;劍術始於與對手的敵對動作，也就是從所謂的「立合」開始。
+居合則始於日常生活，處於床之間、行走之間，也就是從「居」開始而「合う」&amp;mdash;&amp;ndash;遭遇敵人。
+所以&amp;hellip;&amp;hellip;不要拔刀了以後又收回去只為了&lt;strong&gt;擺出一個中二POSE&lt;/strong&gt;阿混●，拔出來就用劍術啦！&lt;/p&gt;
+&lt;p&gt;幹話到此為止。
+我們來講講第九話唯一的戰鬥吧。&lt;/p&gt;
+&lt;h2 id=&#34;警視流立居合-二本目夢想返し神道無念流&#34;&gt;警視流立居合　 二本目　夢想返し　神道無念流&lt;/h2&gt;
+&lt;p&gt;有敵自後方來，不亦樂乎
+轉身拔刀，單手斬其腹部，再取上段垂直斬下，下段残心、納刀。&lt;/p&gt;
+&lt;p&gt;作品中是無双返し，讀音是一樣的。
+佐鳥果然是神道無念流的，用來用去還是自己流派的最多。
+作品中取的是右單手拔刀的部分。
+在錯身之時，因為天羽的視野較佐烏狹窄，所以天羽會先「看不見」佐烏，而這就是佐烏的嗆斯。
+以左足為軸轉身，拔刀、橫斬，非常漂亮的策略。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/VcrExLv.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/VcrExLv.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/u6ohkin.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/u6ohkin.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;只可惜天羽是梅利奧達斯和加藤EAGLE的傳人，一手全反擊使得出神入化、五根87K金手指插的佐鳥跪地。
+拳法如此、流水制空圈如此，我，也是跪了。&lt;/p&gt;
+&lt;p&gt;BTW，無雙返SHI是&lt;strong&gt;神道無念流 立居合&lt;/strong&gt; 的 &lt;strong&gt;七本目&lt;/strong&gt;。
+↓右片手で胴に水平に切り付ける
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/1gyhRAB.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/1gyhRAB.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;接下來是第十話，示現流的回合。
+俗話說「左蜻蜓右白虎上朱雀下玄武」，不過蜻蜓其實在右邊。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/h9PUy4D.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/h9PUy4D.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/f1RchV0.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/f1RchV0.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不過今天是藥丸自顯流的場子，示現流就不多說了，前作有更詳細的說明。
+(&lt;strong&gt;作者是示現流控&lt;/strong&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;薬丸自顕流抜き&#34;&gt;薬丸自顕流　抜き&lt;/h2&gt;
+&lt;p&gt;抜即斬，相當於躺即睡、吃即吐、哥即拉，表示A動與B動間毫無間隔。
+實務上就是拔刀的同時放出電光火石般的斬擊，自敵人的右腹上斬到左肩。
+要特別注意的是拔刀時刀刃的方向是向下的，在打刀的配法會先轉向再拔刀。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/4QGzvlC.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/4QGzvlC.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;師傅手速比較快，所以拔刀後又砍了兩刀，是為一瞬三斬。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/V50KONp.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/V50KONp.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/iDTMsWa.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/iDTMsWa.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Mk9VTht.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Mk9VTht.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/WnrL1Il.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/WnrL1Il.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/ZMDKMDW.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/ZMDKMDW.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;strong&gt;雲耀 瞬光&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;先不論女帝歐派上的傷痕為什麼是長那樣子的，這招的威力──可怖可畏。
+由下方撩上來的攻擊本來就不好對付──應該說難以用理想的狀態接下來。
+如果體軸崩壞，第二招就無法防禦，更何況之後的第三招。&lt;/p&gt;
+&lt;p&gt;即使是用閃的，大概也退不出這招的距離，唯一可以期待的是──這招感覺是突進技，所以在第一刀將出未出之時往側邊閃，應該就能躲過。
+或者是佔先，在將出未出之時沉腰拔刀一擊爆腦(不過我可砍不下手)。&lt;/p&gt;
+&lt;p&gt;不愧是愛解說的朋友。&lt;/p&gt;
+&lt;p&gt;然而女帝還是用歐派接下來了，一身橫練的金鐘罩──我知道你是少林寺的大師兄對不對我們去踢世界盃好不。
+師傅的模造刀斬不了人，但女帝的金手指卻男女通吃。
+不過模造刀能不能砍死蝴蝶這我還要再考證考證。
+另外就是──
+&lt;strong&gt;女帝歐派(上的傷痕)，發人深省&lt;/strong&gt;。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/jqMWmmD.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/jqMWmmD.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+從傷口來看，她挨了左右袈裟和真向斬，但師傅的斬擊應該是同一軌道切上、袈裟、切上。
+左右袈裟我還可以接受，但那個真向斬是哪裡來的？
+沒有上段怎麼打出垂直攻擊？
+倒不如說在藥丸自顯流的技法之中，就我所知，是沒有「真向斬」的技巧。&lt;/p&gt;
+&lt;p&gt;另外既然有提到前作，師傅那時是被變態劍術廚囚禁，一個賽臉也不要說是壞人臉。
+當時的決戰因為腰斬而中斷真的很可惜，也沒有解明豬口「小姐」的變身之謎令人遺憾。&lt;/p&gt;
+&lt;p&gt;最後，看到貫手&lt;strong&gt;我總算想到女帝是誰的化身了&lt;/strong&gt;。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/r9a9MqP.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/r9a9MqP.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;三代目雷影是你！&lt;/p&gt;
+&lt;p&gt;參考影片：密着24時！「一撃必殺剣」薬丸自顕流 - The Sword Master
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/WPANkfvzkJw&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>武装少女マキャヴェリズム 第七節 妖しき刃「眠目さとり」心得、考證加秘密遊戲</title>
+        <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</link>
+        <pubDate>Sat, 20 May 2017 19:04:23 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</guid>
+        <description>&lt;img src="https://i.imgur.com/XkS2Knz.jpg" alt="Featured image of post 武装少女マキャヴェリズム 第七節 妖しき刃「眠目さとり」心得、考證加秘密遊戲" /&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/XkS2Knz.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/XkS2Knz.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;先大略講一下心得，老實說這集我看的不是很愉快，只畏浮雲遮望眼、不緣身在最高層。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/8GB8uP6.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/8GB8uP6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt; 
+我說那個聖光也太亮了吧！
+還有那個霧氣，濃霧請開燈？
+如果有一天巴哈推出付費去聖光的服務，就算是以集為單位收費我也肯付。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;撇除聖光的問題不談，主要是戰鬥的這集可說是一高潮，綜合來看名字常被打錯的佐鳥醬實力不下於大師傅，又在有主場優勢的女子浴場對上納村，對魔彈射手可說是一場苦戰。
+被一陣吊打之後，納村終於領悟「&lt;strong&gt;欲練神功，必先自●&lt;/strong&gt;」的道理，忍痛斬下●●習得「&lt;strong&gt;賢者模式、常時發動&lt;/strong&gt;」的技能(誤)，受到此決心震驚的佐烏方寸大亂，輸了決鬥。&lt;/p&gt;
+&lt;p&gt;同胞們，為犧牲的烈士納村默哀吧！&lt;/p&gt;
+&lt;p&gt;不知為何我有點習慣了回合制的戰鬥，一本一本地打感覺也不錯──除了有些地方偷偷灌水之外。
+不過你幾時產生了這集重點是戰鬥的錯覺？
+重點是肉啊！乾你攝影師雞肋！拍這什麼鬼東西！
+&lt;strong&gt;佐鳥der歐派、看來是不會晃的&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;幹話到此為止。
+我們來講講警視流ㄅㄚ&lt;/p&gt;
+&lt;p&gt;WHAT  IS  KEISIRYU?
+KEISIRYU  is  Meiji 10-nendai ni keishichou de seitei sa reta bujutsu no katachi.
+好啦，總之…警視流的設立可以歸因於西南戰爭時拔刀隊的活躍。&lt;/p&gt;
+&lt;p&gt;戰史就不贅述了。&lt;!-- raw HTML omitted --&gt;當時的政府軍主要是徵召入伍的平民，而對面的西鄉軍主體為舊武士階級。
+如果是遠距離互射還好，近距離肉搏西鄉軍表示：想我當年手拿武士刀（因為是舊士族嘛），從田原坂一直砍到吉次峠，來回砍了十天九夜，是血流成河，手起刀落手起刀落手起刀落，一眼都沒眨過。
+自小練習劍術的士族跟只受過一些訓練的平民兵，在近身戰的素質實在差太多了。
+終於，政府軍開始擔心西鄉軍士兵一眼都沒眨的眼睛健康，從後方支援的警視隊選拔出劍術高超者編成拔刀隊，對抗舊士族。
+而這個拔刀隊，可以說是突破僵局最重要的一枚旗子。最終政府軍在田原坂的勝利，拔刀隊功不可沒。
+&lt;!-- raw HTML omitted --&gt;(反白&lt;/p&gt;
+&lt;p&gt;回到警視流的話題，由於拔刀隊的活躍，使劍術的實用性再次被認識。
+明治12年於内務省警視局設立巡査教習所，任用多位古流劍士擔任&lt;strong&gt;撃剣世話掛&lt;/strong&gt;（教官），並將擊劍列為必修。
+因為這些教官出身於不同流派，為了統合教學方法，從各派各選出最精華的一式、共十式──
+八相（直心影流）、變化（鞍馬流）、八天切（堤寶山流）、卷落（立身流）、下段之突（北辰一刀流）、阿吽（淺山一傳流）、一二之太刀（示現流）、打落（神道無念流）、破折（柳生流）、位詰（鏡新明智流）
+並根據當時洋裝帶劍的警察（西式制服及軍刀）做了改訂，是為獨孤九劍警視流木太刀形。
+從統合諸流這點來看，警視流木太刀形可說是&lt;strong&gt;日本剣道形&lt;/strong&gt;的先驅（剣道形制定委員大部分都是警視流出身），戰前的劍道教本也多有皆載。&lt;/p&gt;
+&lt;p&gt;說了那麼多，警視流到底是什麼？
+警視流是&lt;strong&gt;警視廳制定的武術型&lt;/strong&gt;（木太刀形、立居合、柔術）。
+當時警察都會學習擊劍和柔術，所以警察可說都是警視流出身。
+照這個邏輯，至今警視流依然是日本最強流派、日本最大劍道集團，在十六次的世界劍道大會中，有十二次的個人冠軍是由警視流出身的劍士拿下。
+看彈幕時有板友提到「警視流沒有統一風格」，的確，同時有那麼多老師，跟哪一位親近，自然就會染上哪一位的色彩。
+就像今日的劍道，所有人遵循統一的規則，但又在小地方有不同的特徵、打著屬於自己的劍。&lt;/p&gt;
+&lt;h2 id=&#34;一本目八相直心影流&#34;&gt;一本目　八相　直心影流&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/mrEVj9C.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/mrEVj9C.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;動畫中沒有列出來，不過個人認為這應該是八相中打太刀的動作。
+打太刀斬右腳，仕太刀縮腳取上段，將太刀擊落
+上對下的打法，在直心影流十之型中可以觀察到，擊落之後連接刺腹或重整態勢，是攻守兼備的技法。&lt;/p&gt;
+&lt;p&gt;##　六本目　阿吽　浅山一伝流
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/tm55Yp8.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/tm55Yp8.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34; &#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;融合體術的一式，霧氣太濃可能看不清楚──&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/dLJDkNB.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/dLJDkNB.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34; &#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;佐鳥：（&lt;strong&gt;幹拐子&lt;/strong&gt;）切你中路。
+納村：咳哈
+仕太刀以下段防禦打太刀的擊側腹部，打太刀欲卷開僵持的太刀，仕太刀趁勢貼近、&lt;strong&gt;肘擊&lt;/strong&gt;打太刀心窩、將其摔倒、斬首。醬
+自由地使用體術在現今的劍道是看不到的，以前有一段時間可以用掃堂腿。
+納村中了全套服務，做好做滿，還有我說如果最後斬首的部分可以包含佐烏膝枕的服務，膝枕躺著死、做鬼也風流。&lt;/p&gt;
+&lt;h2 id=&#34;三本目八天切堤宝山流&#34;&gt;三本目　八天切　堤宝山流&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/xNzK376.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/xNzK376.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34; &#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;堤宝山流已經滅絕了，動畫組也沒有畫出動作。
+打太刀自上段擊下，仕太刀迴劍、受流，擊&lt;strong&gt;居敷胴&lt;/strong&gt;。
+&lt;strong&gt;居敷胴&lt;/strong&gt;是不多見的劍道招式，屈膝閃避擊面並攻擊腹部。像是高跪姿的&lt;strong&gt;拔擊胴&lt;/strong&gt;。
+老實說會被打出拔擊，就代表納村的動作被看穿到某種地步，沒有被一發KO真是謝天謝地。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/4qR2Yrz.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/4qR2Yrz.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			alt=&#34; &#34;&gt;
+	&lt;/a&gt;
+	
+	&lt;figcaption&gt;&lt;/figcaption&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;終於猜出來了，唯一看透真相的是身體看似普通高中生、魔♂彈裝彈量卻異於常人的納村不道。&lt;/p&gt;
+&lt;h2 id=&#34;四本目巻落立身流&#34;&gt;四本目　巻落　立身流&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Mf9K7nT.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Mf9K7nT.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;稍微不一樣的卷劍，特點在構的不同。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/pJ7m4I6.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/pJ7m4I6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/aOPFMgv.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/aOPFMgv.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;這個構可以視為是極其堅固的防禦，強硬地佔據中線，迫使我方必須撥開才能進攻，而只要嘗試撥劍，就會被捲開、受擊──這樣的一式。
+不僅如此，水平正眼直指眼睛的劍看起來是一個點，會使我方難以判斷距離、開始混亂。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/l38FneX.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/l38FneX.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/rRkyAyp.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/rRkyAyp.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(黑鐵)
+立身流對這式有些看法：&lt;a class=&#34;link&#34; href=&#34;http://tatsumi-ryu.org/?p=2564&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;立身流からみた警視(庁)流の各種形及び体系&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;還有、這裡送足的動作真的做的不佳、不流暢。&lt;/p&gt;
+&lt;h2 id=&#34;八本目打落神道無念流&#34;&gt;八本目　打落　神道無念流&lt;/h2&gt;
+&lt;p&gt;截不到好看的圖QQ。
+總之──受流、受流、打落、擦擊、斬後頸醬。
+來源是非打的四本目。
+神道無念流的特點是有許多「添手」、也就是將手放在刀背的技巧，跟鬼瓦的「延金」相同，是改變距離的一種方式。
+將手貼在刀背，在近距離可收奇效，在防禦上也可圈可點。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/c6cxPss.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/c6cxPss.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/L91jT3a.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/L91jT3a.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;說到這裡……佐烏
+果然是神道無念流的啊 ！
+以神道無念流為本、學了木太刀型的佐鳥，使出來的便是神道無念流風味的警視流。
+幹話說多也會累，&lt;strong&gt;有圖有真相&lt;/strong&gt;，納村早已看透一切，佐鳥的10分，根本是超過100分。&lt;/p&gt;
+&lt;h2 id=&#34;非打五本目&#34;&gt;非打　五本目&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/SN9PQic.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/SN9PQic.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/1Rs6aGa.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/1Rs6aGa.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/H0Ucq1A.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/H0Ucq1A.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/RfR9PgR.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/RfR9PgR.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/rqPYCbS.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/rqPYCbS.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/N6fu84k.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/N6fu84k.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/c3Mo9jX.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/c3Mo9jX.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/HeNhLoT.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/HeNhLoT.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;非打十本目の三&#34;&gt;非打　十本目の三&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/kPw3Rx7.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/kPw3Rx7.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Z63X1M3.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Z63X1M3.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以上是神道無念流的考察。&lt;/p&gt;
+&lt;p&gt;最後來聊聊眼睛的話題，聽說佐鳥有雙特別的眼睛。
+為什麼佐鳥難對付？為什麼前期吊打鬼瓦、メアリ、熊熊的納村會被砍的血流成河？
+原因絕對不是因為佐鳥的流派複雜，大雜燴劍法唯一的優勢，就只是難以被預測、被針對弱點擊破而已。
+佐烏最強的地方，是那雙「&lt;strong&gt;天通眼&lt;/strong&gt;」，去除掉那中二的名字，她擁有的就是劍道中的&lt;strong&gt;觀之目/遠山之目&lt;/strong&gt;（好像也挺中二的。
+不只觀察手、劍尖，遠山之目觀察著敵手的全身，能夠捕捉發動攻擊的前兆（然後就被抓出端手、被高段吊打的你我都知道），想感受那種眼睛，可以去找找劍道八段戰的影片。
+納村無疑也是善於此道，不過佐烏更勝一籌。
+古人有言：&lt;strong&gt;一眼二足三膽四力&lt;/strong&gt;，說明觀察在對劍時占有的重要地位，目乃心之鏡，只要能讀目便能讀心。
+佐鳥強大的地方在於擅長隱藏自己的想法、動向，使對手抓不到攻擊的「起」，無從預測，只能憑反應力躲避。甚至能利用視線誘導納村落入陷阱，可畏可怖。
+（這樣老練的手法，跟玩弄年輕人的高段老師一模一樣&lt;/p&gt;
+&lt;p&gt;以上是第七節妖しき刃「眠目さとり」的考證與嘴砲報告，佐烏鳥教授，您給幾分？
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/NiqPJZO.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/NiqPJZO.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;靠 21&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>武装少女マキャヴェリズム 第三節 麗しき刃「亀鶴城メアリ」心得0考證</title>
+        <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</link>
+        <pubDate>Thu, 20 Apr 2017 21:38:02 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</guid>
+        <description>&lt;img src="https://i.imgur.com/tzfXmA2.png" alt="Featured image of post 武装少女マキャヴェリズム 第三節 麗しき刃「亀鶴城メアリ」心得0考證" /&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;重音在前的&lt;!-- raw HTML omitted --&gt; 納村：7000單。指考必備。每天三十分鐘
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/tzfXmA2.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/tzfXmA2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;閃光的&lt;!-- raw HTML omitted --&gt; メアリ：va te faire foutre(f**k you)、太沉重了、指考戰士的威壓。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;五劍之二的メアリ在與納村的單挑中被推倒，正所謂將軍百戰一發藝、大蛇倒爬屋薩斯，Merry  南無觀世IN PUT薩。
+(累積那個發烏干達‧U‧烏薩斯 再次滿血挑戰大魔王 納村，納村使出鞭劍雙絕、一手白蟒鞭克制 累積那個發烏干達、一腿隕鐵黑蟒劍打得屋薩斯 嫑嫑，不在話下。)
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Ce1fb2T.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Ce1fb2T.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;另外可喜可賀的是，&lt;strong&gt;月夜師父&lt;/strong&gt;終於歸位，開始解說。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/hMj5pUF.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/hMj5pUF.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;有了師父的精闢解說，渣渣如我也只能洗耳恭聽，豈有扮成鍵盤劍士亂噴的份。
+想必眼尖的朋友都發現，動畫版メアリ的武器外型和漫畫版有不小的差距。
+從這一把
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/m05t0A6.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/m05t0A6.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;換成了這一把
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Tny4Mcd.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Tny4Mcd.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;同樣是&lt;strong&gt;RAPIER&lt;/strong&gt;(中文稱為護手刺劍)，哇勒那ㄟ差加多，一個動畫化、&lt;strong&gt;hilt&lt;/strong&gt;?or &lt;strong&gt;handguard&lt;/strong&gt;?的風格也改了，是為了省預算嗎？不知各位怎麼想。&lt;/p&gt;
+&lt;p&gt;無論如何，本集的打鬥真的挺不錯，即使電腦不斷停格、依然好看。
+命懸一線的戰鬥、針鋒相對的應酬，這才是戰鬥、這才是戰鬥啊！
+只需要小動作便能使出的突刺對眼力不足的對手堪稱夢靨，即使想拉近距離，來自下段的突刺也會將其阻止。
+尤其是背後繞劍，令人防不勝防，堪稱絕技。
+有些遺憾的是字幕沒辦法翻出所有的招式名，可能是法文&amp;mdash;-片假名之間的路太曲折，趕著上架力有未逮，那也無傷大雅。
+總之，即使經過一場激♂鬥，最後メアリ還是跪了──&lt;strong&gt;西洋劍術&lt;/strong&gt;不能用左手防禦，面對右手婆左手小三的主角，自然難以招架。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/qmevFM2.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/qmevFM2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;這時請務必大聲回答：&lt;strong&gt;そのとおりDESU WA&lt;/strong&gt;(沒錯！)&lt;/p&gt;
+&lt;p&gt;看著一擊剝奪智商的工口雜誌、主動賣福利無下限的メアリ──
+10分！(雖然控貧乳
+以上，希望製作組能夠維持流暢的作畫，持續到與師傅對戰的那一天。&lt;/p&gt;
+&lt;p&gt;美江：我就再跑回去看，在原來地方，唉唷！
+因為我不是很懂西洋劍術，不懂的不開噴是國民素養，但&amp;hellip;&amp;hellip;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/oA1aMCV.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/oA1aMCV.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;メアリ桑，我懷疑你拿的是鈍劍啊。
+那個動作那個招式，還有漫畫版自己寫出的太田雄貴，メアリ拿的really是rapier嗎？
+如果站在機車的史實廚立場，個人覺得是值得討論的問題。
+一開始提到的武器更換，原本懷疑是否動畫組換成鈍劍來增加真實度，但或許真的只是hilt太難畫而已。&lt;/p&gt;
+&lt;p&gt;歐洲的兵器術本來非我專業，rapier應該也可以這樣使用，以上的意見只是個人的想法而已，如果能釣到古典擊劍的專家浮出水面解惑就太好了──我是這麼想。&lt;/p&gt;
+&lt;p&gt;無論如何，為被去勢的同胞們祈禱冥福，舉手過頂高呼三聲：&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;鬼瓦月夜花酒蕨、年上年下親子丼！&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;#追記：感謝版友糾正HILT的部分有誤，應該是HANDGUARD。HILT似乎比較類似籠手劍的籠手。
+#追記：補上幾個參考影片
+Yuki Ota Fencing Visualized Project - MORE ENJOY FENCING-日本的擊劍說明影片
+(似乎有背後繞劍動作
+{%youtube leOP7rWwBpw%}&lt;/p&gt;
+&lt;p&gt;WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier
+{%youtube nZSGaqlpJgg%}&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>武装少女マキャヴェリズム 第二話「貞淑寮」騒乱 心得微考證</title>
+        <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</link>
+        <pubDate>Sat, 15 Apr 2017 13:52:32 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
+        <description>&lt;img src="https://i.imgur.com/JdK8cMN.png" alt="Featured image of post 武装少女マキャヴェリズム 第二話「貞淑寮」騒乱 心得微考證" /&gt;&lt;p&gt;不道：達美樂打了沒(We&amp;rsquo;re THE 單身狗!!)，外送啦！
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/JdK8cMN.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/JdK8cMN.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;輪：找飯店？TRIVAGO，想出校門？IMPOSSIBLE&lt;/p&gt;
+&lt;p&gt;經過這一集，五劍首席的輪正式被推倒，象徵著共生學園戰國時代的來臨。&lt;/p&gt;
+&lt;p&gt;在此先為已去勢的同胞祈求冥福，嗚呼尚饗。&lt;/p&gt;
+&lt;p&gt;(默哀三分鐘)&lt;/p&gt;
+&lt;p&gt;這一集的重點其實是鬼瓦輪的胸，毫不做作的賣福利，顯示攝影師與分鏡的高超技術。&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/itsXOBq.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/itsXOBq.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&amp;ndash;&amp;gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;同志們，三年血賺、死刑不虧，提頭幹革命、怕死不入貞淑寮！
+話說忍者屋這個概念在漫畫中好像……管他的。&lt;/p&gt;
+&lt;p&gt;本集算是過渡階段，戰鬥部分不多，只有冷靜的捏阿拉花瓜？呃、累積那個發烏干達‧U‧烏薩斯跟nononono桑不上不下的被調教了一番。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/mpisQtR.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/mpisQtR.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;個人反而覺得這集戰鬥做的中規中矩，沒有殘影、該表現的也表現了出來。
+不過，nononono桑，妳不也是直心影流的嗎，最重要的呼吸聲呢？嬌喘努力呼吸呢？
+離題了，接下來是微考證的部分。&lt;/p&gt;
+&lt;p&gt;鞭子暫且不論。
+小太刀，比打刀短、有大型脇差し長度的武器，分類上有灰色地帶。
+通常，作為主武器時稱為小太刀，副手時為脇差し；或者是以能否兩手握持為分類依據。
+以小太刀作為主武器的武術，便稱為小太刀術，較有名的除了本作的直心影流，還有富田流等，大多是以入身、制體技為主體的技法，再加上柔術。劍道型中也有短刀，只是除了升段外不會練習。
+神崎かるな老師的另一部作品主角──櫻就是使用短刀的高手。&lt;/p&gt;
+&lt;h2 id=&#34;鹿島神伝直心影流小太刀の型&#34;&gt;鹿島神伝直心影流　小太刀の型&lt;/h2&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/tNmu8aO.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/tNmu8aO.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;以短制長、鍛鍊氣魄，全形中共通的精神便是以肉身為餌，誘使敵人攻擊。
+在戰鬥時不能想著二之太刀，要以一擊必殺的氣勢衝向對手，否則間合無法拉近，技也無從施展。
+(個人認為大概是直心影流中最簡潔實戰的技巧，單看型就能了解部分術理)
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/3kdrTmrKs7I&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;ニ本目水勢&#34;&gt;ニ本目　水勢&lt;/h3&gt;
+&lt;p&gt;怒濤般席捲對手，因此名為水勢。
+向對手眉心 launch a 突刺，接下自直立上段的擊面，&lt;strong&gt;使其落下&lt;/strong&gt;，斬擊對手頸動脈。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/C0FWIvG.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/C0FWIvG.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/LjPxZLR.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/LjPxZLR.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;原本技法中是單手斬擊，但這裡nononono桑用的是打擊武器警棍，所以換成雙手。
+技法的重點是&lt;strong&gt;落下&lt;/strong&gt;，使敵人的劍(或觸手)偏離隨時足以壓向天靈蓋的優勢位置。
+實務上就是：對+X、-Z方向有速度的質點A施加+Y方向的作用力，改變其運動方向……放鬆架住攻擊的手腕，使敵人的武器突然失去施力點而滑掉。
+附上原作
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/WXAf7rY.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/WXAf7rY.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&#34;五本目突非押非&#34;&gt;五本目　突非押非&lt;/h3&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/BysJ9fj.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/BysJ9fj.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;對應突刺或強壓進來的對手的技巧，作品中取的是型的前半段，也就是：
+打落突刺、擊手、&lt;strong&gt;金的&lt;/strong&gt;蹴り。
+&lt;em&gt;(名詞解釋，金的不是什麼金色的東西、太刀的配件。
+WIKI：金的（きんてき）とは武道、格闘技における攻撃対象としての男性性器とくに&lt;strong&gt;睾丸&lt;/strong&gt;を指す用語。
+&lt;strong&gt;睾丸を指す！&lt;/strong&gt;)
+不用解釋了吧？
+(不要真的去試，試了我無法負責)&lt;/em&gt;
+&lt;!-- raw HTML omitted --&gt;單兵戰鬥
+攻擊發起前準備：面對伸出龍爪手的8+9，我方右手握40CM假屌根部，左手將另一端夾於我虎口。
+此時8+9開始衝刺，我在龍爪手觸擊身體的前一瞬間左為支點右手用力壓下，左手壓住8+9右手、右手持假屌狠尻8+9左手，踏進一步，踹其下體。&lt;!-- raw HTML omitted --&gt;
+呼~~
+本技的重點是：在等到**最接近一瞬間**才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
+打擊左手之後還繼續踹蛋蛋，是因為**單手斬斷人體**需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/0k3CBv8.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/0k3CBv8.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/J09L3rm.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/J09L3rm.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;突非押非恐怕是實戰中最有效的技巧吧。(卵葩一涼&lt;/p&gt;
+&lt;p&gt;接下來就是西洋劍術回，在此總結一下直心影流的部分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;鹿島神伝直心影流&lt;/strong&gt;
+直實剛健，樸素的流派，在呼吸運氣上有其獨到之處。可以由幕末三劍豪中，直心影流就佔了兩個席位──男谷信友、島田虎之助──看出端倪，該流的強悍。
+值得一提的是男谷信友。
+男谷積極實踐與他流的交流比試，再次為一潭死水的劍術界注入活力，他制定的竹刀長度、以竹刀稽古為中心的練習方針給予現今的劍道極大的影響。&lt;/p&gt;
+&lt;p&gt;可資辨認的&lt;strong&gt;特色&lt;/strong&gt;是──&lt;strong&gt;看不懂的型&lt;/strong&gt;、&lt;strong&gt;翹起的食指&lt;/strong&gt;、&lt;strong&gt;嬌喘呼吸&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tsukuba.repo.nii.ac.jp/?action=pages_view_main&amp;amp;active_action=repository_view_main_item_detail&amp;amp;item_id=31855&amp;amp;item_no=1&amp;amp;page_id=13&amp;amp;block_id=83&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;直心影流に関する研究(軽米 克尊,2014)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(或許有人還是覺得日本刀砍來砍去都一樣，但是這部作品選擇的已經是有特色、極富魅力的流派了，比如華麗的泰捨流、風格多變的警視流、作者親女兒兇悍神速鬼叫的藥丸自顯流。)
+(還是你想看溝口派一刀流、中西派一刀流、小野派一刀流、伊藤派一刀流、北辰一刀流     版本的五劍？)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>武装少女マキャヴェリズム 第一話 素晴らしき刃「鬼瓦輪」心得加考證(?)</title>
+        <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</link>
+        <pubDate>Sat, 08 Apr 2017 16:09:47 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</guid>
+        <description>&lt;h2 id=&#34;第一話-素晴らしき刃鬼瓦輪心得加考證&#34;&gt;第一話 素晴らしき刃「鬼瓦輪」心得加考證(?)&lt;/h2&gt;
+&lt;p&gt;食指向上畫半圓
+感覺劍術的部分沒有很好的做出來，鍾愛短劍流的術理解說也沒有出現在漫畫裡，不知道單行本會不會有，只能自己先考證看看。
+總之，妹子很可愛，op也好聽，但…
+打鬥不差，但是也沒有到極好，本來這部作品應該就是史實打鬥的後宮肉番，但是關鍵的龍尾啊圓連啊竟然用殘影&amp;amp;快轉帶過…
+還有橫一文字的地方，動畫沒有做出納村的突進動作，腦袋搬家云云，就有點突兀。
+不要以為只要加上一個中二招式名就是劍術啊製作組。
+(第二個)總之，能聽到輪(&lt;strong&gt;高田優希&lt;/strong&gt;)的叫喊，好爽……看來twitter上說有去考證過是千真萬確的。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;竜尾-十韜之形一本目左二本目右&#34;&gt;竜尾　 十（韜）之形　一本目左、二本目右&lt;/h3&gt;
+&lt;p&gt;攻擊龍首就會被龍尾反擊、攻擊龍尾就會被龍首攻擊。
+誘使對手打擊，利用對手力量的反擊技，應該就像劍道的應擊。
+重點大概在輕輕的擋、快速的返之間的手之內。&lt;/p&gt;
+&lt;h3 id=&#34;曲尺十韜之形十三本目&#34;&gt;曲尺　十（韜）之形　十三本目&lt;/h3&gt;
+&lt;p&gt;伸縮自如的橡膠劍(X)，捲尺般縱橫無盡的攻守、讀距離。
+重點在使對手無意間踏入攻擊距離的「誘」，以及心中存在的距離感。
+實務上是利用巧妙的步距差來掌握彼此的節奏——小步、小步、大步、大步，在對手踏步追上、腳抬起時揮出難以閃避的一擊。
+間合的判讀是重點。&lt;/p&gt;
+&lt;h3 id=&#34;曲尺---八寸延金&#34;&gt;曲尺   八寸延金&lt;/h3&gt;
+&lt;p&gt;至於輪用的八寸延金，其實並不包含在現在的曲尺之中，而是直心影流四代目小笠原 長治的失傳絕技，大概是像片手面那樣的原理。
+（虎眼流4 ni&lt;/p&gt;
+&lt;h3 id=&#34;橫一文字八相発破&#34;&gt;橫一文字　八相発破&lt;/h3&gt;
+&lt;p&gt;可以在法定一本目八相看到，用來鍛鍊初學者的刃筋，此外還有縱一文字。
+（不就是橫斬嘛&lt;/p&gt;
+&lt;h3 id=&#34;圓連刀連体連十韜之形十四本目&#34;&gt;圓連（刀連体連）　十（韜）之形　十四本目&lt;/h3&gt;
+&lt;p&gt;因為攻與擋之間毫無稜角、一氣呵成，所以稱為圓連。
+氣劍體一致、圓轉如意的攻擊(人劍合一成為劍人)。總之就是在極近的距離互相切返，為了防止對手体当たり，會在打擊時向側邊踏步。
+和龍尾一樣，輕柔的手之內是重點。
+（不過反正納村已經靠在樹上了&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/VIARbx2LuO8&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tsukuba.repo.nii.ac.jp/?action=pages_view_main&amp;amp;active_action=repository_view_main_item_detail&amp;amp;item_id=31855&amp;amp;item_no=1&amp;amp;page_id=13&amp;amp;block_id=83&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;直心影流に関する研究(軽米 克尊,2014)&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>再開</title>
+        <link>https://example.com/uncategorized/ry/</link>
+        <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/uncategorized/ry/</guid>
+        <description>&lt;h1 id=&#34;再開通知&#34;&gt;再開通知&lt;/h1&gt;
+&lt;p&gt;HEXO是高一時某生活科技老師介紹的「神奇網頁生成器」，作為作業每人都在學校網域發布了一個頁面。
+最近因為一個契機回去看了一下，發現原本帳號已經登不進去ㄌwww，總之就先搬運到GITHUB PAGE上。&lt;/p&gt;
+&lt;p&gt;孤獨的大學生應該很有機會寫一堆廢文，總之夜露死苦。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+</description>
+        </item>
+        <item>
+        <title>刃鳴散らす</title>
+        <link>https://example.com/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</link>
+        <pubDate>Sun, 22 Jan 2017 21:08:05 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</guid>
+        <description>&lt;img src="https://i.imgur.com/Q94EDDx.png" alt="Featured image of post 刃鳴散らす" /&gt;&lt;h1 id=&#34;刃鳴散以及其中的刈包流劍術&#34;&gt;刃鳴散、以及其中的刈&lt;del&gt;包&lt;/del&gt;流劍術&lt;/h1&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/Q94EDDx.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/Q94EDDx.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&#34;緣起&#34;&gt;緣起&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[【ゆっくり語り】ゲームの剣術は真人間には可能か挑む【五刀目】]&amp;gt; (&lt;a class=&#34;link&#34; href=&#34;https://www.nicovideo.jp/watch/sm23573301&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.nicovideo.jp/watch/sm23573301&lt;/a&gt;)
+ニコニコ不能嵌入==，幸好作者之後也放了水管版。&lt;!-- raw HTML omitted --&gt;
+{%youtube RwCo9IVzfaE%}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;總之，有一天在逛ニコニコ時看到了這個系列&amp;hellip;
+「嗯？好像很有趣喔？」地想著，就弄了這遊戲來玩。
+對日文程度也是相當地挑戰XD。&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h2 id=&#34;內容&#34;&gt;內容&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;『刃鳴散らす』（はなちらす）は、ニトロプラスが2005年9月30日に発売したアダルトゲーム。
+21世紀の架空の日本帝国を舞台とした剣劇アドベンチャーで、発売前には『テックジャイアン』2005年9月号を皮切りにアダルトゲーム専門誌で紹介されている。ゲーム以外にも短編小説の「枝篇 刃鳴散らす」が『ザ・スニーカー』に2005年06月号より全3回で連載されていた。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;背景創造出了一個依然用冷兵器戰鬥的近現代架空世界，大概就是&amp;hellip;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;傳奇ㄌㄌ少將&lt;strong&gt;石馬戒厳&lt;/strong&gt;不爽日美安保，發動政變取得政權，然後遷都名古屋、用牆把東京包圍後實施「廢槍令」。
+於是，都內依然是幕末的感覺。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;主角&lt;strong&gt;赤音&lt;/strong&gt;是古流剣術・&lt;strong&gt;刈流兵法&lt;/strong&gt;的傳人，在支配東京經濟的大企業瀧川商事裡擔任食客、小白臉&amp;amp;保鑣。
+即使看起來就是個整天玩女人、風流成性的輕浮拉基男，他心中一直尋求著與同門師兄・&lt;strong&gt;伊烏義阿&lt;/strong&gt;的再次對決，為此甚至連妹子也可拋下(所以我一直覺得這部作品有BL成分在)。&lt;/p&gt;
+&lt;p&gt;而伊烏義阿為了報殺妻之仇進入了東京，兩人再度相遇，故事就這樣展開。
+剩下請自行補完劇情，實在不擅描述&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;兵法綾瀬刈流&#34;&gt;兵法綾瀬刈流&lt;/h2&gt;
+&lt;h3 id=&#34;理念&#34;&gt;理念&lt;/h3&gt;
+&lt;p&gt;不用手揮劍，而是用腰足推進全身時的重心移動來驅動劍。
+由於多餘的力量只是阻礙，故使各個部位脫力，也不重視腰&amp;hellip;等的扭轉。&lt;/p&gt;
+&lt;p&gt;&amp;mdash;寫實到這個程度，逼格整個出來。
+一般的作品描寫劍術，通常都只用「神速」一詞帶過、什麼一瞬三斬的。
+然而刃鳴散給出了原因，這點深得我心。
+重心的移動確實是古武術中的一個重點，很多流派也有相關的基本技法或步法&amp;hellip;&lt;/p&gt;
+&lt;p&gt;咳哼、扯遠ㄌ&lt;/p&gt;
+&lt;h3 id=&#34;鍔眼返し&#34;&gt;鍔眼返し&lt;/h3&gt;
+&lt;p&gt;再看一次影片：
+{%youtube RwCo9IVzfaE%}
+ツバメ返し&amp;hellip;不就燕返OwO？&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>遊記 京都</title>
+        <link>https://example.com/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</link>
+        <pubDate>Mon, 01 Aug 2016 11:00:41 +0000</pubDate>
+        
+        <guid>https://example.com/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</guid>
+        <description>&lt;img src="https://i.imgur.com/YNLHdmn.jpg" alt="Featured image of post 遊記 京都" /&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/YNLHdmn.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/YNLHdmn.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+嵐山的竹林。&lt;/p&gt;
+&lt;p&gt;看著看著有種平靜感。&lt;/p&gt;
+&lt;h3 id=&#34;高級素食料理-龍門&#34;&gt;高級素食料理 龍門&lt;/h3&gt;
+&lt;p&gt;日本是叫精進料理，對他們來說是精進，對我是日常。
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/ZUwzwYG.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/ZUwzwYG.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/G66f3ih.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/G66f3ih.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/xVuyxTP.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/xVuyxTP.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+除了豆腐外，有一道味曾烤茄子令我印象深刻。略為燒焦的味曾把茄子的鮮味與水分鎖在皮裡面，好吃。
+這間店就在天龍寺裏面，應該蠻貴的，吃得有點壓力~~&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/qBuFP6R.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/qBuFP6R.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+傳說中的金閣寺&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/eEmT9hB.png&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/eEmT9hB.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+抹茶拿鐵&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/WWsh4LU.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/WWsh4LU.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+PEACE HOSTEL的BAR，剛好有抽積木大賽，獎品啤酒一壺。
+贏了我也不能喝啊啊啊啊啊啊&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/mU1xH1D.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/mU1xH1D.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+和弟弟騎車，早上先拜訪了京都童軍會，再騎到鴨川神社。
+中間還去打了太鼓。&lt;/p&gt;
+&lt;p&gt;然後讚嘆一下河原地BOOK OFF，根本指南針。
+把千早的景品都收齊了，爽。&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>升段</title>
+        <link>https://example.com/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</link>
+        <pubDate>Sun, 26 Jun 2016 18:00:41 +0000</pubDate>
+        
+        <guid>https://example.com/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</guid>
+        <description>&lt;img src="https://i.imgur.com/L7DGZWs.jpg" alt="Featured image of post 升段" /&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://i.imgur.com/L7DGZWs.jpg&#34; &gt;
+		&lt;img src=&#34;https://i.imgur.com/L7DGZWs.jpg&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;審查通過，論文還是現場抄的。
+劍道型沒出錯、對打也還可，所以應該過八。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

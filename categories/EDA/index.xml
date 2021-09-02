@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EDA on 竹林抄</title>
+    <link>https://example.com/categories/EDA/</link>
+    <description>Recent content in EDA on 竹林抄</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/EDA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>trouble shooting of Concert exception--has not been extracted by IloAlgorithm</title>
+      <link>https://example.com/EDA/cplexTroubleshooting/</link>
+      <pubDate>Mon, 30 Aug 2021 05:20:00 +0000</pubDate>
+      
+      <guid>https://example.com/EDA/cplexTroubleshooting/</guid>
+      <description>CPLEX最佳化： VAR has not been extracted 問題 在練習用cplex解placement位移最佳化時，雖然算出了object value，卻因為exception無法檢視值。
+Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by IloAlgorithm 0x212faf0 原因 變數沒有放入objective function或costraint，因此根本沒有被algorithm算到，何來有解而能取出？
+解法 重新檢視objective function的寫法，注意所有解的變數均應涵蓋。
+須注意將變數乘以0的操作一樣會導致這個例外，因為等於那個變數變成don&amp;rsquo;t care。</description>
+    </item>
+    
+    <item>
+      <title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
+      <link>https://example.com/EDA/corner_stitching/</link>
+      <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
+      
+      <guid>https://example.com/EDA/corner_stitching/</guid>
+      <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點：
+ 能明確表現free space 將cell組織在一起  而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。
+Introduction Existing Mechanisms 這邊介紹一些現有的結構
+Linked list
+Bins
+Neighbor Pointers</description>
+    </item>
+    
+  </channel>
+</rss>
