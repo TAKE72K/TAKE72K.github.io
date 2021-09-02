@@ -1,189 +1,189 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 竹林抄</title>
-    <link>https://example.com/tags/</link>
-    <description>Recent content in Tags on 竹林抄</description>
+    <title>Tags on 竹林七閒</title>
+    <link>https://take72k.github.io/tags/</link>
+    <description>Recent content in Tags on 竹林七閒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>eda</title>
-      <link>https://example.com/tags/eda/</link>
+      <link>https://take72k.github.io/tags/eda/</link>
       <pubDate>Mon, 30 Aug 2021 05:20:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/eda/</guid>
+      <guid>https://take72k.github.io/tags/eda/</guid>
       <description></description>
     </item>
     
     <item>
       <title>paper</title>
-      <link>https://example.com/tags/paper/</link>
+      <link>https://take72k.github.io/tags/paper/</link>
       <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/paper/</guid>
+      <guid>https://take72k.github.io/tags/paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>placement</title>
-      <link>https://example.com/tags/placement/</link>
+      <link>https://take72k.github.io/tags/placement/</link>
       <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/placement/</guid>
+      <guid>https://take72k.github.io/tags/placement/</guid>
       <description></description>
     </item>
     
     <item>
       <title>新聞</title>
-      <link>https://example.com/tags/%E6%96%B0%E8%81%9E/</link>
+      <link>https://take72k.github.io/tags/%E6%96%B0%E8%81%9E/</link>
       <pubDate>Fri, 06 Sep 2019 16:34:34 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E6%96%B0%E8%81%9E/</guid>
+      <guid>https://take72k.github.io/tags/%E6%96%B0%E8%81%9E/</guid>
       <description></description>
     </item>
     
     <item>
       <title>翻譯</title>
-      <link>https://example.com/tags/%E7%BF%BB%E8%AD%AF/</link>
+      <link>https://take72k.github.io/tags/%E7%BF%BB%E8%AD%AF/</link>
       <pubDate>Fri, 06 Sep 2019 16:34:34 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E7%BF%BB%E8%AD%AF/</guid>
+      <guid>https://take72k.github.io/tags/%E7%BF%BB%E8%AD%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>アイマス</title>
-      <link>https://example.com/tags/%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9/</link>
+      <link>https://take72k.github.io/tags/%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9/</link>
       <pubDate>Mon, 22 Jul 2019 22:16:24 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9/</guid>
+      <guid>https://take72k.github.io/tags/%E3%82%A2%E3%82%A4%E3%83%9E%E3%82%B9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>シャニマス</title>
-      <link>https://example.com/tags/%E3%82%B7%E3%83%A3%E3%83%8B%E3%83%9E%E3%82%B9/</link>
+      <link>https://take72k.github.io/tags/%E3%82%B7%E3%83%A3%E3%83%8B%E3%83%9E%E3%82%B9/</link>
       <pubDate>Mon, 22 Jul 2019 22:16:24 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E3%82%B7%E3%83%A3%E3%83%8B%E3%83%9E%E3%82%B9/</guid>
+      <guid>https://take72k.github.io/tags/%E3%82%B7%E3%83%A3%E3%83%8B%E3%83%9E%E3%82%B9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ipadic</title>
-      <link>https://example.com/tags/ipadic/</link>
+      <link>https://take72k.github.io/tags/ipadic/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/ipadic/</guid>
+      <guid>https://take72k.github.io/tags/ipadic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://example.com/tags/linux/</link>
+      <link>https://take72k.github.io/tags/linux/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/linux/</guid>
+      <guid>https://take72k.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MeCab</title>
-      <link>https://example.com/tags/MeCab/</link>
+      <link>https://take72k.github.io/tags/MeCab/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/MeCab/</guid>
+      <guid>https://take72k.github.io/tags/MeCab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>nlp</title>
-      <link>https://example.com/tags/nlp/</link>
+      <link>https://take72k.github.io/tags/nlp/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/nlp/</guid>
+      <guid>https://take72k.github.io/tags/nlp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>windows</title>
-      <link>https://example.com/tags/windows/</link>
+      <link>https://take72k.github.io/tags/windows/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/tags/windows/</guid>
+      <guid>https://take72k.github.io/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ミリシタ</title>
-      <link>https://example.com/tags/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/</link>
+      <link>https://take72k.github.io/tags/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/</guid>
+      <guid>https://take72k.github.io/tags/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>偶像大師</title>
-      <link>https://example.com/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%AB/</link>
+      <link>https://take72k.github.io/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%AB/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%AB/</guid>
+      <guid>https://take72k.github.io/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%AB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>剣道</title>
-      <link>https://example.com/tags/%E5%89%A3%E9%81%93/</link>
+      <link>https://take72k.github.io/tags/%E5%89%A3%E9%81%93/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E5%89%A3%E9%81%93/</guid>
+      <guid>https://take72k.github.io/tags/%E5%89%A3%E9%81%93/</guid>
       <description></description>
     </item>
     
     <item>
       <title>論文</title>
-      <link>https://example.com/tags/%E8%AB%96%E6%96%87/</link>
+      <link>https://take72k.github.io/tags/%E8%AB%96%E6%96%87/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E8%AB%96%E6%96%87/</guid>
+      <guid>https://take72k.github.io/tags/%E8%AB%96%E6%96%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ACG</title>
-      <link>https://example.com/tags/ACG/</link>
+      <link>https://take72k.github.io/tags/ACG/</link>
       <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
       
-      <guid>https://example.com/tags/ACG/</guid>
+      <guid>https://take72k.github.io/tags/ACG/</guid>
       <description></description>
     </item>
     
     <item>
       <title>劍術</title>
-      <link>https://example.com/tags/%E5%8A%8D%E8%A1%93/</link>
+      <link>https://take72k.github.io/tags/%E5%8A%8D%E8%A1%93/</link>
       <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E5%8A%8D%E8%A1%93/</guid>
+      <guid>https://take72k.github.io/tags/%E5%8A%8D%E8%A1%93/</guid>
       <description></description>
     </item>
     
     <item>
       <title>武装少女マキャヴェリズム</title>
-      <link>https://example.com/tags/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0/</link>
+      <link>https://take72k.github.io/tags/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0/</link>
       <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0/</guid>
+      <guid>https://take72k.github.io/tags/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>剣術</title>
-      <link>https://example.com/tags/%E5%89%A3%E8%A1%93/</link>
+      <link>https://take72k.github.io/tags/%E5%89%A3%E8%A1%93/</link>
       <pubDate>Sun, 22 Jan 2017 21:08:05 +0000</pubDate>
       
-      <guid>https://example.com/tags/%E5%89%A3%E8%A1%93/</guid>
+      <guid>https://take72k.github.io/tags/%E5%89%A3%E8%A1%93/</guid>
       <description></description>
     </item>
     

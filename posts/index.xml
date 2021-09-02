@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 竹林抄</title>
-    <link>https://example.com/posts/</link>
-    <description>Recent content in Posts on 竹林抄</description>
+    <title>Posts on 竹林七閒</title>
+    <link>https://take72k.github.io/posts/</link>
+    <description>Recent content in Posts on 竹林七閒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>trouble shooting of Concert exception--has not been extracted by IloAlgorithm</title>
-      <link>https://example.com/EDA/cplexTroubleshooting/</link>
+      <link>https://take72k.github.io/EDA/cplexTroubleshooting/</link>
       <pubDate>Mon, 30 Aug 2021 05:20:00 +0000</pubDate>
       
-      <guid>https://example.com/EDA/cplexTroubleshooting/</guid>
+      <guid>https://take72k.github.io/EDA/cplexTroubleshooting/</guid>
       <description>CPLEX最佳化： VAR has not been extracted 問題 在練習用cplex解placement位移最佳化時，雖然算出了object value，卻因為exception無法檢視值。
 Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by IloAlgorithm 0x212faf0 原因 變數沒有放入objective function或costraint，因此根本沒有被algorithm算到，何來有解而能取出？
 解法 重新檢視objective function的寫法，注意所有解的變數均應涵蓋。
@@ -21,10 +21,10 @@ Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by 
     
     <item>
       <title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
-      <link>https://example.com/EDA/corner_stitching/</link>
+      <link>https://take72k.github.io/EDA/corner_stitching/</link>
       <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
       
-      <guid>https://example.com/EDA/corner_stitching/</guid>
+      <guid>https://take72k.github.io/EDA/corner_stitching/</guid>
       <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點：
  能明確表現free space 將cell組織在一起  而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。
 Introduction Existing Mechanisms 這邊介紹一些現有的結構
@@ -35,10 +35,10 @@ Neighbor Pointers</description>
     
     <item>
       <title>玉山記行</title>
-      <link>https://example.com/%E9%81%8A%E8%A8%98/MtJade/</link>
+      <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtJade/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/%E9%81%8A%E8%A8%98/MtJade/</guid>
+      <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtJade/</guid>
       <description>&lt;h1 id=&#34;2020春玉山-進退之間的殘念之旅&#34;&gt;2020春玉山-進退之間的殘念之旅&lt;/h1&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
@@ -77,10 +77,10 @@ Neighbor Pointers</description>
     
     <item>
       <title>京アニ放火事件 献花台がつなぐ思い</title>
-      <link>https://example.com/news/Thought-TUNAGU-with-Bouquets/</link>
+      <link>https://take72k.github.io/news/Thought-TUNAGU-with-Bouquets/</link>
       <pubDate>Fri, 06 Sep 2019 16:34:34 +0000</pubDate>
       
-      <guid>https://example.com/news/Thought-TUNAGU-with-Bouquets/</guid>
+      <guid>https://take72k.github.io/news/Thought-TUNAGU-with-Bouquets/</guid>
       <description>from NHK web https://www3.nhk.or.jp/news/html/20190902/k10012059881000.html
   日本だけでなく世界中の人たちが途絶えることなく、連日、そこを訪れていました。 京都市の京都アニメーションの第１スタジオ近くに設置された献花台です。事件２日後から撤去される８月25日までの37日間、亡くなった人たちとファンの思いをつなぐ場所になっていました。 追悼の祈り、感謝の気持ち、再興への願いなど、献花台には訪れた人たちのさまざまな思いがありました。（取材班記者 谷口碧 海老塚恵 新地生佳）
  不僅日本、來自世界各地的人不曾停止造訪那個地方。 那裡是京都市京都動畫公司第一工作室附近設置的獻花台。自事件發生後兩日開始到8月25日撤除的37日間，成為聯繫故人與愛好者思念的地方。 追悼的祈禱、感激的心情、復興的願望&amp;hellip;&amp;hellip;獻花台承載著到訪者各式各樣的想法。（取材班記者 谷口碧 海老塚恵 新地生佳）
@@ -99,10 +99,10 @@ Neighbor Pointers</description>
     
     <item>
       <title>雪山記行</title>
-      <link>https://example.com/%E9%81%8A%E8%A8%98/MtSylvia/</link>
+      <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtSylvia/</link>
       <pubDate>Fri, 16 Aug 2019 22:37:00 +0000</pubDate>
       
-      <guid>https://example.com/%E9%81%8A%E8%A8%98/MtSylvia/</guid>
+      <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtSylvia/</guid>
       <description>&lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://1.bp.blogspot.com/-XZ-PHuMcB38/XVbF-o9wYhI/AAAAAAAAI-4/kdz_OOI-wawS99bQmdA9AldYDfePQWJdQCKgBGAs/s1600/DSCPDC_0002_BURST20190813051651683.JPG&#34; &gt;
@@ -124,10 +124,10 @@ Neighbor Pointers</description>
     
     <item>
       <title>【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯</title>
-      <link>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</link>
+      <link>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</link>
       <pubDate>Mon, 22 Jul 2019 22:16:24 +0000</pubDate>
       
-      <guid>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</guid>
+      <guid>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</guid>
       <description>バベルシティ・グレイス(Babel City Grace) 歌：アンティーカ作詞：真崎エリカ 作曲／編曲：南田健吾
 專輯封面
  https://www.ptt.cc/bbs/IdolMaster/M.1563804987.A.075.html 也有發在ptt版上 [name=take]
@@ -142,10 +142,10 @@ Neighbor Pointers</description>
     
     <item>
       <title>在Window上安裝mecab-ipadic-NEologd</title>
-      <link>https://example.com/NLP/install-mecab-ipadic-neologd-windows/</link>
+      <link>https://take72k.github.io/NLP/install-mecab-ipadic-neologd-windows/</link>
       <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
       
-      <guid>https://example.com/NLP/install-mecab-ipadic-neologd-windows/</guid>
+      <guid>https://take72k.github.io/NLP/install-mecab-ipadic-neologd-windows/</guid>
       <description>在Window上安裝mecab-ipadic-NEologd 今天的主角:ipadic萬能擴充包
 首先看了一下ReadMe，並沒有提到windows的安裝方法。 但這時可以注意到有ubuntu系統的指示，OK&amp;mdash;
  On Ubuntu  $ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file$ cd mecab-ipadic-neologd$ ./bin/install-mecab-ipadic-neologd -n在windows要怎麼弄來Ubuntu？   VMBox BJ4
@@ -159,10 +159,10 @@ $ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-uti
     
     <item>
       <title>垂降授課</title>
-      <link>https://example.com/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</link>
+      <link>https://take72k.github.io/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</guid>
+      <guid>https://take72k.github.io/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</guid>
       <description>垂降授課 垂降四要素 垂降者、垂降繩、固定點、確保
 垂降繩結   雙八結(Figure-eight loop knot) 功能：連結勾環、固定點 打法：直接、回穿 別稱：弗萊明圈結(Flemish loop)
   丁字褲、四角褲 功能：以扁帶打結包覆臀部、代替安全吊帶 注意： 跪姿打才能完整包覆身體 扁帶不要扭繩以免有空隙
@@ -177,10 +177,10 @@ $ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-uti
     
     <item>
       <title>D/zeal 主演廣播劇 天国の鳥 中文翻譯</title>
-      <link>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</link>
+      <link>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</guid>
+      <guid>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</guid>
       <description>D/zeal 主演廣播劇 天国の鳥 中文翻譯 tags: ミリシタ 偶像大師
 
 叢林入口
@@ -192,10 +192,10 @@ Freezing 司儀 第九屆百萬夢想鋼琴比賽，參賽者15號、最上靜�
     
     <item>
       <title>移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性</title>
-      <link>https://example.com/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</link>
+      <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</guid>
+      <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</guid>
       <description>移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性:―10年間の縦断的資料に基づいて―  巽申直(茨城大学)、野村知弘(水戸市立見川小学校)、村山勤治(滋賀大学)、小田佳子(金沢大学大学院)、富樫泰一(茨城大学)、服部恒明(茨城大学) Article
  摘要 這篇論文的目的為分析全日本劍道選手權優勝者宮崎正裕先生的動作。使用二元線性直接轉換法，追蹤測量選手的運動。 這使我們能夠分析兩者在試合間的距離(間合)。 分布曲線顯示出兩種主要的間合類型：鍔迫り合い、一足一刀。經分析了47場試合(1990-1999)，我們歸納出：
  宮崎先生的鍔迫り合い、一足一刀出現率為低相關，與大部分選手相同。 從一足一刀發動的攻擊及防守動作數高於其他選手。 在一足一刀的對抗時間顯低於其他選手。亦即其初始攻擊動作遠早於其他選手。 宮崎先生的一足一刀百分比逐年上升，但自一足一刀發動的攻擊數逐年減少。  </description>
@@ -203,10 +203,10 @@ Freezing 司儀 第九屆百萬夢想鋼琴比賽，參賽者15號、最上靜�
     
     <item>
       <title>上段の構えからの剣道打撃動作における指力の発揮過程の分析</title>
-      <link>https://example.com/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</link>
+      <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</link>
       <pubDate>Thu, 10 Aug 2017 19:09:55 +0000</pubDate>
       
-      <guid>https://example.com/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</guid>
+      <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</guid>
       <description>&lt;h1 id=&#34;上段の構えからの剣道打撃動作における指力の発揮過程の分析&#34;&gt;上段の構えからの剣道打撃動作における指力の発揮過程の分析&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;林 邦夫、堀山 健治、山本 高司
@@ -220,10 +220,10 @@ Freezing 司儀 第九屆百萬夢想鋼琴比賽，參賽者15號、最上靜�
     
     <item>
       <title>武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證</title>
-      <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</link>
+      <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</link>
       <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
       
-      <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
+      <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
       <description>感覺有點失去了對人類的信任，經費見底了是吧。 為什麼納村有時有帶套，有時卻是沒帶套(手套)，這樣還要用魔彈，倫理上大丈夫？
 手套就是你的金鐘罩啊、納村大大！
 沒帶套的作品也能在台灣合法收看 
@@ -248,10 +248,10 @@ BTW，無雙返SHI是神道無念流 立居合 的 七本目。 ↓右片手で�
     
     <item>
       <title>武装少女マキャヴェリズム 第七節 妖しき刃「眠目さとり」心得、考證加秘密遊戲</title>
-      <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</link>
+      <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</link>
       <pubDate>Sat, 20 May 2017 19:04:23 +0000</pubDate>
       
-      <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</guid>
+      <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</guid>
       <description>先大略講一下心得，老實說這集我看的不是很愉快，只畏浮雲遮望眼、不緣身在最高層。  我說那個聖光也太亮了吧！ 還有那個霧氣，濃霧請開燈？ 如果有一天巴哈推出付費去聖光的服務，就算是以集為單位收費我也肯付。
 撇除聖光的問題不談，主要是戰鬥的這集可說是一高潮，綜合來看名字常被打錯的佐鳥醬實力不下於大師傅，又在有主場優勢的女子浴場對上納村，對魔彈射手可說是一場苦戰。 被一陣吊打之後，納村終於領悟「欲練神功，必先自●」的道理，忍痛斬下●●習得「賢者模式、常時發動」的技能(誤)，受到此決心震驚的佐烏方寸大亂，輸了決鬥。
 同胞們，為犧牲的烈士納村默哀吧！
@@ -269,10 +269,10 @@ WHAT IS KEISIRYU? KEISIRYU is Meiji 10-nendai ni keishichou de seitei sa reta bu
     
     <item>
       <title>武装少女マキャヴェリズム 第三節 麗しき刃「亀鶴城メアリ」心得0考證</title>
-      <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</link>
+      <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</link>
       <pubDate>Thu, 20 Apr 2017 21:38:02 +0000</pubDate>
       
-      <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</guid>
+      <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</guid>
       <description>重音在前的納村：7000單。指考必備。每天三十分鐘 
 閃光的メアリ：va te faire foutre(f**k you)、太沉重了、指考戰士的威壓。五劍之二的メアリ在與納村的單挑中被推倒，正所謂將軍百戰一發藝、大蛇倒爬屋薩斯，Merry 南無觀世IN PUT薩。 (累積那個發烏干達‧U‧烏薩斯 再次滿血挑戰大魔王 納村，納村使出鞭劍雙絕、一手白蟒鞭克制 累積那個發烏干達、一腿隕鐵黑蟒劍打得屋薩斯 嫑嫑，不在話下。) 
 另外可喜可賀的是，月夜師父終於歸位，開始解說。 
@@ -291,10 +291,10 @@ WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier {%youtube nZSG
     
     <item>
       <title>武装少女マキャヴェリズム 第二話「貞淑寮」騒乱 心得微考證</title>
-      <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</link>
+      <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</link>
       <pubDate>Sat, 15 Apr 2017 13:52:32 +0000</pubDate>
       
-      <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
+      <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
       <description>不道：達美樂打了沒(We&amp;rsquo;re THE 單身狗!!)，外送啦！ 
 輪：找飯店？TRIVAGO，想出校門？IMPOSSIBLE
 經過這一集，五劍首席的輪正式被推倒，象徵著共生學園戰國時代的來臨。
@@ -315,10 +315,10 @@ WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier {%youtube nZSG
     
     <item>
       <title>武装少女マキャヴェリズム 第一話 素晴らしき刃「鬼瓦輪」心得加考證(?)</title>
-      <link>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</link>
+      <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</link>
       <pubDate>Sat, 08 Apr 2017 16:09:47 +0000</pubDate>
       
-      <guid>https://example.com/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</guid>
+      <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</guid>
       <description>第一話 素晴らしき刃「鬼瓦輪」心得加考證(?) 食指向上畫半圓 感覺劍術的部分沒有很好的做出來，鍾愛短劍流的術理解說也沒有出現在漫畫裡，不知道單行本會不會有，只能自己先考證看看。 總之，妹子很可愛，op也好聽，但… 打鬥不差，但是也沒有到極好，本來這部作品應該就是史實打鬥的後宮肉番，但是關鍵的龍尾啊圓連啊竟然用殘影&amp;amp;快轉帶過… 還有橫一文字的地方，動畫沒有做出納村的突進動作，腦袋搬家云云，就有點突兀。 不要以為只要加上一個中二招式名就是劍術啊製作組。 (第二個)總之，能聽到輪(高田優希)的叫喊，好爽……看來twitter上說有去考證過是千真萬確的。
 竜尾　十（韜）之形　一本目左、二本目右 攻擊龍首就會被龍尾反擊、攻擊龍尾就會被龍首攻擊。 誘使對手打擊，利用對手力量的反擊技，應該就像劍道的應擊。 重點大概在輕輕的擋、快速的返之間的手之內。
 曲尺　十（韜）之形　十三本目 伸縮自如的橡膠劍(X)，捲尺般縱橫無盡的攻守、讀距離。 重點在使對手無意間踏入攻擊距離的「誘」，以及心中存在的距離感。 實務上是利用巧妙的步距差來掌握彼此的節奏——小步、小步、大步、大步，在對手踏步追上、腳抬起時揮出難以閃避的一擊。 間合的判讀是重點。
@@ -331,20 +331,20 @@ WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier {%youtube nZSG
     
     <item>
       <title>再開</title>
-      <link>https://example.com/uncategorized/ry/</link>
+      <link>https://take72k.github.io/uncategorized/ry/</link>
       <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/uncategorized/ry/</guid>
+      <guid>https://take72k.github.io/uncategorized/ry/</guid>
       <description>再開通知 HEXO是高一時某生活科技老師介紹的「神奇網頁生成器」，作為作業每人都在學校網域發布了一個頁面。 最近因為一個契機回去看了一下，發現原本帳號已經登不進去ㄌwww，總之就先搬運到GITHUB PAGE上。
 孤獨的大學生應該很有機會寫一堆廢文，總之夜露死苦。</description>
     </item>
     
     <item>
       <title>刃鳴散らす</title>
-      <link>https://example.com/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</link>
+      <link>https://take72k.github.io/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</link>
       <pubDate>Sun, 22 Jan 2017 21:08:05 +0000</pubDate>
       
-      <guid>https://example.com/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</guid>
+      <guid>https://take72k.github.io/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</guid>
       <description>刃鳴散、以及其中的刈包流劍術 
 緣起  [【ゆっくり語り】ゲームの剣術は真人間には可能か挑む【五刀目】]&amp;gt; (https://www.nicovideo.jp/watch/sm23573301) ニコニコ不能嵌入==，幸好作者之後也放了水管版。{%youtube RwCo9IVzfaE%}
  總之，有一天在逛ニコニコ時看到了這個系列&amp;hellip; 「嗯？好像很有趣喔？」地想著，就弄了這遊戲來玩。 對日文程度也是相當地挑戰XD。內容  『刃鳴散らす』（はなちらす）は、ニトロプラスが2005年9月30日に発売したアダルトゲーム。 21世紀の架空の日本帝国を舞台とした剣劇アドベンチャーで、発売前には『テックジャイアン』2005年9月号を皮切りにアダルトゲーム専門誌で紹介されている。ゲーム以外にも短編小説の「枝篇 刃鳴散らす」が『ザ・スニーカー』に2005年06月号より全3回で連載されていた。
@@ -360,10 +360,10 @@ WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier {%youtube nZSG
     
     <item>
       <title>遊記 京都</title>
-      <link>https://example.com/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</link>
+      <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</link>
       <pubDate>Mon, 01 Aug 2016 11:00:41 +0000</pubDate>
       
-      <guid>https://example.com/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</guid>
+      <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</guid>
       <description>&lt;p&gt;&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://i.imgur.com/YNLHdmn.jpg&#34; &gt;
@@ -382,10 +382,10 @@ WMAW 2011 - Spanish vs Italian Rapier&amp;mdash;-HEMA中的rapier {%youtube nZSG
     
     <item>
       <title>升段</title>
-      <link>https://example.com/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</link>
+      <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</link>
       <pubDate>Sun, 26 Jun 2016 18:00:41 +0000</pubDate>
       
-      <guid>https://example.com/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</guid>
+      <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</guid>
       <description>審查通過，論文還是現場抄的。 劍道型沒出錯、對打也還可，所以應該過八。</description>
     </item>
     
