@@ -16,11 +16,14 @@ Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by 
 <meta property='og:url' content='https://take72k.github.io/EDA/cplexTroubleshooting/'>
 <meta property='og:site_name' content='竹林七閒'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:published_time' content='2021-08-30T05:20:00&#43;00:00'/><meta property='article:modified_time' content='2021-08-30T05:20:00&#43;00:00'/>
-<meta name="twitter:title" content="trouble shooting of Concert exception--has not been extracted by IloAlgorithm">
+<meta name="twitter:site" content="@hyes94107">
+    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="trouble shooting of Concert exception--has not been extracted by IloAlgorithm">
 <meta name="twitter:description" content="CPLEX最佳化： VAR has not been extracted 問題 在練習用cplex解placement位移最佳化時，雖然算出了object value，卻因為exception無法檢視值。
 Concert exception caught: IloExtractable 9 IloNumVarI has not been extracted by IloAlgorithm 0x212faf0 原因 變數沒有放入objective function或costraint，因此根本沒有被algorithm算到，何來有解而能取出？
 解法 重新檢視objective function的寫法，注意所有解的變數均應涵蓋。
 須注意將變數乘以0的操作一樣會導致這個例外，因為等於那個變數變成don&amp;rsquo;t care。">
+    <link rel="shortcut icon" href="/ico/sword.png" />
+
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
