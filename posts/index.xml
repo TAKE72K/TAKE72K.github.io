@@ -6,7 +6,17 @@
     <description>Recent content in Posts on 竹林七閒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 30 Aug 2021 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Sep 2021 11:17:09 +0800</lastBuildDate><atom:link href="https://take72k.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Saraba</title>
+      <link>https://take72k.github.io/uncategorized/saraba/</link>
+      <pubDate>Fri, 03 Sep 2021 11:17:09 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/uncategorized/saraba/</guid>
+      <description>再會啦 HEXO 因應npm更新等問題，本站改由hugo產生。
+再見了，Hexo.Next。</description>
+    </item>
+    
     <item>
       <title>trouble shooting of Concert exception--has not been extracted by IloAlgorithm</title>
       <link>https://take72k.github.io/EDA/cplexTroubleshooting/</link>
