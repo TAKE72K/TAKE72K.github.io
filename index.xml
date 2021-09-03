@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>竹林七閒</title>
+        <title>竹林七閑</title>
         <link>https://take72k.github.io/</link>
-        <description>Recent content on 竹林七閒</description>
+        <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 03 Sep 2021 11:17:09 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 03 Sep 2021 11:22:51 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>矮人要塞教程／參考資料 中文翻譯</title>
+        <link>https://take72k.github.io/DwarfFortress/tutorialIdex/</link>
+        <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/DwarfFortress/tutorialIdex/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;矮人要塞是我見過一款最不可思議的遊戲，簡樸的外表下潛藏著無比豐富而真實的內容，與其說是遊戲，玩家更像是在譜寫敘事詩的矮人祖靈&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;翻譯教程&#34;&gt;翻譯教程&lt;/h2&gt;
+&lt;h3 id=&#34;peridexiserrants-df-walkthroughhttpsdf-walkthroughreadthedocsioenlatest系列&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PeridexisErrant’s DF Walkthrough&lt;/a&gt;系列&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WIP&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Peridexis Errant是維護新手包的大佬，他寫的Walkthrough可說是一步一腳印，補齊所有DF裡的基礎常識。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>Saraba</title>
         <link>https://take72k.github.io/uncategorized/saraba/</link>
         <pubDate>Fri, 03 Sep 2021 11:17:09 +0800</pubDate>
