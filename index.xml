@@ -149,14 +149,16 @@
 &lt;p&gt;你可以繼續四處探索，在前進下一章之前先回到108層，並找到貨車。下圖可以幫你了解你在看什麼。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-unit-detail.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-unit-detail.png&#34;
+	&lt;a href=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-unit-detail.png&#34; &gt;
+		&lt;img src=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-unit-detail.png&#34;
 			
 			
 			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;圖標解釋&#34;&gt;
 	&lt;/a&gt;
+	
+	&lt;figcaption&gt;圖標解釋&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;h2 id=&#34;四開挖囉&#34;&gt;四、開挖囉！&lt;/h2&gt;
@@ -176,8 +178,10 @@
 			
 			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;挖掘的游標&#34;&gt;
 	&lt;/a&gt;
+	
+	&lt;figcaption&gt;挖掘的游標&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -191,8 +195,10 @@
 			
 			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;挖掘走道&#34;&gt;
 	&lt;/a&gt;
+	
+	&lt;figcaption&gt;挖掘走道&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;/li&gt;
@@ -209,8 +215,10 @@
 			
 			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;挖房間&#34;&gt;
 	&lt;/a&gt;
+	
+	&lt;figcaption&gt;挖房間&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;看看這些小小矮人，太勤勞了吧！他們會快速的挖掘、將一堆泥土拋在腦後。好樣的，接下來先讓他們工作一下，我們還有其他事要辦。&lt;/p&gt;
@@ -267,25 +275,21 @@
 			
 			
 			loading=&#34;lazy&#34;
-			&gt;
+			alt=&#34;農場設置&#34;&gt;
 	&lt;/a&gt;
+	
+	&lt;figcaption&gt;農場設置&lt;/figcaption&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;按下&lt;code&gt;Enter&lt;/code&gt;，綠色網格就會變成閃爍的棕色標記。當標記在閃爍，便代表矮人正準備過來施工。看！一個農夫過來建造農田了！&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-farm-build.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-farm-build.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-farm-build.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-farm-build.png&#34; loading=&#34;lazy&#34; alt=&#34;農場施工中&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;他需要一些時間建造我們的農場，當你看到他跑開，便代表完成了。現在，讓我們來設定種植作物，讓農場一整年種植好吃的肉盔菇。&lt;/p&gt;
@@ -295,45 +299,27 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;可以注意到到右邊已經顯示了跟田相關的細節，像這樣：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-crop-select.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-crop-select.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;我們要做的是將&lt;code&gt;Plump helmets&lt;/code&gt;(肉盔菇)設為一年四季的種植作物。你可以看到選單右上有多種可以嘗試種植的植物、中間則顯示不同季節。現在選取的是&lt;code&gt;Dimple cups&lt;/code&gt;而季節是春天，我們得改一下設定。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;這時需要一個重要的技巧：捲動選單！用&lt;code&gt;=&lt;/code&gt;(而不是方向鍵)往下到&lt;code&gt;Plump helmets&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;，你應該能看到選項圖出顯示。順帶一提，&lt;code&gt;-&lt;/code&gt;/&lt;code&gt;=&lt;/code&gt;是捲動選單的方法，DF通常用&lt;code&gt;-&lt;/code&gt;/&lt;code&gt;+&lt;/code&gt;，但有些鍵盤必須一直按&lt;code&gt;shift&lt;/code&gt;，所以改成這樣。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;注意我們現在只設定了春季，該來設定夏、秋、冬了。按&lt;code&gt;b&lt;/code&gt;來切換到夏季選單，並捲動選單到&lt;code&gt;Plump helmets&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;，按&lt;code&gt;c&lt;/code&gt;切換到秋季並選取&lt;code&gt;Plump helmets&lt;/code&gt;，冬季則是按&lt;code&gt;d&lt;/code&gt;，其他的操作依此類推。你可能注意到了美紀可以種植不同的作物，但現在還不用擔心這個。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;按&lt;code&gt;Esc&lt;/code&gt;來離開選單回到主畫面，你的矮人很快就會開始種植了，做得好！&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-crop-select.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-crop-select.png&#34; loading=&#34;lazy&#34; alt=&#34;田種植選單&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;我們要做的是將&lt;code&gt;Plump helmets&lt;/code&gt;(肉盔菇)設為一年四季的種植作物。你可以看到選單右上有多種可以嘗試種植的植物、中間則顯示不同季節。現在選取的是&lt;code&gt;Dimple cups&lt;/code&gt;而季節是春天，我們得改一下設定。&lt;/li&gt;
+&lt;li&gt;這時需要一個重要的技巧：捲動選單！用&lt;code&gt;=&lt;/code&gt;(而不是方向鍵)往下到&lt;code&gt;Plump helmets&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;，你應該能看到選項圖出顯示。順帶一提，&lt;code&gt;-&lt;/code&gt;/&lt;code&gt;=&lt;/code&gt;是捲動選單的方法，DF通常用&lt;code&gt;-&lt;/code&gt;/&lt;code&gt;+&lt;/code&gt;，但有些鍵盤必須一直按&lt;code&gt;shift&lt;/code&gt;，所以改成這樣。&lt;/li&gt;
+&lt;li&gt;注意我們現在只設定了春季，該來設定夏、秋、冬了。按&lt;code&gt;b&lt;/code&gt;來切換到夏季選單，並捲動選單到&lt;code&gt;Plump helmets&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;，按&lt;code&gt;c&lt;/code&gt;切換到秋季並選取&lt;code&gt;Plump helmets&lt;/code&gt;，冬季則是按&lt;code&gt;d&lt;/code&gt;，其他的操作依此類推。你可能注意到了美紀可以種植不同的作物，但現在還不用擔心這個。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;Esc&lt;/code&gt;來離開選單回到主畫面，你的矮人很快就會開始種植了，做得好！&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;現在我們有了一片田，矮人們應該不會飢荒、陷入瘋狂然後吃老鼠、或吃矮人。很快你的土裡便會種滿種子，看起來像這樣：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-crop-planting.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-crop-planting.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-crop-planting.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-crop-planting.png&#34; loading=&#34;lazy&#34; alt=&#34;田的樣子&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;p&gt;對了，你或許發現了畫面底部閃過的公告，這通常是遊戲想讓你知道一些重要的事件發生了。你可以按下空白鍵繼續遊戲，或按&lt;code&gt;a&lt;/code&gt;來仔細看這些通知與警告，按&lt;code&gt;Esc&lt;/code&gt;可以回到主畫面。&lt;/p&gt;
 &lt;h2 id=&#34;七倉庫&#34;&gt;七、倉庫&lt;/h2&gt;
 &lt;p&gt;你可以讓矮人散落在各地，但也可以讓他們集中一點來增加效率。你可能注意到農夫會跑進跑出來拿種子。(當他們的標示和紅點(代表種子)閃爍時就是在拿種子)&lt;/p&gt;
@@ -356,18 +342,12 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;過不了幾秒沒事的矮人便會開始將食物運入，你可以看到木桶與袋子被搬運，很快地倉庫就會變成這樣：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-first-stockpiles.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-first-stockpiles.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-first-stockpiles.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-first-stockpiles.png&#34; loading=&#34;lazy&#34; alt=&#34;第一個倉庫&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;要塞裡還沒有多少房間，因此倉庫就先這樣。未來你會到處設置倉庫來管理生產與資源收集，現在這樣就夠好了。你已經設置了倉庫、讓樹被砍倒、收集植物、並知道如何挖些東西，可以說好的開始是成功的一半吧！&lt;/p&gt;
