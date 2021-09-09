@@ -6,7 +6,20 @@
     <description>Recent content in Walkthrough on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 03 Sep 2021 13:11:15 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/Walkthrough/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 11:17:08 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/Walkthrough/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>矮人要塞Walkthrough教程：第二章、工坊，家具與階梯</title>
+      <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging/</link>
+      <pubDate>Thu, 09 Sep 2021 11:17:08 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging/</guid>
+      <description>貳、工坊、家具與階梯 讓我們繼續矮人要塞的奇妙旅程吧！在這一章我們將設置一些工坊，並為矮人挖出更多空間。要做的事很多，快開始挖吧！
+一、建造工坊 工坊可以說是矮人要塞的核心內容，讓我們好好地掌握它吧。工坊是矮人工作的地方，通常會用於將基本而原始的材料，製作成有用的物品。要叫出工坊的選單有點麻煩(按b然後w)，但別擔心，我們只要按一兩次。
+首先我們需要的是木匠工坊(carpenter’s workshop)，在這裡可以用原木製成家具或其他物品。你應該有看到要塞前面散落著木頭，那是伐木工砍倒樹之後放置在那的。我們還沒設置木頭的倉庫，如你所知。
+理想上我們會將木匠工坊放在要塞裡面，但既然還沒有挖出一個適合的空間，就暫且建在要塞外吧：
+ 移動視角到要塞前方。 按b進入建築物選單(Building)，w進入工坊子選單(Workshops)。你也可以用=捲動到Workshops後按Enter。   </description>
+    </item>
+    
     <item>
       <title>矮人要塞Walkthrough教程：第一章、整裝待發</title>
       <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting/</link>
