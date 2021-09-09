@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 03 Sep 2021 13:11:15 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Sep 2021 11:17:08 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教程／參考資料 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIdex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -23,9 +23,25 @@
 &lt;/blockquote&gt;
 &lt;p&gt;Peridexis Errant是維護新手包的大佬，他寫的Walkthrough可說是一步一腳印，補齊所有DF裡的基礎常識。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt; (完成)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging&#34; &gt;貳、工坊、家具與階梯&lt;/a&gt; (施工)&lt;/li&gt;
+&lt;li&gt;參、從洞窟到家園&lt;/li&gt;
+&lt;li&gt;肆、幾乎上軌道了！&lt;/li&gt;
+&lt;li&gt;伍、工業革命&lt;/li&gt;
+&lt;li&gt;陸、陷阱！&lt;/li&gt;
+&lt;li&gt;柒、貴族&lt;/li&gt;
+&lt;li&gt;捌、軍隊與兵士&lt;/li&gt;
+&lt;li&gt;玖、弓兵與野獸、哥布林控制&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+        </item>
+        <item>
+        <title>貳、工坊、家具與階梯</title>
+        <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging/</link>
+        <pubDate>Thu, 09 Sep 2021 11:17:08 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging/</guid>
+        <description></description>
         </item>
         <item>
         <title>第一章 整裝待發</title>
@@ -33,7 +49,7 @@
         <pubDate>Fri, 03 Sep 2021 13:11:15 +0800</pubDate>
         
         <guid>https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting/</guid>
-        <description>&lt;h1 id=&#34;壹整裝待發&#34;&gt;壹、整裝待發&lt;/h1&gt;
+        <description>&lt;img src="https://take72k.github.io/images/01-local-area.png" alt="Featured image of post 第一章 整裝待發" /&gt;&lt;h1 id=&#34;壹整裝待發&#34;&gt;壹、整裝待發&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文翻譯或改寫自&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/chapters/chap01-setup-starting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PeridexisErrant’s DF Walkthrough&lt;/a&gt;，並在相同License下發布&lt;/p&gt;
@@ -106,61 +122,35 @@
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;現在我們真正進入狀況了！很快你就可以用岩漿瀑布歡迎你的敵人，把哥布林困在美的令人窒息的致命陷阱裡。但在那之前，我們先四處看看。用方向鍵移動區域地圖，你可以發現我們有一塊合適的地方來開始工作。&lt;/p&gt;
 &lt;p&gt;當你查看周遭時應該能輕易認出樹幹以及包圍著它們的草地，一些池塘(結冰)、溪流以及灌木叢。還有一些沒那麼直觀的，例如表示空無一物(open air spaces)的神祕區域──淡藍色或點狀材質、地面──棕色材質、斜坡(slope or ramp)──像上的箭頭。如圖所示：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl108.png&#34; &gt;
-		&lt;img src=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl108.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-features-lvl108.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-features-lvl108.png&#34; loading=&#34;lazy&#34; alt=&#34;108層的東西&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;p&gt;建立這些概念最重要的是去理解：矮人要塞是一款以2D地圖表示的3D遊戲，為了表示不同的高度，而照著Z軸將整個世界分割成無數剖面。&lt;/p&gt;
 &lt;p&gt;看一下畫面底部，會寫著我們目前的高度：108。你可以藉由&lt;code&gt;&amp;lt;&lt;/code&gt;來增加高度、&lt;code&gt;&amp;gt;&lt;/code&gt;來減少高度。試試看往上一層，畫面應該會變成這樣。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl109.png&#34; &gt;
-		&lt;img src=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl109.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-features-lvl109.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-features-lvl109.png&#34; loading=&#34;lazy&#34; alt=&#34;109層的東西&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;p&gt;你會發現那些黑色的泥土現在是草與樹了，這就像是我們的電梯上升了一層。所以我們看到的不再是斜坡，而是一片平坦的草地，而我們的下方是開放空間與樹頂。到這邊還算合理吧？現在讓我們回去108層，並向下到地平面下的107。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl107.png&#34; &gt;
-		&lt;img src=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-features-lvl107.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			&gt;
-	&lt;/a&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-features-lvl107.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-features-lvl107.png&#34; loading=&#34;lazy&#34; alt=&#34;107層的東西&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;p&gt;你的視野應該會變成這個樣子，我們現在在地下，並且被土壤、泥巴與池子、樹根環繞著。你可能有發現池子看起來沒有變，但不用太疑惑。在這層看到的池子會和上層的一樣，是因為現在我們與池子位於同一水平面，而在上一層我們其實像是在高一點的岸邊向下看。&lt;/p&gt;
 &lt;p&gt;你可以繼續四處探索，在前進下一章之前先回到108層，並找到貨車。下圖可以幫你了解你在看什麼。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-unit-detail.png&#34; &gt;
-		&lt;img src=&#34;https://df-walkthrough.readthedocs.io/en/latest/_images/01-unit-detail.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;圖標解釋&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;圖標解釋&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-unit-detail.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-unit-detail.png&#34; loading=&#34;lazy&#34; alt=&#34;圖標解釋&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;h2 id=&#34;四開挖囉&#34;&gt;四、開挖囉！&lt;/h2&gt;
 &lt;p&gt;接下來要幹啥？在DF中我們的目標通常是建立與維持一個由許多矮人組成的繁榮社會，並且抵禦哥布林、實現貴族們靈機一動的想法、或是對付其他的邪惡生物。而第一步便是為矮人打造一座巨大的要塞──最好是地下的！準備找一面懸崖挖進去，並讓好戲上場吧！&lt;/p&gt;
 &lt;p&gt;如果你用方向鍵從矮人所在的地方向西(左)走，你會看到一面不錯的牆面。我們先挖出一個洞口來為向下挖掘做準備，之後慢慢深入到安全又舒適的地下。首先，將我們要挖掘的地方在視野裡置中(如下圖所示)，準備好了以後：&lt;/p&gt;
@@ -170,57 +160,33 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;將游標移動到崖面邊緣，像這樣：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-dig-cursor.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-dig-cursor.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;挖掘的游標&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;挖掘的游標&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-dig-cursor.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-dig-cursor.png&#34; loading=&#34;lazy&#34; alt=&#34;挖掘的游標&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;接下來按下&lt;code&gt;Enter&lt;/code&gt;並用方向鍵向下移動游標，你會看到剛剛按Enter的位置正在閃爍。這會標記你的矮人子民開始挖的位置。向左移動約20格並向上3格，再按一次&lt;code&gt;Enter&lt;/code&gt;，現在你的畫面應該長這樣：&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-dig-hallway.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-dig-hallway.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;挖掘走道&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;挖掘走道&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-dig-hallway.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-dig-hallway.png&#34; loading=&#34;lazy&#34; alt=&#34;挖掘走道&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;畫面中棕色區域表示礦工將挖掘的位置，但在離開選單前他們暫時不會行動，因為在&lt;code&gt;Designations&lt;/code&gt;設計選單中遊戲將自動暫停。按下&lt;code&gt;Esc&lt;/code&gt;來解除自動暫停，並使選單回到上一頁也就是主選單。對了，當你在&lt;code&gt;d&lt;/code&gt;選單裡的時候，其實也可以用滑鼠來指定要挖的部分──有些人比較喜歡這種方法。&lt;/p&gt;
 &lt;p&gt;取消暫停之後，你應該可以看到兩個矮人衝向山壁開始挖掘。在我們的洞穴入口成形的同時，我們也該來想想如何建出喜愛岩石與大地的矮人生活的房間。&lt;/p&gt;
 &lt;p&gt;目前我們還不用打造完美的要塞或固若金湯的入口，而僅僅需要簡單地勾勒出生活空間！兒所需要的便是與入口連接的三到四個房間。&lt;/p&gt;
 &lt;p&gt;試看看能不能用待挖掘的標記，畫出跟下圖一樣的設計──跟前面的操作相同。如果不小心畫錯了，你可以在&lt;code&gt;Designations&lt;/code&gt;(按鍵&lt;code&gt;d&lt;/code&gt;)設計選單下按&lt;code&gt;x&lt;/code&gt;來選取&lt;code&gt;Remove Designation&lt;/code&gt;。現在，你按下&lt;code&gt;Enter&lt;/code&gt;所選取區域裡的挖掘記號都會消失。總之，繼續挖房間吧！&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-dig-rooms.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-dig-rooms.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;挖房間&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;挖房間&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-dig-rooms.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-dig-rooms.png&#34; loading=&#34;lazy&#34; alt=&#34;挖房間&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;p&gt;看看這些小小矮人，太勤勞了吧！他們會快速的挖掘、將一堆泥土拋在腦後。好樣的，接下來先讓他們工作一下，我們還有其他事要辦。&lt;/p&gt;
 &lt;h2 id=&#34;五拔草砍樹&#34;&gt;五、拔草、砍樹&lt;/h2&gt;
 &lt;p&gt;土壤和岩石很好用，但要造一張溫暖的床，還是木材最適合，但我們現在有點缺&amp;hellip;&amp;hellip;。要獲得木材，我們必須砍倒一些樹，也因此我們必須畫出區域來標記要砍伐的樹。讓我們先清除入口前的樹吧。&lt;/p&gt;
@@ -267,20 +233,12 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;用方向鍵移動網格，直到它的位置跟截圖一樣。如果你的大小錯了，&lt;code&gt;h&lt;/code&gt;跟&lt;code&gt;m&lt;/code&gt;可以縮小網格。&lt;/p&gt;
-&lt;p&gt;&lt;figure 
-	&gt;
-	&lt;a href=&#34;https://take72k.github.io/images/01-farm-plot.png&#34; &gt;
-		&lt;img src=&#34;https://take72k.github.io/images/01-farm-plot.png&#34;
-			
-			
-			
-			loading=&#34;lazy&#34;
-			alt=&#34;農場設置&#34;&gt;
-	&lt;/a&gt;
-	
-	&lt;figcaption&gt;農場設置&lt;/figcaption&gt;
-	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/01-farm-plot.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/01-farm-plot.png&#34; loading=&#34;lazy&#34; alt=&#34;農場設置&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;按下&lt;code&gt;Enter&lt;/code&gt;，綠色網格就會變成閃爍的棕色標記。當標記在閃爍，便代表矮人正準備過來施工。看！一個農夫過來建造農田了！&lt;/p&gt;
