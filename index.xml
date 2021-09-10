@@ -13,7 +13,7 @@
         
         <guid>https://take72k.github.io/DwarfFortress/tutorialIdex/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;矮人要塞是我見過一款最不可思議的遊戲，簡樸的外表下潛藏著無比豐富而真實的內容，與其說是遊戲，玩家更像是在譜寫敘事詩的矮人祖靈&lt;/p&gt;
+&lt;p&gt;矮人要塞(Dwarf Fortress, DF)是我見過一款最不可思議的遊戲，簡樸的外表下潛藏著無比豐富而真實的內容，與其說是遊戲，玩家更像是在譜寫敘事詩的矮人祖靈&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;翻譯教程&#34;&gt;翻譯教程&lt;/h2&gt;
 &lt;h3 id=&#34;peridexiserrants-df-walkthroughhttpsdf-walkthroughreadthedocsioenlatest系列&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -48,10 +48,61 @@
 &lt;p&gt;首先我們需要的是木匠工坊(&lt;code&gt;carpenter’s workshop&lt;/code&gt;)，在這裡可以用原木製成家具或其他物品。你應該有看到要塞前面散落著木頭，那是伐木工砍倒樹之後放置在那的。我們還沒設置木頭的倉庫，如你所知。&lt;/p&gt;
 &lt;p&gt;理想上我們會將木匠工坊放在要塞裡面，但既然還沒有挖出一個適合的空間，就暫且建在要塞外吧：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;移動視角到要塞前方。&lt;/li&gt;
-&lt;li&gt;按&lt;code&gt;b&lt;/code&gt;進入建築物選單(&lt;code&gt;Building&lt;/code&gt;)，&lt;code&gt;w&lt;/code&gt;進入工坊子選單(&lt;code&gt;Workshops&lt;/code&gt;)。你也可以用&lt;code&gt;=&lt;/code&gt;捲動到&lt;code&gt;Workshops&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;移動視角到要塞前方。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按&lt;code&gt;b&lt;/code&gt;進入建築物選單(&lt;code&gt;Building&lt;/code&gt;)，&lt;code&gt;w&lt;/code&gt;進入工坊子選單(&lt;code&gt;Workshops&lt;/code&gt;)。你也可以用&lt;code&gt;=&lt;/code&gt;捲動到&lt;code&gt;Workshops&lt;/code&gt;後按&lt;code&gt;Enter&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你會看到一個工坊的選單，一路延伸到畫面底端。你可以捲動到底部，或按&lt;code&gt;c&lt;/code&gt;來選擇&lt;code&gt;Carpenters workshop&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;放置選單會取代工坊選單出現。綠色的X型網格表示工坊的藍圖，深綠的X則代表建成之後不可通過的區域。注意這點，如果你在封閉空間裡做建設，你可不想把門給堵住。&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-carpenter-place.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-carpenter-place.png&#34; loading=&#34;lazy&#34; alt=&#34;放置選單&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在要塞前方選一個點。在我標的地方附近都可以。選好點之後按&lt;code&gt;Enter&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右邊的選單現在會顯示一串你能用來蓋建築的材料，通常會是一些木材，看起來像這樣：&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-carpenter-material.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-carpenter-material.png&#34; loading=&#34;lazy&#34; alt=&#34;材料選單list of material&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;這邊你可以單純按&lt;code&gt;Enter&lt;/code&gt;並選擇用列表上第一個材料來建造木匠工坊。不過為了增加趣味，按&lt;code&gt;x&lt;/code&gt;展開列表來看看所有可以蓋工坊的材料。展開選單，在你想確實選擇你想用掉的材料時非常有用。大部分時候你可以忽略這步驟，但這個小技巧非常方便。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再按一次&lt;code&gt;x&lt;/code&gt;來收回列表。補充一點，這些材料排列的順序是依照距離工地的距離，矮人走很慢，所以你通常會想用最近的素材來省時間。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按下&lt;code&gt;Enter&lt;/code&gt;選擇材料之後，工坊就會以未建造的形式放在地圖上，像這樣：&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-carpenter-template.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-carpenter-template.png&#34; loading=&#34;lazy&#34; alt=&#34;工坊未建造carpenter-template&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;你的工坊要破土動工了，你得按幾下&lt;code&gt;Esc&lt;/code&gt;來離開選單並解除暫停，只要遊戲重新開始，我保證一個小矮人會飛快地銃項工地並開始建造。你可以按&lt;code&gt;q&lt;/code&gt;並檢視工坊的狀態，如果你手速夠快，你會看到&lt;code&gt;Construction initiated.&lt;/code&gt;(即將開工)。&lt;/p&gt;
+&lt;p&gt;幾秒鐘之後，工坊落成！&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-carpenter-built.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-carpenter-built.png&#34; loading=&#34;lazy&#34; alt=&#34;木匠工坊完工照carpenter-built&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;看起來不起眼，但保證實用！所以讓我們來把一些木材加工成矮人能用的東西吧。別告訴精靈喔，他們超討厭我們砍樹的，那群尖耳混蛋，熔岩淋頭還太便宜他們了！&lt;/p&gt;
 </description>
         </item>
         <item>
