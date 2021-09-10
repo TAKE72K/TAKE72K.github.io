@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <lastBuildDate>Thu, 09 Sep 2021 11:17:08 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>矮人要塞教程／參考資料 中文翻譯</title>
+        <title>矮人要塞教學教程／參考資料 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIdex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
         
@@ -15,13 +15,13 @@
         <description>&lt;blockquote&gt;
 &lt;p&gt;矮人要塞(Dwarf Fortress, DF)是我見過一款最不可思議的遊戲，簡樸的外表下潛藏著無比豐富而真實的內容，與其說是遊戲，玩家更像是在譜寫敘事詩的矮人祖靈&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;翻譯教程&#34;&gt;翻譯教程&lt;/h2&gt;
-&lt;h3 id=&#34;peridexiserrants-df-walkthroughhttpsdf-walkthroughreadthedocsioenlatest系列&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;PeridexisErrant’s DF Walkthrough&lt;/a&gt;系列&lt;/h3&gt;
+&lt;h2 id=&#34;翻譯教學教程資料&#34;&gt;翻譯教學/教程資料&lt;/h2&gt;
+&lt;h3 id=&#34;peridexiserrants-df-walkthroughhttpsdf-walkthroughreadthedocsioenlatest教學系列&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PeridexisErrant’s DF Walkthrough&lt;/a&gt;教學系列&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;WIP&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Peridexis Errant是維護新手包的大佬，他寫的Walkthrough可說是一步一腳印，補齊所有DF裡的基礎常識。&lt;/p&gt;
+&lt;p&gt;Peridexis Errant是維護新手包的大佬，他寫的Walkthrough教學系列可說是一步一腳印，補齊所有DF裡的基礎常識。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt; (完成)&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging&#34; &gt;貳、工坊、家具與階梯&lt;/a&gt; (施工)&lt;/li&gt;
@@ -36,7 +36,7 @@
 </description>
         </item>
         <item>
-        <title>矮人要塞Walkthrough教程：第二章、工坊，家具與階梯</title>
+        <title>矮人要塞Walkthrough教學：第二章、工坊，家具與階梯</title>
         <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging/</link>
         <pubDate>Thu, 09 Sep 2021 11:17:08 +0800</pubDate>
         
@@ -106,12 +106,12 @@
 </description>
         </item>
         <item>
-        <title>矮人要塞Walkthrough教程：第一章、整裝待發</title>
+        <title>矮人要塞Walkthrough教學：第一章、整裝待發</title>
         <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting/</link>
         <pubDate>Fri, 03 Sep 2021 13:11:15 +0800</pubDate>
         
         <guid>https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting/</guid>
-        <description>&lt;img src="https://take72k.github.io/images/01-local-area.png" alt="Featured image of post 矮人要塞Walkthrough教程：第一章、整裝待發" /&gt;&lt;h1 id=&#34;壹整裝待發&#34;&gt;壹、整裝待發&lt;/h1&gt;
+        <description>&lt;img src="https://take72k.github.io/images/01-local-area.png" alt="Featured image of post 矮人要塞Walkthrough教學：第一章、整裝待發" /&gt;&lt;h1 id=&#34;壹整裝待發&#34;&gt;壹、整裝待發&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文翻譯或改寫自&lt;a class=&#34;link&#34; href=&#34;https://df-walkthrough.readthedocs.io/en/latest/chapters/chap01-setup-starting.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PeridexisErrant’s DF Walkthrough&lt;/a&gt;，並在相同License下發布&lt;/p&gt;
