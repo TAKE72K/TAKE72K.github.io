@@ -249,6 +249,75 @@ if (!doNotTrack) {
 </figure>
 <p>你會發現矮人運來了剛造好的床、空桶子、鐵砧與袋子。如上所述，我們不常把東西晾在外面，即使是放在整齊的倉庫，但這可以當作暫時的解決方案，讓東西保持整齊並使家具能運出工坊。如果家具堆滿了木匠坊，最後工作區會變得雜亂(在<code>q</code>選單以<code>[CLT]</code>標示)，而雜亂不堪的工作坊效率會變差。</p>
 <p>之後我們可以將倉庫撤除，用按<code>p</code>再按<code>x</code>的方法可以選取、撤銷整個倉庫。而矮人會拿起物品並放到其他適合的地方，很厲害吧！不過那是之後的事，我們先繼續要塞的建設吧！</p>
+<h2 id="三挖挖挖">三、挖挖挖！</h2>
+<p>如果我們只在地表四處建造那麼豈不是與骯髒的侏儒無異？我們要往下挖、挖、挖！最簡單的方法便是建一些樓梯，講更精確點，我們要用<code>d</code>選單來設置一些階梯。選擇一塊為挖掘區域，並看看往下幾公尺會怎樣。跟著步驟，開始擴張要塞吧！</p>
+<ul>
+<li>把地圖視角移到要塞廊頂部。</li>
+<li>按<code>d</code>然後<code>j</code>選擇<code>downward stairway</code>(向下階梯)。</li>
+<li>移動X行游標到黑色部分(未挖掘部分)然後按<code>Enter</code>，向下一格，再<code>Enter</code>一次。</li>
+</ul>
+<p>你應該會看到六個階梯的標示。你可能會好奇為何我要設計六個像下的階梯，原因是矮人需要空間來「借過一下」。如果走廊或階梯只有一格寬，那單行道一次一人便會塞車。這個現象在要塞有越多矮人跑來跑去時會越嚴重。六個階梯則可以保持通暢很久。</p>
+<p>按空白鍵直到遊戲重新開始，建好之後看起來應該會像這樣：</p>
+<figure>
+    <a href="/images/02-stairs-down.png">
+        <img src="/images/02-stairs-down.png" loading="lazy" alt="階梯向下stairs-down">
+    </a>
+    
+</figure>
+<p>水啦！一個門廳搭配兩格樓梯！你現在可能有點自我陶醉，但如果你向下一格(<code>&gt;</code>，還記得嗎)，會發現根本看不到階梯的影子，其實有一點，你只會看到這些棕色斑點：</p>
+<figure>
+    <a href="/images/02-stairs-lower.png">
+        <img src="/images/02-stairs-lower.png" loading="lazy" alt="樓梯下面stairs-lower">
+    </a>
+    
+</figure>
+<p>我們的階梯上哪去了？地底下的豐富礦藏又該怎麼辦？嗯，這就是階梯奇怪的地方了，且聽我娓娓道來&hellip;</p>
+<p>對矮人來說，向下的階梯只是測試性質地向下挖，來看看腳底下是什麼。就像打穿樓地板，來看看樓下鄰居在幹嘛，希望找到噪音的原因。</p>
+<p>要真的到下一層，你得同時在要到達的樓層建一道往上的樓梯。以我們現在的情況，是要蓋出一個<code>Up/Down Stairway</code>(跨樓層階梯)以持續向下挖掘。<code>Up/Down Stairway</code>(跨樓層樓梯)會穿出一個洞，試著連接樓上的向下階梯(如果有)、樓下的向上階梯(如果有)。假設你的上下樓都還沒動過，<code>Up/Down Stairway</code>(跨樓層樓梯)也會讓你得以到上層或下層施工，已建造所需的樓梯。</p>
+<p>有圖有真相：</p>
+<figure>
+    <a href="/images/stairs-diagram.png">
+        <img src="/images/stairs-diagram.png" loading="lazy" alt="樓梯側視圖stairs-diagram">
+    </a>
+    
+</figure>
+<p>建造跨樓層樓梯的方法：</p>
+<ul>
+<li>從要塞入口那層向下一層。</li>
+<li>在這一層，於剛剛挖的向下樓梯下方，按<code>d</code>→<code>i</code>，來選擇建造<code>Up/Down Stairway</code>。</li>
+<li>移動游標到斑點處，按<code>Enter</code>，向下一層再按一次。</li>
+<li>棕色的X記號表示階梯預定位置。</li>
+<li>如果你搞砸了，<code>d</code>→<code>x</code>可以刪除預定。</li>
+<li>重新開始遊戲便會挖掘樓梯，看起來像這樣：</li>
+</ul>
+<figure>
+    <a href="/images/02-stairs-updown.png">
+        <img src="/images/02-stairs-updown.png" loading="lazy" alt="樓梯預定樣子stairs-updown">
+    </a>
+    
+</figure>
+<p>很好，完美的階梯。但還沒結束。</p>
+<p>目前我們透過選擇兩個角落來設計出長方形的階梯，但如果要跨多層，那可是相當無聊。好在DF支援3D設計，所以你可以選一個角落之後，<code>&gt;</code>個好幾層，再按<code>Enter</code>來劃出跨多層的藍圖。現在讓我們把階梯挖到高度103。</p>
+<p>Rock！我們被岩石包圍著！這種地方可說是矮人的最愛！不如我們來挖點空間？我推薦緊貼著樓梯、門寬兩格的方形房間。這邊有簡單的平面圖，夠用了。試試看你可不可以和我的吻合。</p>
+<figure>
+    <a href="/images/02-rooms-large.png">
+        <img src="/images/02-rooms-large.png" loading="lazy" alt="大房間layoutrooms-large">
+    </a>
+    
+</figure>
+<blockquote>
+<p>譯註：</p>
+<p>11*11 <figure>
+    <a href="/images/02-big-rooms-layout.png">
+        <img src="/images/02-big-rooms-layout.png" loading="lazy" alt="大房間layout">
+    </a>
+    
+</figure></p>
+<p>不過設定上似乎有機率崩塌，管他的。</p>
+</blockquote>
+<p>現在讓矮人挖吧！快挖啊！記得確保你設計的區域都能連回階梯！</p>
+<p>一路上你會收到一堆挖到礦石的通知。這是好消息，金屬非常有用，如你所知。但我們之後再來處理它。</p>
+<h2 id="四地上那是啥">四、地上那是啥？</h2>
 
 </section>
 
@@ -446,6 +515,8 @@ if (!doNotTrack) {
   <ol>
     <li><a href="#一建造工坊">一、建造工坊</a></li>
     <li><a href="#二造床">二、造床</a></li>
+    <li><a href="#三挖挖挖">三、挖挖挖！</a></li>
+    <li><a href="#四地上那是啥">四、地上那是啥？</a></li>
   </ol>
 </nav>
                 </div>
