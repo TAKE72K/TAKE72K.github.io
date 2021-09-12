@@ -207,6 +207,16 @@
 &lt;p&gt;現在讓矮人挖吧！快挖啊！記得確保你設計的區域都能連回階梯！&lt;/p&gt;
 &lt;p&gt;一路上你會收到一堆挖到礦石的通知。這是好消息，金屬非常有用，如你所知。但我們之後再來處理它。&lt;/p&gt;
 &lt;h2 id=&#34;四地上那是啥&#34;&gt;四、地上那是啥？&lt;/h2&gt;
+&lt;p&gt;當矮人辛勤挖掘，何不看看地上散落的究竟是何物？從主選單按&lt;code&gt;k&lt;/code&gt;來仔細觀察。一個X型游標會出現在畫面上，你可以用方向鍵移動它。當你四處移動游標，就可以看到X型下有什麼東西。舉個例子：&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-look-around.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-look-around.png&#34; loading=&#34;lazy&#34; alt=&#34;亂看look-around&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;如你所見，游標的位置目前有矮人、一些石灰石、以及石灰岩質地板。你可以用&lt;code&gt;=&lt;/code&gt;來捲動，並按&lt;code&gt;Enter&lt;/code&gt;看一些資訊。啊，除了地板，地板是按不進去的。懂我意思嗎，&lt;strong&gt;沒有反應、就是個地板&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Look around&lt;/code&gt;是一個方便的方法，讓你能知道一格裡面有什麼東西。有時你會堆太多東西在同一格，而不確定到底有什麼，按&lt;code&gt;k&lt;/code&gt;就可以調查清楚。同時這個功能也可以幫你調查牆壁或地板的材質。舉個例子，沒有灌溉的狀況下，農田需要特定地質條件才能建造──土壤、砂質、淤泥、黏土、壤土。&lt;code&gt;Look around&lt;/code&gt;可以告訴你地質條件。&lt;/p&gt;
+&lt;p&gt;玩味一下&lt;code&gt;k&lt;/code&gt;的功能、看看我們挖了什麼材料。該放手讓矮人們繼續挖了，我們還有一件要緊的事沒有做&amp;hellip;&lt;/p&gt;
 </description>
         </item>
         <item>
