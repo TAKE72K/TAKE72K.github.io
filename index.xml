@@ -236,6 +236,45 @@
 &lt;/figure&gt;
 &lt;p&gt;看，垃圾被移走了，避免了瘴氣的產生。&lt;/p&gt;
 &lt;p&gt;但我們還有、還有一件重要的事沒做&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;六何以解憂唯有杜康&#34;&gt;六、何以解憂，唯有杜康&lt;/h2&gt;
+&lt;p&gt;美酒是矮人的命脈，就字面上的意思。矮人除非是受傷，偏好喝酒勝過喝水。如果沒有酒，他們就只好喝水，糟透了──他們工作效率會變差，並更加暴躁易怒。&lt;/p&gt;
+&lt;p&gt;所以我們該如何應付他們的酒精需求？簡單，蓋個酒造/釀酒廠(&lt;code&gt;Still&lt;/code&gt;)吧！&lt;/p&gt;
+&lt;p&gt;親愛的讀者，請跟著以下步驟：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按&lt;code&gt;b&lt;/code&gt;：建造(&lt;code&gt;Build&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;w&lt;/code&gt;：工作坊(&lt;code&gt;Workshops&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;l&lt;/code&gt;選取&lt;code&gt;Still&lt;/code&gt;(酒造)，或用鍵盤往下捲動也可以。&lt;/li&gt;
+&lt;li&gt;將酒造藍圖放在食物倉庫附近，像這樣：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-still-place.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-still-place.png&#34; loading=&#34;lazy&#34; alt=&#34;蓋酒造still-place&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;放在倉庫附近有其道理，因為酒造會將食物釀成美酒。我們的釀酒工人需要走的距離越短越好。當你放下藍圖並選擇任何一種材料，你的酒造會很快地蓋好，並變成圖中這樣：&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/02-still-built.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/02-still-built.png&#34; loading=&#34;lazy&#34; alt=&#34;still-built酒造落成&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;當我們釀造酒精之前，還得先準備些東西：酒桶。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;找到木匠工坊。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;q&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;a&lt;/code&gt;下單。&lt;/li&gt;
+&lt;li&gt;捲動並找到&lt;code&gt;Make wooden Barrel&lt;/code&gt;製作木桶，或直接按&lt;code&gt;v&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;重複下單到不能增加為止。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;現在開始釀造啤酒吧！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按&lt;code&gt;q&lt;/code&gt;並移動游標到酒造附近。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;a&lt;/code&gt;來增加新訂單。&lt;/li&gt;
+&lt;li&gt;按&lt;code&gt;b&lt;/code&gt;選擇&lt;code&gt;Brew drink from plant&lt;/code&gt;釀造植物酒。&lt;/li&gt;
+&lt;li&gt;重複下七次單或更多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;耶！現在你已經準備要釀造一堆啤酒了。&lt;/p&gt;
 </description>
         </item>
         <item>
