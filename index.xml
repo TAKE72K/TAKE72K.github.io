@@ -275,6 +275,12 @@
 &lt;li&gt;重複下七次單或更多。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;耶！現在你已經準備要釀造一堆啤酒了。&lt;/p&gt;
+&lt;p&gt;為了將釀造產業控制在可接受的程度，你有許多方法。其中一個是親自定期檢查，但只要晚了一次就會造成騷亂。第二個方法是設定自動重複(&lt;code&gt;q&lt;/code&gt;，選擇工作後按&lt;code&gt;r&lt;/code&gt;)，不過這樣很難維持容器與飲料製造的同步。&lt;/p&gt;
+&lt;p&gt;第三個是叫&lt;code&gt;workflow&lt;/code&gt;的插件，讓你設定固定存量，並自動暫停、開始工作以維持存量。按&lt;code&gt;q&lt;/code&gt;，選擇工作後&lt;code&gt;Alt&lt;/code&gt;+&lt;code&gt;w&lt;/code&gt;，然後按&lt;code&gt;A&lt;/code&gt;來&lt;code&gt;add limit&lt;/code&gt;(增加限制)，&lt;code&gt;R&lt;/code&gt;來調整範圍。聽起來有點複雜，但設定50-100的飲品還有10-20的桶子便足以應付現在的人口。&lt;/p&gt;
+&lt;p&gt;成果：快樂的矮人！值得一提的是釀酒雖然用的是植物，但不會使用種子。相對的烹飪會把種子煮掉，這會相當程度減少種更多作物的能力！因此我們會先專注於釀造。我們的食物足以在農場持續運轉同時吃上一段時間，因為矮人可是很愛生蘑菇的！&lt;/p&gt;
+&lt;p&gt;該是時候看看樓梯下的礦工挖得怎樣了，等到挖出至少一個房間再讓我們繼續下一步。希望他們沒有在工作時睡著(睡著：頭上會飄出大大的Z)。&lt;/p&gt;
+&lt;h2 id=&#34;七千門萬戶&#34;&gt;七、千門萬戶&lt;/h2&gt;
+&lt;p&gt;我們需要門，而且要很多。還有床、椅子、桌子，都要一堆。如果你已經覺得自己變成IKEA的銷售員，&lt;/p&gt;
 </description>
         </item>
         <item>
