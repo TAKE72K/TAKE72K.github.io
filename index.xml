@@ -359,7 +359,14 @@
     
 &lt;/figure&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你可以按Enter來設置目前框出大小的房間，但這樣會框不到兩張床，所以我們需要把選取範圍加大，在藍色框框閃爍時：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按&lt;code&gt;=&lt;/code&gt;來加大選取範圍，直到覆蓋整個房間。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你會發現選取的房間不會蓋到障礙或牆，這就是我們加上房門的原因：防止選到多餘的房間。蠻合理的吧？好，繼續──&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在房間尺寸最大時按&lt;code&gt;Enter&lt;/code&gt;，這時右側欄會顯示新的選單。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
