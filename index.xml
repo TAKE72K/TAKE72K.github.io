@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sat, 14 May 2022 11:22:51 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 10 Aug 2022 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -33,6 +33,44 @@
 &lt;li&gt;捌、軍隊與兵士&lt;/li&gt;
 &lt;li&gt;玖、弓兵與野獸、哥布林控制&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
+        <link>https://take72k.github.io/EDA/cudnnSetup/</link>
+        <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
+        
+        <guid>https://take72k.github.io/EDA/cudnnSetup/</guid>
+        <description>&lt;h1 id=&#34;fatal-error-freeimageh-no-such-file-or-directory--include-freeimageh-centos-7&#34;&gt;fatal error: FreeImage.h: No such file or directory  #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7&lt;/h1&gt;
+&lt;p&gt;編譯CuDnn SAMPLE時出現問題，&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cp -r /usr/src/cudnn_samples_v8/ $HOME
+cd $HOME/cudnn_samples_v8/mnistCUDNN
+# 
+make clean &amp;amp;&amp;amp; make
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;錯誤訊息：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;test.c:1:23: fatal error: FreeImage.h: No such file or directory
+ #include &amp;quot;FreeImage.h&amp;quot;
+                       ^
+compilation terminated.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;原因&#34;&gt;原因&lt;/h2&gt;
+&lt;p&gt;缺少freeimage這個library。&lt;/p&gt;
+&lt;h2 id=&#34;解決方法&#34;&gt;解決方法&lt;/h2&gt;
+&lt;p&gt;安裝library，&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum install freeimage
+sudo yum install freeimage-devel
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再編譯試試看：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;make clean &amp;amp;&amp;amp; make
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;成功編譯！&lt;/p&gt;
+&lt;h2 id=&#34;測試cudnn&#34;&gt;測試CuDnn&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./mnistCUDNN
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;...
+Resulting weights from Softmax:
+0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.0000000 0.0000154 0.0000000 0.0000012 0.0000006
+
+Result of classification: 1 3 5
+
+Test passed!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;顯示成功。&lt;/p&gt;
 </description>
         </item>
         <item>
