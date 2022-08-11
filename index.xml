@@ -42,12 +42,12 @@
         
         <guid>https://take72k.github.io/EDA/cudnnSetup/</guid>
         <description>&lt;h1 id=&#34;fatal-error-freeimageh-no-such-file-or-directory--include-freeimageh-centos-7&#34;&gt;fatal error: FreeImage.h: No such file or directory  #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7&lt;/h1&gt;
-&lt;p&gt;編譯CuDnn SAMPLE時出現問題，&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cp -r /usr/src/cudnn_samples_v8/ $HOME
-cd $HOME/cudnn_samples_v8/mnistCUDNN
-# 
-make clean &amp;amp;&amp;amp; make
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;錯誤訊息：&lt;/p&gt;
+&lt;p&gt;編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cp -r /usr/src/cudnn_samples_v8/ &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/cudnn_samples_v8/mnistCUDNN
+&lt;span class=&#34;c1&#34;&gt;# &lt;/span&gt;
+make clean &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;錯誤訊息：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;test.c:1:23: fatal error: FreeImage.h: No such file or directory
  #include &amp;quot;FreeImage.h&amp;quot;
                        ^
@@ -56,14 +56,14 @@ compilation terminated.
 &lt;p&gt;缺少freeimage這個library。&lt;/p&gt;
 &lt;h2 id=&#34;解決方法&#34;&gt;解決方法&lt;/h2&gt;
 &lt;p&gt;安裝library，&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo yum install freeimage
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo yum install freeimage
 sudo yum install freeimage-devel
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;再編譯試試看：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;make clean &amp;amp;&amp;amp; make
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;成功編譯！&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;再編譯試試看：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;make clean &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;成功編譯！&lt;/p&gt;
 &lt;h2 id=&#34;測試cudnn&#34;&gt;測試CuDnn&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;./mnistCUDNN
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;...
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./mnistCUDNN
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;...
 Resulting weights from Softmax:
 0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.0000000 0.0000154 0.0000000 0.0000012 0.0000006
 
