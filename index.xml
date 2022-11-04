@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Wed, 10 Aug 2022 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -36,9 +36,41 @@
 </description>
         </item>
         <item>
+        <title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
+        <link>https://take72k.github.io/EDA/placementByRL/</link>
+        <pubDate>Thu, 03 Nov 2022 21:01:00 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/EDA/placementByRL/</guid>
+        <description>&lt;h1 id=&#34;chip-placement-with-deep-reinforcement-learning-閱讀筆記&#34;&gt;Chip Placement with Deep Reinforcement Learning 閱讀筆記&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2004.10746&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。
+事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。
+這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。&lt;/p&gt;
+&lt;h2 id=&#34;相關研究&#34;&gt;相關研究&lt;/h2&gt;
+&lt;p&gt;Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。&lt;/p&gt;
+&lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
+&lt;h3 id=&#34;問題定義&#34;&gt;問題定義&lt;/h3&gt;
+&lt;p&gt;這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。&lt;/p&gt;
+&lt;h3 id=&#34;方法概覽&#34;&gt;方法概覽&lt;/h3&gt;
+&lt;p&gt;為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。&lt;/li&gt;
+&lt;li&gt;actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。&lt;/li&gt;
+&lt;li&gt;state transition: 給定state和action，轉場到下一個state。&lt;/li&gt;
+&lt;li&gt;reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t+1}$，同時獲得獎勵$r_t$ ($t&amp;lt;T$時為0，$t=T$時為估計的cost)。
+透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
         <link>https://take72k.github.io/EDA/cudnnSetup/</link>
-        <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
+        <pubDate>Wed, 10 Aug 2022 05:20:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/EDA/cudnnSetup/</guid>
         <description>&lt;h1 id=&#34;fatal-error-freeimageh-no-such-file-or-directory--include-freeimageh-centos-7&#34;&gt;fatal error: FreeImage.h: No such file or directory  #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7&lt;/h1&gt;
@@ -724,7 +756,7 @@ Test passed!
         <item>
         <title>trouble shooting of Concert exception--has not been extracted by IloAlgorithm</title>
         <link>https://take72k.github.io/EDA/cplexTroubleshooting/</link>
-        <pubDate>Mon, 30 Aug 2021 05:20:00 +0000</pubDate>
+        <pubDate>Mon, 30 Aug 2021 05:20:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/EDA/cplexTroubleshooting/</guid>
         <description>&lt;h1 id=&#34;cplex最佳化-var-has-not-been-extracted&#34;&gt;CPLEX最佳化： VAR has not been extracted&lt;/h1&gt;
@@ -741,7 +773,7 @@ Test passed!
         <item>
         <title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
         <link>https://take72k.github.io/EDA/corner_stitching/</link>
-        <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
+        <pubDate>Tue, 04 May 2021 00:40:43 +0800</pubDate>
         
         <guid>https://take72k.github.io/EDA/corner_stitching/</guid>
         <description>&lt;h1 id=&#34;corner-stitching-a-data-structuring-technique--for-vlsi-layout-tools&#34;&gt;Corner Stitching: A Data-Structuring Technique  for VLSI Layout Tools&lt;/h1&gt;
@@ -763,7 +795,7 @@ Test passed!
         <item>
         <title>玉山記行</title>
         <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtJade/</link>
-        <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 01 May 2020 00:00:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtJade/</guid>
         <description>&lt;img src="https://lh3.googleusercontent.com/pw/AM-JKLWHRueiA0_hXLfayDQ3jSWFCwyYvs9et9-Zr6CvRJTg7NjaGoDeUtA_-ljXAejq59AX31qA5rK24wq-6Kaw08wJK3AR5Gw4ov2OLDvdFKHGogPbrefTpyAQZz8Z1W64TufxuqhmJZLvRMdOHu9301C-zg=w2073-h1166-no?authuser=0" alt="Featured image of post 玉山記行" /&gt;&lt;h1 id=&#34;2020春玉山-進退之間的殘念之旅&#34;&gt;2020春玉山-進退之間的殘念之旅&lt;/h1&gt;
@@ -946,7 +978,7 @@ Test passed!
         <item>
         <title>京アニ放火事件 献花台がつなぐ思い</title>
         <link>https://take72k.github.io/news/Thought-TUNAGU-with-Bouquets/</link>
-        <pubDate>Fri, 06 Sep 2019 16:34:34 +0000</pubDate>
+        <pubDate>Fri, 06 Sep 2019 16:34:34 +0800</pubDate>
         
         <guid>https://take72k.github.io/news/Thought-TUNAGU-with-Bouquets/</guid>
         <description>&lt;blockquote&gt;
@@ -1025,7 +1057,7 @@ Test passed!
         <item>
         <title>雪山記行</title>
         <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtSylvia/</link>
-        <pubDate>Fri, 16 Aug 2019 22:37:00 +0000</pubDate>
+        <pubDate>Fri, 16 Aug 2019 22:37:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/MtSylvia/</guid>
         <description>&lt;img src="https://1.bp.blogspot.com/-XZ-PHuMcB38/XVbF-o9wYhI/AAAAAAAAI-4/kdz_OOI-wawS99bQmdA9AldYDfePQWJdQCKgBGAs/s1600/DSCPDC_0002_BURST20190813051651683.JPG" alt="Featured image of post 雪山記行" /&gt;&lt;p&gt;&lt;figure 
@@ -1076,7 +1108,7 @@ Test passed!
         <item>
         <title>【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯</title>
         <link>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</link>
-        <pubDate>Mon, 22 Jul 2019 22:16:24 +0000</pubDate>
+        <pubDate>Mon, 22 Jul 2019 22:16:24 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/ShinyColors/%E3%83%90%E3%83%99%E3%83%AB%E3%82%B7%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AC%E3%82%A4%E3%82%B9Babel-City-Grace/</guid>
         <description>&lt;img src="https://www.lantis.jp/shinycolors/releaseinfo/img/LACM-14783.jpg" alt="Featured image of post 【シャニマス】バベルシティ・グレイス(full ver.) 歌詞 中文翻譯" /&gt;&lt;h2 id=&#34;バベルシティグレイスbabel-city-grace&#34;&gt;バベルシティ・グレイス(Babel City Grace)&lt;/h2&gt;
@@ -1246,7 +1278,7 @@ New Frontier Bless
         <item>
         <title>在Window上安裝mecab-ipadic-NEologd</title>
         <link>https://take72k.github.io/NLP/install-mecab-ipadic-neologd-windows/</link>
-        <pubDate>Fri, 19 Jul 2019 16:40:43 +0000</pubDate>
+        <pubDate>Fri, 19 Jul 2019 16:40:43 +0800</pubDate>
         
         <guid>https://take72k.github.io/NLP/install-mecab-ipadic-neologd-windows/</guid>
         <description>&lt;h1 id=&#34;在window上安裝mecab-ipadic-neologd&#34;&gt;在Window上安裝mecab-ipadic-NEologd&lt;/h1&gt;
@@ -1307,7 +1339,7 @@ t.parse(&#39;転生したらスライムだった件&#39;)
         <item>
         <title>垂降授課</title>
         <link>https://take72k.github.io/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</link>
-        <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 19 May 2019 00:00:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/Scout/%E5%9E%82%E9%99%8D%E6%8E%88%E8%AA%B2/</guid>
         <description>&lt;h1 id=&#34;垂降授課&#34;&gt;垂降授課&lt;/h1&gt;
@@ -1562,7 +1594,7 @@ t.parse(&#39;転生したらスライムだった件&#39;)
         <item>
         <title>D/zeal 主演廣播劇 天国の鳥 中文翻譯</title>
         <link>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</link>
-        <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 01 Jan 2019 00:00:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E3%82%A2%E3%82%A4%E3%83%89%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC/%E3%83%9F%E3%83%AA%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96/%E3%83%9F%E3%83%AA%E3%82%B7%E3%82%BF/D/zeal-%E4%B8%BB%E6%BC%94%E5%BB%A3%E6%92%AD%E5%8A%87-%E5%A4%A9%E5%9B%BD%E3%81%AE%E9%B3%A5-%E4%B8%AD%E6%96%87%E7%BF%BB%E8%AD%AF/</guid>
         <description>&lt;img src="https://i.imgur.com/kqKhJD9.jpg" alt="Featured image of post D/zeal 主演廣播劇 天国の鳥 中文翻譯" /&gt;&lt;h1 id=&#34;dzeal-主演廣播劇-天国の鳥-中文翻譯&#34;&gt;D/zeal 主演廣播劇 天国の鳥 中文翻譯&lt;/h1&gt;
@@ -2343,7 +2375,7 @@ OK！WE ARE──BLUEEEEEEEEE ZEALLLLLL！&lt;/p&gt;
         <item>
         <title>移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性</title>
         <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</link>
-        <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 11 Aug 2017 00:00:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E7%A7%BB%E5%8B%95%E8%BB%8C%E8%B7%A1%E3%81%8B%E3%82%89%E3%81%BF%E3%81%9F%E5%85%A8%E6%97%A5%E6%9C%AC%E5%89%A3%E9%81%93%E9%81%B8%E6%89%8B%E6%A8%A9%E5%84%AA%E5%8B%9D%E8%80%85%E5%AE%AE%E5%B4%8E%E6%AD%A3%E8%A3%95%E9%81%B8%E6%89%8B%E3%81%AE%E8%A9%A6%E5%90%88%E7%89%B9%E6%80%A7/</guid>
         <description>&lt;h1 id=&#34;移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性10年間の縦断的資料に基づいて&#34;&gt;移動軌跡からみた全日本剣道選手権優勝者宮崎正裕選手の試合特性:―10年間の縦断的資料に基づいて―&lt;/h1&gt;
@@ -2368,7 +2400,7 @@ OK！WE ARE──BLUEEEEEEEEE ZEALLLLLL！&lt;/p&gt;
         <item>
         <title>上段の構えからの剣道打撃動作における指力の発揮過程の分析</title>
         <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</link>
-        <pubDate>Thu, 10 Aug 2017 19:09:55 +0000</pubDate>
+        <pubDate>Thu, 10 Aug 2017 19:09:55 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E4%B8%8A%E6%AE%B5%E3%81%AE%E6%A7%8B%E3%81%88%E3%81%8B%E3%82%89%E3%81%AE%E5%89%A3%E9%81%93%E6%89%93%E6%92%83%E5%8B%95%E4%BD%9C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E6%8C%87%E5%8A%9B%E3%81%AE%E7%99%BA%E6%8F%AE%E9%81%8E%E7%A8%8B%E3%81%AE%E5%88%86%E6%9E%90/</guid>
         <description>&lt;h1 id=&#34;上段の構えからの剣道打撃動作における指力の発揮過程の分析&#34;&gt;上段の構えからの剣道打撃動作における指力の発揮過程の分析&lt;/h1&gt;
@@ -2398,7 +2430,7 @@ OK！WE ARE──BLUEEEEEEEEE ZEALLLLLL！&lt;/p&gt;
         <item>
         <title>武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證</title>
         <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</link>
-        <pubDate>Sat, 17 Jun 2017 11:00:41 +0000</pubDate>
+        <pubDate>Sat, 17 Jun 2017 11:00:41 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B9%9D%E7%AF%80-%E7%AC%AC%E5%8D%81%E7%AF%80-%E6%8B%94%E5%88%80%E6%8B%94%E5%88%80%E6%8B%94%E6%8B%94%E8%9C%BB%E8%9C%93-%E7%9C%8B%E8%A6%8B%E5%B8%AB%E5%82%85%E7%9A%84%E7%BE%8E%E9%BA%97%E8%88%87%E5%93%80%E6%84%81-%E6%8B%94%E5%88%80%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
         <description>&lt;img src="https://i.imgur.com/ZMDKMDW.png" alt="Featured image of post 武装少女マキャヴェリズム 第九節 第十節 拔刀拔刀拔拔蜻蜓 看見師傅的美麗與哀愁 拔刀微考證" /&gt;&lt;p&gt;感覺有點失去了對人類的信任，經費見底了是吧。
@@ -2645,7 +2677,7 @@ BUT，我是不戰的(如果想看筆戰請自己找)。&lt;/p&gt;
         <item>
         <title>武装少女マキャヴェリズム 第七節 妖しき刃「眠目さとり」心得、考證加秘密遊戲</title>
         <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</link>
-        <pubDate>Sat, 20 May 2017 19:04:23 +0000</pubDate>
+        <pubDate>Sat, 20 May 2017 19:04:23 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%83%E7%AF%80-%E5%A6%96%E3%81%97%E3%81%8D%E5%88%83%E7%9C%A0%E7%9B%AE%E3%81%95%E3%81%A8%E3%82%8A%E5%BF%83%E5%BE%97%E8%80%83%E8%AD%89%E5%8A%A0%E7%A7%98%E5%AF%86%E9%81%8A%E6%88%B2/</guid>
         <description>&lt;img src="https://i.imgur.com/XkS2Knz.jpg" alt="Featured image of post 武装少女マキャヴェリズム 第七節 妖しき刃「眠目さとり」心得、考證加秘密遊戲" /&gt;&lt;p&gt;&lt;figure 
@@ -3047,7 +3079,7 @@ KEISIRYU  is  Meiji 10-nendai ni keishichou de seitei sa reta bujutsu no katachi
         <item>
         <title>武装少女マキャヴェリズム 第三節 麗しき刃「亀鶴城メアリ」心得0考證</title>
         <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</link>
-        <pubDate>Thu, 20 Apr 2017 21:38:02 +0000</pubDate>
+        <pubDate>Thu, 20 Apr 2017 21:38:02 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%89%E7%AF%80-%E9%BA%97%E3%81%97%E3%81%8D%E5%88%83%E4%BA%80%E9%B6%B4%E5%9F%8E%E3%83%A1%E3%82%A2%E3%83%AA%E5%BF%83%E5%BE%970%E8%80%83%E8%AD%89/</guid>
         <description>&lt;img src="https://i.imgur.com/tzfXmA2.png" alt="Featured image of post 武装少女マキャヴェリズム 第三節 麗しき刃「亀鶴城メアリ」心得0考證" /&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;重音在前的&lt;!-- raw HTML omitted --&gt; 納村：7000單。指考必備。每天三十分鐘
@@ -3174,7 +3206,7 @@ Yuki Ota Fencing Visualized Project - MORE ENJOY FENCING-日本的擊劍說明�
         <item>
         <title>武装少女マキャヴェリズム 第二話「貞淑寮」騒乱 心得微考證</title>
         <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</link>
-        <pubDate>Sat, 15 Apr 2017 13:52:32 +0000</pubDate>
+        <pubDate>Sat, 15 Apr 2017 13:52:32 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%BA%8C%E8%A9%B1%E8%B2%9E%E6%B7%91%E5%AF%AE%E9%A8%92%E4%B9%B1-%E5%BF%83%E5%BE%97%E5%BE%AE%E8%80%83%E8%AD%89/</guid>
         <description>&lt;img src="https://i.imgur.com/JdK8cMN.png" alt="Featured image of post 武装少女マキャヴェリズム 第二話「貞淑寮」騒乱 心得微考證" /&gt;&lt;p&gt;不道：達美樂打了沒(We&amp;rsquo;re THE 單身狗!!)，外送啦！
@@ -3367,7 +3399,7 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
         <item>
         <title>武装少女マキャヴェリズム 第一話 素晴らしき刃「鬼瓦輪」心得加考證(?)</title>
         <link>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</link>
-        <pubDate>Sat, 08 Apr 2017 16:09:47 +0000</pubDate>
+        <pubDate>Sat, 08 Apr 2017 16:09:47 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%8A%8D%E8%A1%93/%E6%AD%A6%E8%A3%85%E5%B0%91%E5%A5%B3%E3%83%9E%E3%82%AD%E3%83%A3%E3%83%B4%E3%82%A7%E3%83%AA%E3%82%BA%E3%83%A0-%E7%AC%AC%E4%B8%80%E8%A9%B1-%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%8D%E5%88%83%E9%AC%BC%E7%93%A6%E8%BC%AA%E5%BF%83%E5%BE%97%E5%8A%A0%E8%80%83%E8%AD%89/</guid>
         <description>&lt;h2 id=&#34;第一話-素晴らしき刃鬼瓦輪心得加考證&#34;&gt;第一話 素晴らしき刃「鬼瓦輪」心得加考證(?)&lt;/h2&gt;
@@ -3417,7 +3449,7 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
         <item>
         <title>再開</title>
         <link>https://take72k.github.io/uncategorized/ry/</link>
-        <pubDate>Tue, 04 Apr 2017 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 04 Apr 2017 00:00:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/uncategorized/ry/</guid>
         <description>&lt;h1 id=&#34;再開通知&#34;&gt;再開通知&lt;/h1&gt;
@@ -3430,7 +3462,7 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
         <item>
         <title>刃鳴散らす</title>
         <link>https://take72k.github.io/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</link>
-        <pubDate>Sun, 22 Jan 2017 21:08:05 +0000</pubDate>
+        <pubDate>Sun, 22 Jan 2017 21:08:05 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%89%A3%E8%A1%93/%E5%88%83%E9%B3%B4%E6%95%A3%E3%82%89%E3%81%99/</guid>
         <description>&lt;img src="https://i.imgur.com/Q94EDDx.png" alt="Featured image of post 刃鳴散らす" /&gt;&lt;h1 id=&#34;刃鳴散以及其中的刈包流劍術&#34;&gt;刃鳴散、以及其中的刈&lt;del&gt;包&lt;/del&gt;流劍術&lt;/h1&gt;
@@ -3488,7 +3520,7 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
         <item>
         <title>遊記 京都</title>
         <link>https://take72k.github.io/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</link>
-        <pubDate>Mon, 01 Aug 2016 11:00:41 +0000</pubDate>
+        <pubDate>Mon, 01 Aug 2016 11:00:41 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E9%81%8A%E8%A8%98/%E9%81%8A%E8%A8%98-%E4%BA%AC%E9%83%BD/</guid>
         <description>&lt;img src="https://i.imgur.com/YNLHdmn.jpg" alt="Featured image of post 遊記 京都" /&gt;&lt;p&gt;&lt;figure 
@@ -3605,7 +3637,7 @@ PEACE HOSTEL的BAR，剛好有抽積木大賽，獎品啤酒一壺。
         <item>
         <title>升段</title>
         <link>https://take72k.github.io/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</link>
-        <pubDate>Sun, 26 Jun 2016 18:00:41 +0000</pubDate>
+        <pubDate>Sun, 26 Jun 2016 18:00:41 +0800</pubDate>
         
         <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</guid>
         <description>&lt;img src="https://i.imgur.com/L7DGZWs.jpg" alt="Featured image of post 升段" /&gt;&lt;p&gt;&lt;figure 

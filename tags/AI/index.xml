@@ -6,11 +6,25 @@
     <description>Recent content in AI on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 10 Aug 2022 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/AI/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/AI/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/placementByRL/</link>
+      <pubDate>Thu, 03 Nov 2022 21:01:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/placementByRL/</guid>
+      <description>Chip Placement with Deep Reinforcement Learning 閱讀筆記  link
+ 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
+相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。
+方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。
+方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
+ states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t+1}$，同時獲得獎勵$r_t$ ($t&amp;lt;T$時為0，$t=T$時為估計的cost)。 透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。</description>
+    </item>
+    
     <item>
       <title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
       <link>https://take72k.github.io/EDA/cudnnSetup/</link>
-      <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
+      <pubDate>Wed, 10 Aug 2022 05:20:00 +0800</pubDate>
       
       <guid>https://take72k.github.io/EDA/cudnnSetup/</guid>
       <description>fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，

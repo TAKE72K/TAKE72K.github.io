@@ -6,11 +6,11 @@
     <description>Recent content in paper on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 04 May 2021 00:40:43 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 May 2021 00:40:43 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/paper/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
       <link>https://take72k.github.io/EDA/corner_stitching/</link>
-      <pubDate>Tue, 04 May 2021 00:40:43 +0000</pubDate>
+      <pubDate>Tue, 04 May 2021 00:40:43 +0800</pubDate>
       
       <guid>https://take72k.github.io/EDA/corner_stitching/</guid>
       <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點：

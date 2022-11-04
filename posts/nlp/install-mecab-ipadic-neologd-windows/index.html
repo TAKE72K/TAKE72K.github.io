@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>在Window上安裝mecab-ipadic-NEologd | 竹林七閒</title>
+<meta name="keywords" content="nlp, MeCab, windows, linux, ipadic" />
+<meta name="description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd">
+<meta name="author" content="">
+<link rel="canonical" href="https://take72k.github.io/posts/nlp/install-mecab-ipadic-neologd-windows/" />
+<link crossorigin="anonymous" href="https://take72k.github.io/assets/css/stylesheet.min.b9ff4cc257e914dab489bd18086151800e18f91456a5174bf28489210227a659.css" integrity="sha256-uf9MwlfpFNq0ib0YCGFRgA4Y&#43;RRWpRdL8oSJIQInplk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="https://take72k.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://take72k.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://take72k.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://take72k.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://take72k.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://take72k.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.88.0-DEV" />
+<meta property="og:title" content="在Window上安裝mecab-ipadic-NEologd" />
+<meta property="og:description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://take72k.github.io/posts/nlp/install-mecab-ipadic-neologd-windows/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-07-19T16:40:43&#43;00:00" />
+<meta property="article:modified_time" content="2019-07-19T16:40:43&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在Window上安裝mecab-ipadic-NEologd"/>
+<meta name="twitter:description" content="在Window上安裝或更新的另一種方法mecab-ipadic-NEologd"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://take72k.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "在Window上安裝mecab-ipadic-NEologd",
+      "item": "https://take72k.github.io/posts/nlp/install-mecab-ipadic-neologd-windows/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "在Window上安裝mecab-ipadic-NEologd",
+  "name": "在Window上安裝mecab-ipadic-NEologd",
+  "description": "在Window上安裝或更新的另一種方法mecab-ipadic-NEologd",
+  "keywords": [
+    "nlp", "MeCab", "windows", "linux", "ipadic"
+  ],
+  "articleBody": "在Window上安裝mecab-ipadic-NEologd 今天的主角:ipadic萬能擴充包\n首先看了一下ReadMe，並沒有提到windows的安裝方法。 但這時可以注意到有ubuntu系統的指示，OK—\n On Ubuntu  $ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file\r$ cd mecab-ipadic-neologd\r$ ./bin/install-mecab-ipadic-neologd -n\r在windows要怎麼弄來Ubuntu？   VMBox BJ4\n  Microsoft Store window8以上導入的這個功能中，其實找的到Ubuntu，跟隨指示安裝後，便能得到一個Linux的視窗XD。這個部分之後可能會寫一下(？\n  安裝 基本上照著Readme輸入之後便能順利獲取/更新mecab-ipadic-NEologd。\n$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file\r$ git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git\r$ cd mecab-ipadic-neologd\r$ ./bin/install-mecab-ipadic-neologd -n\r好了之後如何使用 Ubuntu產生的檔案會放在User/user/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_xxxxxxxxx/LocalState/rootfs/home/Ubuntu_Username/mecab-ipadic-neologd/build/\n為一個資料夾：mecab-ipadic-2.7.0-20070801-neologd-current_date\n將此資料夾重新命名為ipadic並覆蓋MeCab/dic路徑下的同名檔案，替換便宣告完成囉！\n這時可以來試試看是否成功套用\nimport MeCab\rt=MeCab.Tagger(\"-Ochasen\")\rt.parse(\"ミリオンライブシアターデイズ\")\rt.parse('転生したらスライムだった件')\rOutput\n'ミリオンライブシアターデイズ\\tミリオンライブシアターデイズ\\tミリオンライブシアターデイズ\\t名詞-固有名詞-組織\\t\\t\\nEOS\\n'\r'転生したらスライムだった件\\tテンセイシタラスライムダッタケン\\t転生したらスライムだった件\\t名詞-固有名詞-一般\\t\\t\\nEOS\\n'\r",
+  "wordCount" : "69",
+  "inLanguage": "en",
+  "datePublished": "2019-07-19T16:40:43Z",
+  "dateModified": "2019-07-19T16:40:43Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://take72k.github.io/posts/nlp/install-mecab-ipadic-neologd-windows/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "竹林七閒",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://take72k.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://take72k.github.io" accesskey="h" title="竹林七閒 (Alt + H)">竹林七閒</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      在Window上安裝mecab-ipadic-NEologd
+    </h1>
+    <div class="post-description">
+      在Window上安裝或更新的另一種方法mecab-ipadic-NEologd
+    </div>
+    <div class="post-meta">July 19, 2019
+</div>
+  </header> 
+  <div class="post-content"><h1 id="在window上安裝mecab-ipadic-neologd">在Window上安裝mecab-ipadic-NEologd<a hidden class="anchor" aria-hidden="true" href="#在window上安裝mecab-ipadic-neologd">#</a></h1>
+<!-- raw HTML omitted -->
+<p>今天的主角:<a href="https://github.com/neologd/mecab-ipadic-neologd">ipadic萬能擴充包</a></p>
+<p>首先看了一下ReadMe，並沒有提到windows的安裝方法。
+但這時可以注意到有ubuntu系統的指示，OK&mdash;</p>
+<ul>
+<li>On Ubuntu</li>
+</ul>
+<pre tabindex="0"><code class="language-cmd=" data-lang="cmd=">$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file
+$ cd mecab-ipadic-neologd
+$ ./bin/install-mecab-ipadic-neologd -n
+</code></pre><h2 id="在windows要怎麼弄來ubuntu">在windows要怎麼弄來Ubuntu？<a hidden class="anchor" aria-hidden="true" href="#在windows要怎麼弄來ubuntu">#</a></h2>
+<ol>
+<li>
+<p>VMBox
+BJ4</p>
+</li>
+<li>
+<p>Microsoft Store 
+window8以上導入的這個功能中，其實找的到Ubuntu，跟隨指示安裝後，便能得到一個Linux的視窗XD。這個部分之後可能會寫一下(？</p>
+</li>
+</ol>
+<h2 id="安裝">安裝<a hidden class="anchor" aria-hidden="true" href="#安裝">#</a></h2>
+<p>基本上照著Readme輸入之後便能順利獲取/更新mecab-ipadic-NEologd。</p>
+<pre tabindex="0"><code class="language-cmd=" data-lang="cmd=">$ sudo apt-get install mecab libmecab-dev mecab-ipadic-utf8 git make curl xz-utils file
+$ git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git
+$ cd mecab-ipadic-neologd
+$ ./bin/install-mecab-ipadic-neologd -n
+</code></pre><p><img loading="lazy" src="https://i.imgur.com/HQm2qyz.png" alt=""  />
+</p>
+<h2 id="好了之後如何使用">好了之後如何使用<a hidden class="anchor" aria-hidden="true" href="#好了之後如何使用">#</a></h2>
+<p>Ubuntu產生的檔案會放在<code>User/user/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_xxxxxxxxx/LocalState/rootfs/home/Ubuntu_Username/mecab-ipadic-neologd/build/</code></p>
+<p>為一個資料夾：<code>mecab-ipadic-2.7.0-20070801-neologd-current_date</code></p>
+<p>將此資料夾重新命名為<code>ipadic</code>並覆蓋<code>MeCab/dic</code>路徑下的同名檔案，替換便宣告完成囉！</p>
+<p>這時可以來試試看是否成功套用</p>
+<pre tabindex="0"><code class="language-python=" data-lang="python=">import MeCab
+t=MeCab.Tagger(&quot;-Ochasen&quot;)
+t.parse(&quot;ミリオンライブシアターデイズ&quot;)
+t.parse('転生したらスライムだった件')
+</code></pre><p>Output</p>
+<pre tabindex="0"><code>'ミリオンライブシアターデイズ\tミリオンライブシアターデイズ\tミリオンライブシアターデイズ\t名詞-固有名詞-組織\t\t\nEOS\n'
+'転生したらスライムだった件\tテンセイシタラスライムダッタケン\t転生したらスライムだった件\t名詞-固有名詞-一般\t\t\nEOS\n'
+</code></pre>
+
+  </div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://take72k.github.io/tags/nlp/">nlp</a></li>
+      <li><a href="https://take72k.github.io/tags/mecab/">MeCab</a></li>
+      <li><a href="https://take72k.github.io/tags/windows/">windows</a></li>
+      <li><a href="https://take72k.github.io/tags/linux/">linux</a></li>
+      <li><a href="https://take72k.github.io/tags/ipadic/">ipadic</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2022 <a href="https://take72k.github.io">竹林七閒</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
