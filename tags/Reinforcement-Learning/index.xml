@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI on 竹林七閑</title>
-    <link>https://take72k.github.io/tags/AI/</link>
-    <description>Recent content in AI on 竹林七閑</description>
+    <title>Reinforcement Learning on 竹林七閑</title>
+    <link>https://take72k.github.io/tags/Reinforcement-Learning/</link>
+    <description>Recent content in Reinforcement Learning on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/AI/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/Reinforcement-Learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
       <link>https://take72k.github.io/EDA/placementByRL/</link>
@@ -18,21 +18,6 @@
 相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。
 方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
  states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  </description>
-    </item>
-    
-    <item>
-      <title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
-      <link>https://take72k.github.io/EDA/cudnnSetup/</link>
-      <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
-      
-      <guid>https://take72k.github.io/EDA/cudnnSetup/</guid>
-      <description>fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，
-cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN #  make clean &amp;amp;&amp;amp; make 錯誤訊息：
-test.c:1:23: fatal error: FreeImage.h: No such file or directory#include &amp;quot;FreeImage.h&amp;quot;^compilation terminated.原因 缺少freeimage這個library。
-解決方法 安裝library，
-sudo yum install freeimage sudo yum install freeimage-devel 再編譯試試看：
-make clean &amp;amp;&amp;amp; make 成功編譯！
-測試CuDnn ./mnistCUDNN ...Resulting weights from Softmax:0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.</description>
     </item>
     
   </channel>

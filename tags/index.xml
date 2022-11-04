@@ -6,11 +6,11 @@
     <description>Recent content in Tags on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 10 Aug 2022 05:20:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0000</lastBuildDate><atom:link href="https://take72k.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
       <link>https://take72k.github.io/tags/AI/</link>
-      <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
+      <pubDate>Thu, 03 Nov 2022 21:01:00 +0000</pubDate>
       
       <guid>https://take72k.github.io/tags/AI/</guid>
       <description></description>
@@ -19,9 +19,18 @@
     <item>
       <title>eda</title>
       <link>https://take72k.github.io/tags/eda/</link>
-      <pubDate>Wed, 10 Aug 2022 05:20:00 +0000</pubDate>
+      <pubDate>Thu, 03 Nov 2022 21:01:00 +0000</pubDate>
       
       <guid>https://take72k.github.io/tags/eda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://take72k.github.io/tags/Reinforcement-Learning/</link>
+      <pubDate>Thu, 03 Nov 2022 21:01:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/tags/Reinforcement-Learning/</guid>
       <description></description>
     </item>
     
