@@ -82,6 +82,38 @@ $HPWL(netlist)={\displaystyle\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$&lt;/p&gt;
 &lt;h4 id=&#34;格子的數量&#34;&gt;格子的數量&lt;/h4&gt;
 &lt;p&gt;對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。&lt;/p&gt;
 &lt;h4 id=&#34;macro擺放順序&#34;&gt;Macro擺放順序&lt;/h4&gt;
+&lt;p&gt;論文依照面積降序排列macro，並在面積相同時用topological sort來排列。&lt;br&gt;
+依照面積 → 避免發生無解(可擺置位置)。&lt;br&gt;
+topological → 使策略網路能考慮將結構相近的macro擺在一起，從而減少潛在線長。&lt;br&gt;
+另一種做法是在擺的同時最佳化排序，但這又使action更複雜。結果顯示以上方法可行。&lt;/p&gt;
+&lt;h4 id=&#34;標準邏輯閘擺置&#34;&gt;標準邏輯閘擺置&lt;/h4&gt;
+&lt;p&gt;採用經典的force-directed想法，將netlist類比為彈簧、用權重乘以距離來類比彈力。如此，連接比較多的會被拉的較近，線長變減少了。&lt;br&gt;
+此外也會加入將重疊的cell分開的力。&lt;br&gt;
+為了避免震盪，會限制每次移動的距離。&lt;br&gt;
+force-directed可以參考&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.org/doi/10.1145/103724.103725&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;這篇&lt;/a&gt;。&lt;/p&gt;
+&lt;h4 id=&#34;繞線壅擠&#34;&gt;繞線壅擠&lt;/h4&gt;
+&lt;p&gt;論文參考&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.org/doi/10.1145/2160916.2160958&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;這篇&lt;/a&gt;建立congestion map，並用5X1的卷積來平滑結果。&lt;br&gt;
+所有net繞線完後，會選取前10%嚴重的數值套用進獎勵的計算式裡。&lt;/p&gt;
+&lt;h4 id=&#34;密度&#34;&gt;密度&lt;/h4&gt;
+&lt;p&gt;論文將格子中的使用率也就是密度當作限制，禁止策略網路將macro放在密度超過最大值($max_{density}$)的格子中、也就是可能產生重疊的格子。&lt;br&gt;
+這個做法有兩個好處：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;減少策略網路產生的非法解。&lt;/li&gt;
+&lt;li&gt;減小解空間、降低複雜度。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;可行的標準邏輯閘擺置應該符合以下限制：不得超過最大密度($max_{density}$)。這個值在實驗中被設為0.6。&lt;br&gt;
+為了符合這些限制，論文準備了一個$m \times n$的boolean矩陣、表示該格是否滿足限制，將這個矩陣乘上策略網路的輸出，便能把不合限制的位置去除。&lt;br&gt;
+如果要加入blockage也很單純，將該格的限制矩陣設為0即可。&lt;/p&gt;
+&lt;h4 id=&#34;評估擺置品質前處理&#34;&gt;評估擺置品質前處理&lt;/h4&gt;
+&lt;p&gt;論文會用類似tetrix的想法把macro放到最近的合法位置，之候固定macro後用商業tool去擺標準邏輯閘以取得最終的QoR。&lt;/p&gt;
+&lt;h3 id=&#34;action的表示&#34;&gt;action的表示&lt;/h3&gt;
+&lt;p&gt;前面描述過論文將擺置空間化為$m \times n$的格子，策略網路的輸出便會是$m \times n$的機率分佈，動作會選擇最高的位置來擺放macro。&lt;/p&gt;
+&lt;h3 id=&#34;state的表示&#34;&gt;state的表示&lt;/h3&gt;
+&lt;p&gt;論文使用netlist的圖(相鄰矩陣)、點的資訊(寬、高、種類&amp;hellip;等等)、邊的資訊(連接數量)、當前擺的macro、其連接資訊、整體資訊(繞線資源、線的數量、macro與標準邏輯閘叢集的資訊等等)表示一個state。&lt;br&gt;
+論文接下來會討論如何有效處理這些資訊，以學習擺置。&lt;/p&gt;
+&lt;h2 id=&#34;基於經驗學習更好擺置&#34;&gt;基於經驗學習更好擺置&lt;/h2&gt;
 </description>
         </item>
         <item>
