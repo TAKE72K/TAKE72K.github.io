@@ -114,6 +114,23 @@ force-directed可以參考&lt;a class=&#34;link&#34; href=&#34;https://dl.acm.or
 &lt;p&gt;論文使用netlist的圖(相鄰矩陣)、點的資訊(寬、高、種類&amp;hellip;等等)、邊的資訊(連接數量)、當前擺的macro、其連接資訊、整體資訊(繞線資源、線的數量、macro與標準邏輯閘叢集的資訊等等)表示一個state。&lt;br&gt;
 論文接下來會討論如何有效處理這些資訊，以學習擺置。&lt;/p&gt;
 &lt;h2 id=&#34;基於經驗學習更好擺置&#34;&gt;基於經驗學習更好擺置&lt;/h2&gt;
+&lt;p&gt;擺置的目標式可以定義如下：&lt;br&gt;
+$J( \theta ,G )=\dfrac{1}{K}\displaystyle\sum_{g \sim G}^{} 
+E_{g,p\sim\pi_{\theta}}[R_{p,g}]$&lt;br&gt;
+$\theta$是策略網路的參數，$G$是大小為$K$的netlist，個別net由$g$來表示，$R_{p,g}$代表一個章節中的某個擺置$p$裡、某net $g$的獎勵，也就是：&lt;br&gt;
+$$
+\begin{split} R_{p,g}=-Wirelen &amp;amp;gth(p,g)-\lambda \ Congestion(p,g) \cr
+&amp;amp;S.t.density(p,g)\leq max_{density} \end{split}$$&lt;br&gt;
+這個式子便是論文中的最佳化目標，$\lambda$被設為$0.01$、$max_{density}$則為$0.6$。&lt;/p&gt;
+&lt;h3 id=&#34;藉由監督式學習來轉移經驗&#34;&gt;藉由監督式學習來轉移經驗&lt;/h3&gt;
+&lt;p&gt;移植策略網路很有挑戰性，因為擺置內容千變萬化。論文首先嘗試學習多種不同的擺置，因為一個能擺出最佳解的網路應該能有效地理解擺置的資訊──即使換了不一樣的擺置。因此論文便提出了要訓練預測獎勵的網路，來當作策略網路的解碼器。(結果還是得搞一堆測資嗎※。)&lt;br&gt;
+為了訓練，論文找了五個加速器架構、每個產生2000種擺置，共10000筆當作訓練資料。產生的方法便是讓一個原始的策略網路亂擺，並給予不同的參數。一開始網路會產生一些低品質擺置，但隨著網路訓練，品質會逐漸改善，因此可以收集到多樣的資料。&lt;br&gt;
+論文中設計圖神經網路(graph neural network)架構來解碼netlist的資訊，主要作用就是將一個很大的超圖編碼成可處理的向量，方便策略網路去理解。類似的例子可以參考&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1903.00614&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;分類圖中點&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1910.01578&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;擺device&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1802.09691&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;預測連結性&lt;/a&gt;與&lt;a class=&#34;link&#34; href=&#34;https://ieeexplore.ieee.org/document/8587655&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;預測DRC&lt;/a&gt;。(&lt;a class=&#34;link&#34; href=&#34;https://muyuuuu.github.io/2020/07/08/GAP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;別人的筆記&lt;/a&gt;，有空看個)&lt;/p&gt;
 </description>
         </item>
         <item>

@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，
-cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN #  make clean &amp;amp;&amp;amp; make 錯誤訊息：
-test.c:1:23: fatal error: FreeImage.h: No such file or directory#include &amp;quot;FreeImage.h&amp;quot;^compilation terminated.原因 缺少freeimage這個library。
-解決方法 安裝library，
-sudo yum install freeimage sudo yum install freeimage-devel 再編譯試試看：
-make clean &amp;amp;&amp;amp; make 成功編譯！
-測試CuDnn ./mnistCUDNN ...Resulting weights from Softmax:0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.'><title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題， cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN # make clean &amp;amp;&amp;amp; make 錯誤訊息： test.c:1:23: fatal error: FreeImage.h: No such file or directory #include &amp;quot;FreeImage.h&amp;quot;'><title># fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7</title>
 
 <link rel='canonical' href='https://take72k.github.io/EDA/cudnnSetup/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='# fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7'>
-<meta property='og:description' content='fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，
-cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN #  make clean &amp;amp;&amp;amp; make 錯誤訊息：
-test.c:1:23: fatal error: FreeImage.h: No such file or directory#include &amp;quot;FreeImage.h&amp;quot;^compilation terminated.原因 缺少freeimage這個library。
-解決方法 安裝library，
-sudo yum install freeimage sudo yum install freeimage-devel 再編譯試試看：
-make clean &amp;amp;&amp;amp; make 成功編譯！
-測試CuDnn ./mnistCUDNN ...Resulting weights from Softmax:0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.'>
+<meta property='og:description' content='fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題， cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN # make clean &amp;amp;&amp;amp; make 錯誤訊息： test.c:1:23: fatal error: FreeImage.h: No such file or directory #include &amp;quot;FreeImage.h&amp;quot;'>
 <meta property='og:url' content='https://take72k.github.io/EDA/cudnnSetup/'>
 <meta property='og:site_name' content='竹林七閑'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2022-08-10T05:20:00&#43;08:00'/><meta property='article:modified_time' content='2022-08-10T05:20:00&#43;08:00'/>
 <meta name="twitter:site" content="@hyes94107">
     <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="# fatal error: FreeImage.h: No such file or directory #include “FreeImage.h” CentOS 7">
-<meta name="twitter:description" content="fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題，
-cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN #  make clean &amp;amp;&amp;amp; make 錯誤訊息：
-test.c:1:23: fatal error: FreeImage.h: No such file or directory#include &amp;quot;FreeImage.h&amp;quot;^compilation terminated.原因 缺少freeimage這個library。
-解決方法 安裝library，
-sudo yum install freeimage sudo yum install freeimage-devel 再編譯試試看：
-make clean &amp;amp;&amp;amp; make 成功編譯！
-測試CuDnn ./mnistCUDNN ...Resulting weights from Softmax:0.0000000 0.0000008 0.0000000 0.0000002 0.0000000 1.">
+<meta name="twitter:description" content="fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題， cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN # make clean &amp;amp;&amp;amp; make 錯誤訊息： test.c:1:23: fatal error: FreeImage.h: No such file or directory #include &amp;quot;FreeImage.h&amp;quot;">
     <link rel="shortcut icon" href="/ico/sword.png" />
 
 <script type="application/javascript">
@@ -226,6 +208,29 @@ Test passed!
     </footer>
 
 
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css"integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js"integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js"integrity="sha384-vZTG03m&#43;2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl"crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ]
+        });})
+</script>
     
 </article>
 

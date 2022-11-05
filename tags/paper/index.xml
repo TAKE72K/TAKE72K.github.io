@@ -13,12 +13,7 @@
       <pubDate>Tue, 04 May 2021 00:40:43 +0800</pubDate>
       
       <guid>https://take72k.github.io/EDA/corner_stitching/</guid>
-      <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點：
- 能明確表現free space 將cell組織在一起  而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。
-Introduction Existing Mechanisms 這邊介紹一些現有的結構
-Linked list
-Bins
-Neighbor Pointers</description>
+      <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點： 能明確表現free space 將cell組織在一起 而能使演算法達到li</description>
     </item>
     
   </channel>
