@@ -56,7 +56,19 @@
 &lt;h3 id=&#34;問題定義&#34;&gt;問題定義&lt;/h3&gt;
 &lt;p&gt;這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。&lt;/p&gt;
 &lt;h3 id=&#34;方法概覽&#34;&gt;方法概覽&lt;/h3&gt;
-&lt;p&gt;為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://take72k.github.io/images/RLmacro-1.png&#34; &gt;
+		&lt;img src=&#34;https://take72k.github.io/images/RLmacro-1.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;
+為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。&lt;/li&gt;
 &lt;li&gt;actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。&lt;/li&gt;
@@ -131,6 +143,21 @@ $$
     &gt;預測連結性&lt;/a&gt;與&lt;a class=&#34;link&#34; href=&#34;https://ieeexplore.ieee.org/document/8587655&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;預測DRC&lt;/a&gt;。(&lt;a class=&#34;link&#34; href=&#34;https://muyuuuu.github.io/2020/07/08/GAP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;別人的筆記&lt;/a&gt;，有空看個)&lt;/p&gt;
+&lt;p&gt;$$\begin{alignedat}{2} e_{ij} &amp;amp;= fc_1(con&amp;amp;cat(fc_0(v_i)|fc_0(v_j)|w^e_{ij}))\cr 
+v_i &amp;amp;=  &amp;amp;mean_{j \in \mathcal{N}(v_i)}(e_{ij}) \end{alignedat}
+$$&lt;/p&gt;
+&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://take72k.github.io/images/RLmacro-2.png&#34; &gt;
+		&lt;img src=&#34;https://take72k.github.io/images/RLmacro-2.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
 </description>
         </item>
         <item>

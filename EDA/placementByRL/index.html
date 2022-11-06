@@ -163,7 +163,19 @@ if (!doNotTrack) {
 <h3 id="問題定義">問題定義</h3>
 <p>這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。</p>
 <h3 id="方法概覽">方法概覽</h3>
-<p>為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：</p>
+<p><figure 
+	>
+	<a href="/images/RLmacro-1.png" >
+		<img src="/images/RLmacro-1.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：</p>
 <ul>
 <li>states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。</li>
 <li>actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。</li>
@@ -238,6 +250,21 @@ $$
     >預測連結性</a>與<a class="link" href="https://ieeexplore.ieee.org/document/8587655"  target="_blank" rel="noopener"
     >預測DRC</a>。(<a class="link" href="https://muyuuuu.github.io/2020/07/08/GAP/"  target="_blank" rel="noopener"
     >別人的筆記</a>，有空看個)</p>
+<p>$$\begin{alignedat}{2} e_{ij} &amp;= fc_1(con&amp;cat(fc_0(v_i)|fc_0(v_j)|w^e_{ij}))\cr 
+v_i &amp;=  &amp;mean_{j \in \mathcal{N}(v_i)}(e_{ij}) \end{alignedat}
+$$</p>
+<p><figure 
+	>
+	<a href="/images/RLmacro-2.png" >
+		<img src="/images/RLmacro-2.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
 
 </section>
 
