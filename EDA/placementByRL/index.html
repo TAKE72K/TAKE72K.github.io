@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這'><title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 《基於深度強化學習的晶片擺置》 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical desig'><title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
 
 <link rel='canonical' href='https://take72k.github.io/EDA/placementByRL/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Chip Placement with Deep Reinforcement Learning 閱讀筆記'>
-<meta property='og:description' content='Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這'>
+<meta property='og:description' content='Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 《基於深度強化學習的晶片擺置》 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical desig'>
 <meta property='og:url' content='https://take72k.github.io/EDA/placementByRL/'>
 <meta property='og:site_name' content='竹林七閑'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Reinforcement Learning' /><meta property='article:published_time' content='2022-11-03T21:01:00&#43;08:00'/><meta property='article:modified_time' content='2022-11-03T21:01:00&#43;08:00'/>
 <meta name="twitter:site" content="@hyes94107">
     <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記">
-<meta name="twitter:description" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這">
+<meta name="twitter:description" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記 link 引言 《基於深度強化學習的晶片擺置》 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical desig">
     <link rel="shortcut icon" href="/ico/sword.png" />
 
 <script type="application/javascript">
@@ -154,7 +154,8 @@ if (!doNotTrack) {
     >link</a></p>
 </blockquote>
 <h2 id="引言">引言</h2>
-<p>Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。<br>
+<p><strong>《基於深度強化學習的晶片擺置》</strong><br>
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。<br>
 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。<br>
 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。</p>
 <h2 id="相關研究">相關研究</h2>

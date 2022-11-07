@@ -47,7 +47,8 @@
     &gt;link&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
-&lt;p&gt;Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;《基於深度強化學習的晶片擺置》&lt;/strong&gt;&lt;br&gt;
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。&lt;br&gt;
 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。&lt;br&gt;
 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。&lt;/p&gt;
 &lt;h2 id=&#34;相關研究&#34;&gt;相關研究&lt;/h2&gt;
