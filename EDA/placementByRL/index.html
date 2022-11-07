@@ -138,7 +138,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    7 minute read
+                    8 minute read
                 </time>
             </div>
         
@@ -249,11 +249,17 @@ $$
     >擺device</a>、<a class="link" href="https://arxiv.org/abs/1802.09691"  target="_blank" rel="noopener"
     >預測連結性</a>與<a class="link" href="https://ieeexplore.ieee.org/document/8587655"  target="_blank" rel="noopener"
     >預測DRC</a>。(<a class="link" href="https://muyuuuu.github.io/2020/07/08/GAP/"  target="_blank" rel="noopener"
-    >別人的筆記</a>，有空看個)</p>
-<p>$$\begin{alignedat}{2} e_{ij} &amp;= fc_1(con&amp;cat(fc_0(v_i)|fc_0(v_j)|w^e_{ij}))\cr 
+    >別人的筆記</a>，有空看個)<br>
+<br>
+點的表示會將其資訊串接成vector，隨著相鄰矩陣輸入進網路。<br>
+點($v_i$)與邊($e_{ij}$)會進行如下的更新：<br>
+$$\begin{alignedat}{2} e_{ij} &amp;= &amp;fc_1(concat(fc_0(v_i)|fc_0(v_j)|w^e_{ij})) \cr 
 v_i &amp;=  &amp;mean_{j \in \mathcal{N}(v_i)}(e_{ij}) \end{alignedat}
-$$</p>
-<p><figure 
+$$<br>
+兩者的embedding會隨機初始化，維度是32-D。$fc_0$為$32 \times 32$、$fc_1$為$65\times 32$的前饋網路，$w^e_{ij}$為$1\times 1$的可學習權重。$\mathcal{N}(v_i)$代表$v_i$的鄰居。</p>
+<h3 id="策略網路架構">策略網路架構</h3>
+<p>下圖展示策略網路(${\pi}_{\theta}$)與價值網路的架構：<br>
+<figure 
 	>
 	<a href="/images/RLmacro-2.png" >
 		<img src="/images/RLmacro-2.png"
@@ -264,7 +270,24 @@ $$</p>
 			>
 	</a>
 	
-</figure></p>
+</figure><br>
+將前述的監督式學習拔掉預測層拿來當編碼器，並加入背景資訊。輸出經過反捲積、batch normalize，產生最終的機率分布。機率分布還會與遮罩內積，去除掉不合法的位置。</p>
+<h3 id="策略網路theta值的訓練">策略網路($\theta$值)的訓練</h3>
+<p>使用Proximal policy optimization (PPO)來更新，參照<a class="link" href="https://arxiv.org/abs/1707.06347"  target="_blank" rel="noopener"
+    >這篇</a>。</p>
+<h2 id="結果">結果</h2>
+<p>經過預先訓練的策略網路在遇到沒碰過的case時(訓練12hr)，表現明顯優於未預訓練的(訓練24hr)。顯示預訓練的網路能有效傳承經驗。<br>
+網路之後使用更大的資料集(2→5→20 blocks)進行訓練，有效減少了過擬合，表現也更好。<br>
+論文與SA、RePlAce、手擺做比較。<br>
+SA當然是被打趴(線長&amp;擁擠度)，畢竟是老方法。<br>
+RePlAce與人工擺則是值得玩味。人擺出的結果在擁擠度這項指標優於另兩者，在timing方面也不錯，但人工擺置來自於長達數周的反覆試誤，而RL則只需要3-6小時來調整。RePlAce所需時間更短(1-3.5小時)，但RePlAce並未顯著地改善擺置的timing，這可能是因為沒有考慮繞線擁擠所導致。<br>
+論文最後討論了改善方向，其中一個重點會是增進標準邏輯閘快速擺置的精確性。此外也可以考慮將RL的做法往其他階段延伸，例如合成。\</p>
+<blockquote>
+<p>(不過，對於這樣的比較，也有些人有不同的<a class="link" href="http://47.190.89.225/pub/education/MLcontra.pdf"  target="_blank" rel="noopener"
+    >看法</a>。看起來這篇論文似乎也有難以重現的問題。</p>
+</blockquote>
+<h2 id="結論">結論</h2>
+<p>論文提出RL擺置的方法，可以在6小時內產生品質相近於人類數周的成果。相信AI未來會是輔助APR的重要工具。</p>
 
 </section>
 
@@ -515,8 +538,12 @@ $$</p>
     <li><a href="#基於經驗學習更好擺置">基於經驗學習更好擺置</a>
       <ol>
         <li><a href="#藉由監督式學習來轉移經驗">藉由監督式學習來轉移經驗</a></li>
+        <li><a href="#策略網路架構">策略網路架構</a></li>
+        <li><a href="#策略網路theta值的訓練">策略網路($\theta$值)的訓練</a></li>
       </ol>
     </li>
+    <li><a href="#結果">結果</a></li>
+    <li><a href="#結論">結論</a></li>
   </ol>
 </nav>
                 </div>

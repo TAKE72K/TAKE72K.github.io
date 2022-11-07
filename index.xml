@@ -142,11 +142,17 @@ $$
     &gt;擺device&lt;/a&gt;、&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1802.09691&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;預測連結性&lt;/a&gt;與&lt;a class=&#34;link&#34; href=&#34;https://ieeexplore.ieee.org/document/8587655&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;預測DRC&lt;/a&gt;。(&lt;a class=&#34;link&#34; href=&#34;https://muyuuuu.github.io/2020/07/08/GAP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;別人的筆記&lt;/a&gt;，有空看個)&lt;/p&gt;
-&lt;p&gt;$$\begin{alignedat}{2} e_{ij} &amp;amp;= fc_1(con&amp;amp;cat(fc_0(v_i)|fc_0(v_j)|w^e_{ij}))\cr 
+    &gt;別人的筆記&lt;/a&gt;，有空看個)&lt;br&gt;
+&lt;br&gt;
+點的表示會將其資訊串接成vector，隨著相鄰矩陣輸入進網路。&lt;br&gt;
+點($v_i$)與邊($e_{ij}$)會進行如下的更新：&lt;br&gt;
+$$\begin{alignedat}{2} e_{ij} &amp;amp;= &amp;amp;fc_1(concat(fc_0(v_i)|fc_0(v_j)|w^e_{ij})) \cr 
 v_i &amp;amp;=  &amp;amp;mean_{j \in \mathcal{N}(v_i)}(e_{ij}) \end{alignedat}
-$$&lt;/p&gt;
-&lt;p&gt;&lt;figure 
+$$&lt;br&gt;
+兩者的embedding會隨機初始化，維度是32-D。$fc_0$為$32 \times 32$、$fc_1$為$65\times 32$的前饋網路，$w^e_{ij}$為$1\times 1$的可學習權重。$\mathcal{N}(v_i)$代表$v_i$的鄰居。&lt;/p&gt;
+&lt;h3 id=&#34;策略網路架構&#34;&gt;策略網路架構&lt;/h3&gt;
+&lt;p&gt;下圖展示策略網路(${\pi}_{\theta}$)與價值網路的架構：&lt;br&gt;
+&lt;figure 
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/RLmacro-2.png&#34; &gt;
 		&lt;img src=&#34;https://take72k.github.io/images/RLmacro-2.png&#34;
@@ -157,7 +163,24 @@ $$&lt;/p&gt;
 			&gt;
 	&lt;/a&gt;
 	
-&lt;/figure&gt;&lt;/p&gt;
+&lt;/figure&gt;&lt;br&gt;
+將前述的監督式學習拔掉預測層拿來當編碼器，並加入背景資訊。輸出經過反捲積、batch normalize，產生最終的機率分布。機率分布還會與遮罩內積，去除掉不合法的位置。&lt;/p&gt;
+&lt;h3 id=&#34;策略網路theta值的訓練&#34;&gt;策略網路($\theta$值)的訓練&lt;/h3&gt;
+&lt;p&gt;使用Proximal policy optimization (PPO)來更新，參照&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1707.06347&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;這篇&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;結果&#34;&gt;結果&lt;/h2&gt;
+&lt;p&gt;經過預先訓練的策略網路在遇到沒碰過的case時(訓練12hr)，表現明顯優於未預訓練的(訓練24hr)。顯示預訓練的網路能有效傳承經驗。&lt;br&gt;
+網路之後使用更大的資料集(2→5→20 blocks)進行訓練，有效減少了過擬合，表現也更好。&lt;br&gt;
+論文與SA、RePlAce、手擺做比較。&lt;br&gt;
+SA當然是被打趴(線長&amp;amp;擁擠度)，畢竟是老方法。&lt;br&gt;
+RePlAce與人工擺則是值得玩味。人擺出的結果在擁擠度這項指標優於另兩者，在timing方面也不錯，但人工擺置來自於長達數周的反覆試誤，而RL則只需要3-6小時來調整。RePlAce所需時間更短(1-3.5小時)，但RePlAce並未顯著地改善擺置的timing，這可能是因為沒有考慮繞線擁擠所導致。&lt;br&gt;
+論文最後討論了改善方向，其中一個重點會是增進標準邏輯閘快速擺置的精確性。此外也可以考慮將RL的做法往其他階段延伸，例如合成。\&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;(不過，對於這樣的比較，也有些人有不同的&lt;a class=&#34;link&#34; href=&#34;http://47.190.89.225/pub/education/MLcontra.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;看法&lt;/a&gt;。看起來這篇論文似乎也有難以重現的問題。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;結論&#34;&gt;結論&lt;/h2&gt;
+&lt;p&gt;論文提出RL擺置的方法，可以在6小時內產生品質相近於人類數周的成果。相信AI未來會是輔助APR的重要工具。&lt;/p&gt;
 </description>
         </item>
         <item>
