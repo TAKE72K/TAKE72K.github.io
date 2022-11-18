@@ -24,7 +24,7 @@
 &lt;p&gt;Peridexis Errant是維護新手包的大佬，他寫的Walkthrough教學系列可說是一步一腳印，補齊所有DF裡的基礎常識。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt; (完成)&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging&#34; &gt;貳、工坊、家具與階梯&lt;/a&gt; (施工)&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging&#34; &gt;貳、工坊、家具與階梯&lt;/a&gt; (完成)&lt;/li&gt;
 &lt;li&gt;參、從洞窟到家園&lt;/li&gt;
 &lt;li&gt;肆、幾乎上軌道了！&lt;/li&gt;
 &lt;li&gt;伍、工業革命&lt;/li&gt;
@@ -576,6 +576,14 @@ Test passed!
 &lt;ul&gt;
 &lt;li&gt;在房間尺寸最大時按&lt;code&gt;Enter&lt;/code&gt;，這時右側欄會顯示新的選單。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;選單會給你這間房間能選擇的選項，你也可以在房間裡面的東西上按&lt;code&gt;q&lt;/code&gt;來叫出選單。順帶一提，你並不用將房間中的每張床設定為臥室(雖然可以這樣做)。矮人要塞夠聰明，知道這間房間是臥室而所有床都可以睡。&lt;/p&gt;
+&lt;p&gt;在選單這邊，你要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按下&lt;code&gt;d&lt;/code&gt;來選擇&lt;code&gt;Dormitory&lt;/code&gt;(宿舍)，這會將選項打開、由&lt;code&gt;(N)&lt;/code&gt;變為&lt;code&gt;(Y)&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有了設定為宿舍的房間，沒有自己專屬臥室的矮人便可以在宿舍的床睡覺。如果你之後組建一支矮人軍隊，你還可以設定&lt;code&gt;Barracks&lt;/code&gt;(軍營)作為矮人們練習與睡覺的地方。&lt;/p&gt;
+&lt;p&gt;做得好！我們現在有了給矮子們睡覺的共享臥室！&lt;/p&gt;
+&lt;p&gt;接著，我們將挖出餐廳、建造更多工坊並設計矮人們的個人臥室。等不及了！&lt;/p&gt;
 </description>
         </item>
         <item>
