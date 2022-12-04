@@ -6,7 +6,16 @@
     <description>Recent content in Reinforcement Learning on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 03 Nov 2022 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/Reinforcement-Learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/Reinforcement-Learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/MORLPlace/</link>
+      <pubDate>Sat, 03 Dec 2022 21:01:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
+      <description>用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</description>
+    </item>
+    
     <item>
       <title>Chip Placement with Deep Reinforcement Learning 閱讀筆記</title>
       <link>https://take72k.github.io/EDA/placementByRL/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://take72k.github.io/EDA/placementByRL/</guid>
       <description>《基於深度強化學習的晶片擺置》 閱讀筆記 link 引言 《基於深度強化學習的晶片擺置》 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺phys</description>
-    </item>
-    
-    <item>
-      <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
-      <link>https://take72k.github.io/EDA/MORLPlace/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
-      <description>用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</description>
     </item>
     
   </channel>
