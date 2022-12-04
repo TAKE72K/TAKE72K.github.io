@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一種新的VLSI layout資料結構'><title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)'><title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
 
-<link rel='canonical' href='https://take72k.github.io/EDA/corner_stitching/'>
+<link rel='canonical' href='https://take72k.github.io/EDA/MORLPlace/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools'>
-<meta property='og:description' content='一種新的VLSI layout資料結構'>
-<meta property='og:url' content='https://take72k.github.io/EDA/corner_stitching/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記'>
+<meta property='og:description' content='用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)'>
+<meta property='og:url' content='https://take72k.github.io/EDA/MORLPlace/'>
 <meta property='og:site_name' content='竹林七閑'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='paper' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='placement' /><meta property='article:published_time' content='2021-05-04T00:40:43&#43;08:00'/><meta property='article:modified_time' content='2021-05-04T00:40:43&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Reinforcement Learning' /><meta property='article:tag' content='Floorplan' />
 <meta name="twitter:site" content="@hyes94107">
-    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools">
-<meta name="twitter:description" content="一種新的VLSI layout資料結構">
+    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記">
+<meta name="twitter:description" content="用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)">
     <link rel="shortcut icon" href="/ico/sword.png" />
 
 <script type="application/javascript">
@@ -105,30 +105,13 @@ if (!doNotTrack) {
     
 
     <h2 class="article-title">
-        <a href="/EDA/corner_stitching/">Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</a>
+        <a href="/EDA/MORLPlace/">Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        一種新的VLSI layout資料結構
-    </h3>
     
 
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">May 04, 2021</time>
-            </div>
         
 
         
@@ -152,20 +135,34 @@ if (!doNotTrack) {
 </header>
 
     <section class="article-content">
-    <h1 id="corner-stitching-a-data-structuring-technique--for-vlsi-layout-tools">Corner Stitching: A Data-Structuring Technique  for VLSI Layout Tools</h1>
-<h2 id="abstract">Abstract</h2>
-<p>Corner stitching是用來表現2D長方形的方法，有兩個優點：</p>
+    <h1 id="用於晶片擺置的靈活性多目標強化學習">用於晶片擺置的靈活性多目標強化學習</h1>
+<blockquote>
+<p><a class="link" href="https://arxiv.org/abs/2204.06407"  target="_blank" rel="noopener"
+    >link to paper</a></p>
+</blockquote>
+<blockquote>
+<p><em>為了EDA Workshop看的。</em></p>
+</blockquote>
+<h2 id="本篇的亮點貢獻">本篇的亮點\貢獻：</h2>
 <ol>
-<li>能明確表現free space</li>
-<li>將cell組織在一起</li>
+<li>提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</li>
+<li>提出選取STD CELL叢集尺寸的方法</li>
+<li>改編policy gradient，使其能適用在MORL上</li>
 </ol>
-<p>而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。</p>
-<h2 id="introduction">Introduction</h2>
-<h2 id="existing-mechanisms">Existing Mechanisms</h2>
-<p>這邊介紹一些現有的結構</p>
-<p>Linked list</p>
-<p>Bins</p>
-<p>Neighbor Pointers</p>
+<p>目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。</p>
+<h2 id="相關研究">相關研究</h2>
+<p>基本上本篇的作法和<a class="link" href="https://take72k.github.io/EDA/placementByRL/"  target="_blank" rel="noopener"
+    >google這篇</a>類似，可以看一下。</p>
+<h2 id="問題定義">問題定義</h2>
+<h3 id="混和尺寸擺置">混和尺寸擺置</h3>
+<p>我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。
+node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。
+流程是這樣的：</p>
+<ol>
+<li>輸入檔案(LEF/DEF/RTL)</li>
+<li>擺置</li>
+<li>EDA Tool算出QoRs</li>
+</ol>
 
 </section>
 
@@ -174,11 +171,13 @@ if (!doNotTrack) {
     
     <section class="article-tags">
         
-            <a href="/tags/paper/">paper</a>
-        
             <a href="/tags/eda/">eda</a>
         
-            <a href="/tags/placement/">placement</a>
+            <a href="/tags/AI/">AI</a>
+        
+            <a href="/tags/Reinforcement-Learning/">Reinforcement Learning</a>
+        
+            <a href="/tags/Floorplan/">Floorplan</a>
         
     </section>
 
@@ -269,12 +268,12 @@ if (!doNotTrack) {
                 
                     
 <article class="">
-    <a href="/EDA/MORLPlace/">
+    <a href="/EDA/corner_stitching/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</h2>
+            <h2 class="article-title">Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</h2>
         </div>
     </a>
 </article>
@@ -404,9 +403,13 @@ if (!doNotTrack) {
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#abstract">Abstract</a></li>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#existing-mechanisms">Existing Mechanisms</a></li>
+    <li><a href="#本篇的亮點貢獻">本篇的亮點\貢獻：</a></li>
+    <li><a href="#相關研究">相關研究</a></li>
+    <li><a href="#問題定義">問題定義</a>
+      <ol>
+        <li><a href="#混和尺寸擺置">混和尺寸擺置</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
                 </div>

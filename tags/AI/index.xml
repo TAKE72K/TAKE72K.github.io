@@ -25,5 +25,14 @@
       <description>fatal error: FreeImage.h: No such file or directory #include &amp;ldquo;FreeImage.h&amp;rdquo; CentOS 7 編譯mnistCUDNN，CuDnn的SAMPLE時出現問題， cp -r /usr/src/cudnn_samples_v8/ $HOME cd $HOME/cudnn_samples_v8/mnistCUDNN # make clean &amp;amp;&amp;amp; make 錯誤訊息： test.c:1:23: fatal error: FreeImage.h: No such file or directory #include &amp;quot;FreeImage.h&amp;quot;</description>
     </item>
     
+    <item>
+      <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/MORLPlace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
+      <description>用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</description>
+    </item>
+    
   </channel>
 </rss>

@@ -43,5 +43,14 @@
       <description>Corner Stitching: A Data-Structuring Technique for VLSI Layout Tools Abstract Corner stitching是用來表現2D長方形的方法，有兩個優點： 能明確表現free space 將cell組織在一起 而能使演算法達到li</description>
     </item>
     
+    <item>
+      <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/MORLPlace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
+      <description>用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</description>
+    </item>
+    
   </channel>
 </rss>

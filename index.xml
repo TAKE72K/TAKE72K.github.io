@@ -3781,6 +3781,42 @@ PEACE HOSTEL的BAR，剛好有抽積木大賽，獎品啤酒一壺。
 劍道型沒出錯、對打也還可，所以應該過八。&lt;/p&gt;
 </description>
         </item>
+        <item>
+        <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+        <link>https://take72k.github.io/EDA/MORLPlace/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
+        <description>&lt;h1 id=&#34;用於晶片擺置的靈活性多目標強化學習&#34;&gt;用於晶片擺置的靈活性多目標強化學習&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/2204.06407&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;link to paper&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;為了EDA Workshop看的。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;本篇的亮點貢獻&#34;&gt;本篇的亮點\貢獻：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)&lt;/li&gt;
+&lt;li&gt;提出選取STD CELL叢集尺寸的方法&lt;/li&gt;
+&lt;li&gt;改編policy gradient，使其能適用在MORL上&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。&lt;/p&gt;
+&lt;h2 id=&#34;相關研究&#34;&gt;相關研究&lt;/h2&gt;
+&lt;p&gt;基本上本篇的作法和&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/EDA/placementByRL/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;google這篇&lt;/a&gt;類似，可以看一下。&lt;/p&gt;
+&lt;h2 id=&#34;問題定義&#34;&gt;問題定義&lt;/h2&gt;
+&lt;h3 id=&#34;混和尺寸擺置&#34;&gt;混和尺寸擺置&lt;/h3&gt;
+&lt;p&gt;我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。
+node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。
+流程是這樣的：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;輸入檔案(LEF/DEF/RTL)&lt;/li&gt;
+&lt;li&gt;擺置&lt;/li&gt;
+&lt;li&gt;EDA Tool算出QoRs&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
         
     </channel>
 </rss>

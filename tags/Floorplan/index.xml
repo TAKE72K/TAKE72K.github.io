@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Floorplan on 竹林七閑</title>
+    <link>https://take72k.github.io/tags/Floorplan/</link>
+    <description>Recent content in Floorplan on 竹林七閑</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language><atom:link href="https://take72k.github.io/tags/Floorplan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/MORLPlace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/MORLPlace/</guid>
+      <description>用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</description>
+    </item>
+    
+  </channel>
+</rss>
