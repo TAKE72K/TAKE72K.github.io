@@ -138,7 +138,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -176,6 +176,11 @@ node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/�
 <li>擺置</li>
 <li>EDA Tool算出QoRs</li>
 </ol>
+<p>google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。</p>
+<h3 id="多目標強化學習">多目標強化學習</h3>
+<p>先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。
+定義<em>multi-objective MDP(MOMDP)</em>$\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。
+對於這樣的獎勵向量，我們可以用一個$\omega=(\omega_i)^{K}<em>{i=1}$來使MOMDP$\mathcal{M}$塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值\凸組合$r</em>\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。</p>
 
 </section>
 
@@ -421,6 +426,7 @@ node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/�
     <li><a href="#問題定義">問題定義</a>
       <ol>
         <li><a href="#混和尺寸擺置">混和尺寸擺置</a></li>
+        <li><a href="#多目標強化學習">多目標強化學習</a></li>
       </ol>
     </li>
   </ol>

@@ -69,6 +69,11 @@ node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/�
 &lt;li&gt;擺置&lt;/li&gt;
 &lt;li&gt;EDA Tool算出QoRs&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。&lt;/p&gt;
+&lt;h3 id=&#34;多目標強化學習&#34;&gt;多目標強化學習&lt;/h3&gt;
+&lt;p&gt;先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。
+定義&lt;em&gt;multi-objective MDP(MOMDP)&lt;/em&gt;$\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。
+對於這樣的獎勵向量，我們可以用一個$\omega=(\omega_i)^{K}&lt;em&gt;{i=1}$來使MOMDP$\mathcal{M}$塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值\凸組合$r&lt;/em&gt;\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。&lt;/p&gt;
 </description>
         </item>
         <item>
