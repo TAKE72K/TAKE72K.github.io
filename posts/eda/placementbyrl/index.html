@@ -7,11 +7,23 @@
 <meta name="robots" content="index, follow">
 <title>Chip Placement with Deep Reinforcement Learning 閱讀筆記 | 竹林七閒</title>
 <meta name="keywords" content="eda, AI, Reinforcement Learning" />
-<meta name="description" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記  link
- 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
+<meta name="description" content="《基於深度強化學習的晶片擺置》 閱讀筆記  link
+ 引言 《基於深度強化學習的晶片擺置》
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。
+事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。
+這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
 相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。
-方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
- states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  $S_0$">
+方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。
+方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
+ states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t&#43;1}$，同時獲得獎勵$r_t$ ($t&lt;T$時為0，$t=T$時為估計的cost)。
+透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。
+獎勵 (reward) 這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。
+這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。
+同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：
+ 將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。 將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。 計算標準邏輯閘時，假設所有的線都是來自叢集中心。 計算繞線壅擠時，只考慮前10%嚴重的格子。  線長 HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。 這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：
+$HPWL(netlist)={\displaystyle\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$
+格子的數量 對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。
+Macro擺放順序 論文依照面積降序排列macro，並在面積相同時用topological sort來排列。">
 <meta name="author" content="">
 <link rel="canonical" href="https://take72k.github.io/posts/eda/placementbyrl/" />
 <link crossorigin="anonymous" href="https://take72k.github.io/assets/css/stylesheet.min.b9ff4cc257e914dab489bd18086151800e18f91456a5174bf28489210227a659.css" integrity="sha256-uf9MwlfpFNq0ib0YCGFRgA4Y&#43;RRWpRdL8oSJIQInplk=" rel="preload stylesheet" as="style">
@@ -24,13 +36,25 @@
 <link rel="mask-icon" href="https://take72k.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.88.0-DEV" />
+<meta name="generator" content="Hugo 0.93.0-DEV" />
 <meta property="og:title" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記" />
-<meta property="og:description" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記  link
- 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
+<meta property="og:description" content="《基於深度強化學習的晶片擺置》 閱讀筆記  link
+ 引言 《基於深度強化學習的晶片擺置》
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。
+事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。
+這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
 相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。
-方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
- states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  $S_0$" />
+方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。
+方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
+ states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t&#43;1}$，同時獲得獎勵$r_t$ ($t&lt;T$時為0，$t=T$時為估計的cost)。
+透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。
+獎勵 (reward) 這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。
+這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。
+同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：
+ 將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。 將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。 計算標準邏輯閘時，假設所有的線都是來自叢集中心。 計算繞線壅擠時，只考慮前10%嚴重的格子。  線長 HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。 這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：
+$HPWL(netlist)={\displaystyle\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$
+格子的數量 對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。
+Macro擺放順序 論文依照面積降序排列macro，並在面積相同時用topological sort來排列。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://take72k.github.io/posts/eda/placementbyrl/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-03T21:01:00&#43;00:00" />
@@ -38,11 +62,23 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記"/>
-<meta name="twitter:description" content="Chip Placement with Deep Reinforcement Learning 閱讀筆記  link
- 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
+<meta name="twitter:description" content="《基於深度強化學習的晶片擺置》 閱讀筆記  link
+ 引言 《基於深度強化學習的晶片擺置》
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。
+事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。
+這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。
 相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。
-方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
- states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  $S_0$"/>
+方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。
+方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：
+ states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t&#43;1}$，同時獲得獎勵$r_t$ ($t&lt;T$時為0，$t=T$時為估計的cost)。
+透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。
+獎勵 (reward) 這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。
+這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。
+同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：
+ 將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。 將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。 計算標準邏輯閘時，假設所有的線都是來自叢集中心。 計算繞線壅擠時，只考慮前10%嚴重的格子。  線長 HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。 這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：
+$HPWL(netlist)={\displaystyle\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$
+格子的數量 對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。
+Macro擺放順序 論文依照面積降序排列macro，並在面積相同時用topological sort來排列。"/>
 
 
 <script type="application/ld+json">
@@ -71,12 +107,12 @@
   "@type": "BlogPosting",
   "headline": "Chip Placement with Deep Reinforcement Learning 閱讀筆記",
   "name": "Chip Placement with Deep Reinforcement Learning 閱讀筆記",
-  "description": "Chip Placement with Deep Reinforcement Learning 閱讀筆記  link\n 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。\n相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。\n方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：\n states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  $S_0$",
+  "description": "《基於深度強化學習的晶片擺置》 閱讀筆記  link\n 引言 《基於深度強化學習的晶片擺置》\nGoogle這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。\n事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。\n這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。\n相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。\n方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。\n方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：\n states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t+1}$，同時獲得獎勵$r_t$ ($t\u0026lt;T$時為0，$t=T$時為估計的cost)。\n透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\\pi_\\theta(a|s)$中的參數$\\theta$。\n獎勵 (reward) 這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。\n這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。\n同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：\n 將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。 將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。 計算標準邏輯閘時，假設所有的線都是來自叢集中心。 計算繞線壅擠時，只考慮前10%嚴重的格子。  線長 HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。 這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：\n$HPWL(netlist)={\\displaystyle\\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$\n格子的數量 對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。\nMacro擺放順序 論文依照面積降序排列macro，並在面積相同時用topological sort來排列。",
   "keywords": [
     "eda", "AI", "Reinforcement Learning"
   ],
-  "articleBody": "Chip Placement with Deep Reinforcement Learning 閱讀筆記  link\n 引言 Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。 事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。\n相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。\n方法 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：\n states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  $S_0$\n",
-  "wordCount" : "39",
+  "articleBody": "《基於深度強化學習的晶片擺置》 閱讀筆記  link\n 引言 《基於深度強化學習的晶片擺置》\nGoogle這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。\n事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。\n這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。\n相關研究 Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。\n方法 問題定義 這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。\n方法概覽 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：\n states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。 actions: 智慧型代理人能執行的動作的集合 (也就是擺放macro到一個合法位置)。 state transition: 給定state和action，轉場到下一個state。 reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)  我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t+1}$，同時獲得獎勵$r_t$ ($t獎勵 (reward) 這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。\n這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。\n同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：\n 將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。 將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。 計算標準邏輯閘時，假設所有的線都是來自叢集中心。 計算繞線壅擠時，只考慮前10%嚴重的格子。  線長 HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。 這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：\n$HPWL(netlist)={\\displaystyle\\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$\n格子的數量 對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。\nMacro擺放順序 論文依照面積降序排列macro，並在面積相同時用topological sort來排列。\n依照面積 → 避免發生無解(可擺置位置)。\ntopological → 使策略網路能考慮將結構相近的macro擺在一起，從而減少潛在線長。\n另一種做法是在擺的同時最佳化排序，但這又使action更複雜。結果顯示以上方法可行。\n標準邏輯閘擺置 採用經典的force-directed想法，將netlist類比為彈簧、用權重乘以距離來類比彈力。如此，連接比較多的會被拉的較近，線長變減少了。\n此外也會加入將重疊的cell分開的力。\n為了避免震盪，會限制每次移動的距離。\nforce-directed可以參考這篇。\n繞線壅擠 論文參考這篇建立congestion map，並用5X1的卷積來平滑結果。\n所有net繞線完後，會選取前10%嚴重的數值套用進獎勵的計算式裡。\n密度 論文將格子中的使用率也就是密度當作限制，禁止策略網路將macro放在密度超過最大值($max_{density}$)的格子中、也就是可能產生重疊的格子。\n這個做法有兩個好處：\n 減少策略網路產生的非法解。 減小解空間、降低複雜度。  可行的標準邏輯閘擺置應該符合以下限制：不得超過最大密度($max_{density}$)。這個值在實驗中被設為0.6。\n為了符合這些限制，論文準備了一個$m \\times n$的boolean矩陣、表示該格是否滿足限制，將這個矩陣乘上策略網路的輸出，便能把不合限制的位置去除。\n如果要加入blockage也很單純，將該格的限制矩陣設為0即可。\n評估擺置品質前處理 論文會用類似tetrix的想法把macro放到最近的合法位置，之候固定macro後用商業tool去擺標準邏輯閘以取得最終的QoR。\naction的表示 前面描述過論文將擺置空間化為$m \\times n$的格子，策略網路的輸出便會是$m \\times n$的機率分佈，動作會選擇最高的位置來擺放macro。\nstate的表示 論文使用netlist的圖(相鄰矩陣)、點的資訊(寬、高、種類…等等)、邊的資訊(連接數量)、當前擺的macro、其連接資訊、整體資訊(繞線資源、線的數量、macro與標準邏輯閘叢集的資訊等等)表示一個state。\n論文接下來會討論如何有效處理這些資訊，以學習擺置。\n基於經驗學習更好擺置 擺置的目標式可以定義如下：\n$J( \\theta ,G )=\\dfrac{1}{K}\\displaystyle\\sum_{g \\sim G}^{} E_{g,p\\sim\\pi_{\\theta}}[R_{p,g}]$\n$\\theta$是策略網路的參數，$G$是大小為$K$的netlist，個別net由$g$來表示，$R_{p,g}$代表一個章節中的某個擺置$p$裡、某net $g$的獎勵，也就是：\n$$ \\begin{split} R_{p,g}=-Wirelen \u0026gth(p,g)-\\lambda \\ Congestion(p,g) \\cr \u0026S.t.density(p,g)\\leq max_{density} \\end{split}$$\n這個式子便是論文中的最佳化目標，$\\lambda$被設為$0.01$、$max_{density}$則為$0.6$。\n藉由監督式學習來轉移經驗 移植策略網路很有挑戰性，因為擺置內容千變萬化。論文首先嘗試學習多種不同的擺置，因為一個能擺出最佳解的網路應該能有效地理解擺置的資訊──即使換了不一樣的擺置。因此論文便提出了要訓練預測獎勵的網路，來當作策略網路的解碼器。(結果還是得搞一堆測資嗎※。)\n為了訓練，論文找了五個加速器架構、每個產生2000種擺置，共10000筆當作訓練資料。產生的方法便是讓一個原始的策略網路亂擺，並給予不同的參數。一開始網路會產生一些低品質擺置，但隨著網路訓練，品質會逐漸改善，因此可以收集到多樣的資料。\n論文中設計圖神經網路(graph neural network)架構來解碼netlist的資訊，主要作用就是將一個很大的超圖編碼成可處理的向量，方便策略網路去理解。類似的例子可以參考分類圖中點、擺device、預測連結性與預測DRC。(別人的筆記，有空看個)\n點的表示會將其資訊串接成vector，隨著相鄰矩陣輸入進網路。\n點($v_i$)與邊($e_{ij}$)會進行如下的更新：\n$$\\begin{alignedat}{2} e_{ij} \u0026= \u0026fc_1(concat(fc_0(v_i)|fc_0(v_j)|w^e_{ij})) \\cr v_i \u0026= \u0026mean_{j \\in \\mathcal{N}(v_i)}(e_{ij}) \\end{alignedat} $$\n兩者的embedding會隨機初始化，維度是32-D。$fc_0$為$32 \\times 32$、$fc_1$為$65\\times 32$的前饋網路，$w^e_{ij}$為$1\\times 1$的可學習權重。$\\mathcal{N}(v_i)$代表$v_i$的鄰居。\n策略網路架構 下圖展示策略網路(${\\pi}_{\\theta}$)與價值網路的架構：\n將前述的監督式學習拔掉預測層拿來當編碼器，並加入背景資訊。輸出經過反捲積、batch normalize，產生最終的機率分布。機率分布還會與遮罩內積，去除掉不合法的位置。\n策略網路($\\theta$值)的訓練 使用Proximal policy optimization (PPO)來更新，參照這篇。\n結果 經過預先訓練的策略網路在遇到沒碰過的case時(訓練12hr)，表現明顯優於未預訓練的(訓練24hr)。顯示預訓練的網路能有效傳承經驗。\n網路之後使用更大的資料集(2→5→20 blocks)進行訓練，有效減少了過擬合，表現也更好。\n論文與SA、RePlAce、手擺做比較。\nSA當然是被打趴(線長\u0026擁擠度)，畢竟是老方法。\nRePlAce與人工擺則是值得玩味。人擺出的結果在擁擠度這項指標優於另兩者，在timing方面也不錯，但人工擺置來自於長達數周的反覆試誤，而RL則只需要3-6小時來調整。RePlAce所需時間更短(1-3.5小時)，但RePlAce並未顯著地改善擺置的timing，這可能是因為沒有考慮繞線擁擠所導致。\n論文最後討論了改善方向，其中一個重點會是增進標準邏輯閘快速擺置的精確性。此外也可以考慮將RL的做法往其他階段延伸，例如合成。\\\n (不過，對於這樣的比較，也有些人有不同的看法。看起來這篇論文似乎也有難以重現的問題。\n 結論 論文提出RL擺置的方法，可以在6小時內產生品質相近於人類數周的成果。相信AI未來會是輔助APR的重要工具。\n",
+  "wordCount" : "170",
   "inLanguage": "en",
   "datePublished": "2022-11-03T21:01:00Z",
   "dateModified": "2022-11-03T21:01:00Z",
@@ -187,18 +223,23 @@
     <div class="post-meta">November 3, 2022
 </div>
   </header> 
-  <div class="post-content"><h1 id="chip-placement-with-deep-reinforcement-learning-閱讀筆記">Chip Placement with Deep Reinforcement Learning 閱讀筆記<a hidden class="anchor" aria-hidden="true" href="#chip-placement-with-deep-reinforcement-learning-閱讀筆記">#</a></h1>
+  <div class="post-content"><h1 id="基於深度強化學習的晶片擺置-閱讀筆記">《基於深度強化學習的晶片擺置》 閱讀筆記<a hidden class="anchor" aria-hidden="true" href="#基於深度強化學習的晶片擺置-閱讀筆記">#</a></h1>
 <blockquote>
 <p><a href="https://arxiv.org/abs/2004.10746">link</a></p>
 </blockquote>
 <h2 id="引言">引言<a hidden class="anchor" aria-hidden="true" href="#引言">#</a></h2>
-<p>Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。
-事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。
+<p><strong>《基於深度強化學習的晶片擺置》</strong><br>
+Google這篇一出可說語驚四座，從未有人把強化學習拿來擺physical design中的macro過。<br>
+事實上，這個步驟可說是整個flow中複雜度最高的部分之一，原因無他，所有的改變都牽一髮而動全身，要完美衡量擺放macro的效果去做決定，不能說不可能，但肯定是相當耗時的。<br>
 這時工程師真正的作用就出來了，經驗老到的可能一看就知道怎樣擺(可能)比較好，過去我們開發的演算法，可說是在用程式模擬這種經驗；而強化學習則另闢蹊徑，讓AI來扮演菜鳥工程師，從零開始學習這些know-how。</p>
 <h2 id="相關研究">相關研究<a hidden class="anchor" aria-hidden="true" href="#相關研究">#</a></h2>
 <p>Global placment問題是晶片設計上的一大挑戰，前人所提出的方法大致可以歸納為三個方向：基於分區、基於隨機優化、基於分析。</p>
 <h2 id="方法">方法<a hidden class="anchor" aria-hidden="true" href="#方法">#</a></h2>
-<p>這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。
+<h3 id="問題定義">問題定義<a hidden class="anchor" aria-hidden="true" href="#問題定義">#</a></h3>
+<p>這份研究的課題是晶片擺置最佳化，目標是將netlist(描述晶片的graph)這張圖的節點定位在2D的有限平面上，也就是擺置空間，並且同時最佳化Power, performance and area (PPA)。</p>
+<h3 id="方法概覽">方法概覽<a hidden class="anchor" aria-hidden="true" href="#方法概覽">#</a></h3>
+<p><img loading="lazy" src="https://take72k.github.io/images/RLmacro-1.png" alt=""  />
+
 為了與深度強化學習做結合，必須將這個擺置問題轉化為Markov Decision Processes (MDPs)的形式，由四個要素構成：</p>
 <ul>
 <li>states: 所有可能發生的環境的集合 (也就是所有可能產生的擺置)。</li>
@@ -206,7 +247,93 @@
 <li>state transition: 給定state和action，轉場到下一個state。</li>
 <li>reward: 在某個state做某個動作的獎勵 (設定為零，擺完最後一步之後會用估計線長與擁擠狀況的負加權合作為獎勵。)</li>
 </ul>
-<p>$S_0$</p>
+<p>我們將$s_0$定義為初始state，也就是空無一物的平面，而最後的終點則是$s_T$，也就是擺放了所有Macro後完整的擺置結果。在每個單位時間$t$，智慧型代理人會觀察當前的環境$s_t$，並做動作$a_t$，以到達下一個階段$s_{t+1}$，同時獲得獎勵$r_t$ ($t&lt;T$時為0，$t=T$時為估計的cost)。<br>
+透過重複學習這些紀錄(episodes)，智慧型代理人能透過策略網路(policy network)學習最大化cost的方法。這篇論文使用Proximal Policy Optimization (PPO)的方式，來更新策略網路 $\pi_\theta(a|s)$中的參數$\theta$。</p>
+<h3 id="獎勵-reward">獎勵 (reward)<a hidden class="anchor" aria-hidden="true" href="#獎勵-reward">#</a></h3>
+<p>這篇論文的目標是最佳化PPA，而這些資訊通常是由商業tool在flow的最後產生，也就是report QoR，包含線長、繞線擁擠狀況、timing、密度、面積、power等等，這些資訊綜合在一起便是最精確的reward。然而這通常得花上數小時甚至一天的時間來產生這些結果，RL需要快速迭代的特性注定讓使用這樣的reward不現實可行，RL需要的是一個能快速估算的reward、同時足夠精確而可以代表最終的QoR。<br>
+這篇論文採用線長與繞線擁擠度來估計擺置品質，並將其加權相加後當作reward，也就是$r_t=-HPWL-c*Congestion$。<br>
+同時為了保證在足夠短的時間能算出線長，論文做了幾個假設：</p>
+<ol>
+<li>將標準邏輯閘用hMETIS叢集起來，再用forced-directed方式來快速擺置，這使得計算線長時能獲得快速而不失精確的標準邏輯閘線長。</li>
+<li>將平面離散化成數千個格子，並將macro與cell叢集的重心放置於格子的中心。</li>
+<li>計算標準邏輯閘時，假設所有的線都是來自叢集中心。</li>
+<li>計算繞線壅擠時，只考慮前10%嚴重的格子。</li>
+</ol>
+<h4 id="線長">線長<a hidden class="anchor" aria-hidden="true" href="#線長">#</a></h4>
+<p>HPWL，常見的估算方法，其意義可以視為是繞線長度所需的下限，大約等於其Steiner tree的線長。
+這篇論文並加入一個normalize factor $q(i)$來增加估算的精確性，隨著netlist中結點的數量增加HPWL，如下所示，其中$N_{netlist}$代表netlist的數量：<br>
+$HPWL(netlist)={\displaystyle\sum_{i=1}^{N_{netlist}}q(i)*HPWL(i)}$</p>
+<h4 id="格子的數量">格子的數量<a hidden class="anchor" aria-hidden="true" href="#格子的數量">#</a></h4>
+<p>對於空白的擺置空間，有無數種格子切法可以將其離散化。而切的數量嚴重影響最佳化的複雜度與解的品質。論文將數量上限定為128x128，並將數量選擇視為一個bin-packing問題，透過浪費的格子數來衡量選擇的好壞。實驗中使用的數量平均約30。</p>
+<h4 id="macro擺放順序">Macro擺放順序<a hidden class="anchor" aria-hidden="true" href="#macro擺放順序">#</a></h4>
+<p>論文依照面積降序排列macro，並在面積相同時用topological sort來排列。<br>
+依照面積 → 避免發生無解(可擺置位置)。<br>
+topological → 使策略網路能考慮將結構相近的macro擺在一起，從而減少潛在線長。<br>
+另一種做法是在擺的同時最佳化排序，但這又使action更複雜。結果顯示以上方法可行。</p>
+<h4 id="標準邏輯閘擺置">標準邏輯閘擺置<a hidden class="anchor" aria-hidden="true" href="#標準邏輯閘擺置">#</a></h4>
+<p>採用經典的force-directed想法，將netlist類比為彈簧、用權重乘以距離來類比彈力。如此，連接比較多的會被拉的較近，線長變減少了。<br>
+此外也會加入將重疊的cell分開的力。<br>
+為了避免震盪，會限制每次移動的距離。<br>
+force-directed可以參考<a href="https://dl.acm.org/doi/10.1145/103724.103725">這篇</a>。</p>
+<h4 id="繞線壅擠">繞線壅擠<a hidden class="anchor" aria-hidden="true" href="#繞線壅擠">#</a></h4>
+<p>論文參考<a href="https://dl.acm.org/doi/10.1145/2160916.2160958">這篇</a>建立congestion map，並用5X1的卷積來平滑結果。<br>
+所有net繞線完後，會選取前10%嚴重的數值套用進獎勵的計算式裡。</p>
+<h4 id="密度">密度<a hidden class="anchor" aria-hidden="true" href="#密度">#</a></h4>
+<p>論文將格子中的使用率也就是密度當作限制，禁止策略網路將macro放在密度超過最大值($max_{density}$)的格子中、也就是可能產生重疊的格子。<br>
+這個做法有兩個好處：</p>
+<ol>
+<li>減少策略網路產生的非法解。</li>
+<li>減小解空間、降低複雜度。</li>
+</ol>
+<p>可行的標準邏輯閘擺置應該符合以下限制：不得超過最大密度($max_{density}$)。這個值在實驗中被設為0.6。<br>
+為了符合這些限制，論文準備了一個$m \times n$的boolean矩陣、表示該格是否滿足限制，將這個矩陣乘上策略網路的輸出，便能把不合限制的位置去除。<br>
+如果要加入blockage也很單純，將該格的限制矩陣設為0即可。</p>
+<h4 id="評估擺置品質前處理">評估擺置品質前處理<a hidden class="anchor" aria-hidden="true" href="#評估擺置品質前處理">#</a></h4>
+<p>論文會用類似tetrix的想法把macro放到最近的合法位置，之候固定macro後用商業tool去擺標準邏輯閘以取得最終的QoR。</p>
+<h3 id="action的表示">action的表示<a hidden class="anchor" aria-hidden="true" href="#action的表示">#</a></h3>
+<p>前面描述過論文將擺置空間化為$m \times n$的格子，策略網路的輸出便會是$m \times n$的機率分佈，動作會選擇最高的位置來擺放macro。</p>
+<h3 id="state的表示">state的表示<a hidden class="anchor" aria-hidden="true" href="#state的表示">#</a></h3>
+<p>論文使用netlist的圖(相鄰矩陣)、點的資訊(寬、高、種類&hellip;等等)、邊的資訊(連接數量)、當前擺的macro、其連接資訊、整體資訊(繞線資源、線的數量、macro與標準邏輯閘叢集的資訊等等)表示一個state。<br>
+論文接下來會討論如何有效處理這些資訊，以學習擺置。</p>
+<h2 id="基於經驗學習更好擺置">基於經驗學習更好擺置<a hidden class="anchor" aria-hidden="true" href="#基於經驗學習更好擺置">#</a></h2>
+<p>擺置的目標式可以定義如下：<br>
+$J( \theta ,G )=\dfrac{1}{K}\displaystyle\sum_{g \sim G}^{} 
+E_{g,p\sim\pi_{\theta}}[R_{p,g}]$<br>
+$\theta$是策略網路的參數，$G$是大小為$K$的netlist，個別net由$g$來表示，$R_{p,g}$代表一個章節中的某個擺置$p$裡、某net $g$的獎勵，也就是：<br>
+$$
+\begin{split} R_{p,g}=-Wirelen &amp;gth(p,g)-\lambda \ Congestion(p,g) \cr
+&amp;S.t.density(p,g)\leq max_{density} \end{split}$$<br>
+這個式子便是論文中的最佳化目標，$\lambda$被設為$0.01$、$max_{density}$則為$0.6$。</p>
+<h3 id="藉由監督式學習來轉移經驗">藉由監督式學習來轉移經驗<a hidden class="anchor" aria-hidden="true" href="#藉由監督式學習來轉移經驗">#</a></h3>
+<p>移植策略網路很有挑戰性，因為擺置內容千變萬化。論文首先嘗試學習多種不同的擺置，因為一個能擺出最佳解的網路應該能有效地理解擺置的資訊──即使換了不一樣的擺置。因此論文便提出了要訓練預測獎勵的網路，來當作策略網路的解碼器。(結果還是得搞一堆測資嗎※。)<br>
+為了訓練，論文找了五個加速器架構、每個產生2000種擺置，共10000筆當作訓練資料。產生的方法便是讓一個原始的策略網路亂擺，並給予不同的參數。一開始網路會產生一些低品質擺置，但隨著網路訓練，品質會逐漸改善，因此可以收集到多樣的資料。<br>
+論文中設計圖神經網路(graph neural network)架構來解碼netlist的資訊，主要作用就是將一個很大的超圖編碼成可處理的向量，方便策略網路去理解。類似的例子可以參考<a href="https://arxiv.org/abs/1903.00614">分類圖中點</a>、<a href="https://arxiv.org/abs/1910.01578">擺device</a>、<a href="https://arxiv.org/abs/1802.09691">預測連結性</a>與<a href="https://ieeexplore.ieee.org/document/8587655">預測DRC</a>。(<a href="https://muyuuuu.github.io/2020/07/08/GAP/">別人的筆記</a>，有空看個)<br>
+<br>
+點的表示會將其資訊串接成vector，隨著相鄰矩陣輸入進網路。<br>
+點($v_i$)與邊($e_{ij}$)會進行如下的更新：<br>
+$$\begin{alignedat}{2} e_{ij} &amp;= &amp;fc_1(concat(fc_0(v_i)|fc_0(v_j)|w^e_{ij})) \cr 
+v_i &amp;=  &amp;mean_{j \in \mathcal{N}(v_i)}(e_{ij}) \end{alignedat}
+$$<br>
+兩者的embedding會隨機初始化，維度是32-D。$fc_0$為$32 \times 32$、$fc_1$為$65\times 32$的前饋網路，$w^e_{ij}$為$1\times 1$的可學習權重。$\mathcal{N}(v_i)$代表$v_i$的鄰居。</p>
+<h3 id="策略網路架構">策略網路架構<a hidden class="anchor" aria-hidden="true" href="#策略網路架構">#</a></h3>
+<p>下圖展示策略網路(${\pi}_{\theta}$)與價值網路的架構：<br>
+<img loading="lazy" src="https://take72k.github.io/images/RLmacro-2.png" alt=""  />
+<br>
+將前述的監督式學習拔掉預測層拿來當編碼器，並加入背景資訊。輸出經過反捲積、batch normalize，產生最終的機率分布。機率分布還會與遮罩內積，去除掉不合法的位置。</p>
+<h3 id="策略網路theta值的訓練">策略網路($\theta$值)的訓練<a hidden class="anchor" aria-hidden="true" href="#策略網路theta值的訓練">#</a></h3>
+<p>使用Proximal policy optimization (PPO)來更新，參照<a href="https://arxiv.org/abs/1707.06347">這篇</a>。</p>
+<h2 id="結果">結果<a hidden class="anchor" aria-hidden="true" href="#結果">#</a></h2>
+<p>經過預先訓練的策略網路在遇到沒碰過的case時(訓練12hr)，表現明顯優於未預訓練的(訓練24hr)。顯示預訓練的網路能有效傳承經驗。<br>
+網路之後使用更大的資料集(2→5→20 blocks)進行訓練，有效減少了過擬合，表現也更好。<br>
+論文與SA、RePlAce、手擺做比較。<br>
+SA當然是被打趴(線長&amp;擁擠度)，畢竟是老方法。<br>
+RePlAce與人工擺則是值得玩味。人擺出的結果在擁擠度這項指標優於另兩者，在timing方面也不錯，但人工擺置來自於長達數周的反覆試誤，而RL則只需要3-6小時來調整。RePlAce所需時間更短(1-3.5小時)，但RePlAce並未顯著地改善擺置的timing，這可能是因為沒有考慮繞線擁擠所導致。<br>
+論文最後討論了改善方向，其中一個重點會是增進標準邏輯閘快速擺置的精確性。此外也可以考慮將RL的做法往其他階段延伸，例如合成。\</p>
+<blockquote>
+<p>(不過，對於這樣的比較，也有些人有不同的<a href="http://47.190.89.225/pub/education/MLcontra.pdf">看法</a>。看起來這篇論文似乎也有難以重現的問題。</p>
+</blockquote>
+<h2 id="結論">結論<a hidden class="anchor" aria-hidden="true" href="#結論">#</a></h2>
+<p>論文提出RL擺置的方法，可以在6小時內產生品質相近於人類數周的成果。相信AI未來會是輔助APR的重要工具。</p>
 
 
   </div>

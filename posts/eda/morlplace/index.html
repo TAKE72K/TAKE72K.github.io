@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記 | 竹林七閒</title>
+<meta name="keywords" content="Floorplanning, reinforcement learning" />
+<meta name="description" content="用於晶片擺置的靈活性多目標強化學習  link to paper
+  為了EDA Workshop看的。
+ 本篇的亮點\貢獻：  提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL) 提出選取STD CELL叢集尺寸的方法 改編policy gradient，使其能適用在MORL上  目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。
+相關研究 基本上本篇的作法和google這篇類似，可以看一下。
+問題定義 混和尺寸擺置 我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。 node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。 流程是這樣的：
+ 輸入檔案(LEF/DEF/RTL) 擺置 EDA Tool算出QoRs  google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。
+多目標強化學習 先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。 定義multi-objective MDP(MOMDP) $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。
+對於這樣的獎勵向量，我們可以用一個偏好參數${\omega}={(\omega_i)}^K_{i=1}$，來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──凸組合$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。">
+<meta name="author" content="">
+<link rel="canonical" href="https://take72k.github.io/posts/eda/morlplace/" />
+<link crossorigin="anonymous" href="https://take72k.github.io/assets/css/stylesheet.min.b9ff4cc257e914dab489bd18086151800e18f91456a5174bf28489210227a659.css" integrity="sha256-uf9MwlfpFNq0ib0YCGFRgA4Y&#43;RRWpRdL8oSJIQInplk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="https://take72k.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://take72k.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://take72k.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://take72k.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://take72k.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://take72k.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.93.0-DEV" />
+<meta property="og:title" content="Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記" />
+<meta property="og:description" content="用於晶片擺置的靈活性多目標強化學習  link to paper
+  為了EDA Workshop看的。
+ 本篇的亮點\貢獻：  提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL) 提出選取STD CELL叢集尺寸的方法 改編policy gradient，使其能適用在MORL上  目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。
+相關研究 基本上本篇的作法和google這篇類似，可以看一下。
+問題定義 混和尺寸擺置 我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。 node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。 流程是這樣的：
+ 輸入檔案(LEF/DEF/RTL) 擺置 EDA Tool算出QoRs  google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。
+多目標強化學習 先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。 定義multi-objective MDP(MOMDP) $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。
+對於這樣的獎勵向量，我們可以用一個偏好參數${\omega}={(\omega_i)}^K_{i=1}$，來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──凸組合$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://take72k.github.io/posts/eda/morlplace/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-03T21:01:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-12-03T21:01:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記"/>
+<meta name="twitter:description" content="用於晶片擺置的靈活性多目標強化學習  link to paper
+  為了EDA Workshop看的。
+ 本篇的亮點\貢獻：  提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL) 提出選取STD CELL叢集尺寸的方法 改編policy gradient，使其能適用在MORL上  目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。
+相關研究 基本上本篇的作法和google這篇類似，可以看一下。
+問題定義 混和尺寸擺置 我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。 node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。 流程是這樣的：
+ 輸入檔案(LEF/DEF/RTL) 擺置 EDA Tool算出QoRs  google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。
+多目標強化學習 先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。 定義multi-objective MDP(MOMDP) $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。
+對於這樣的獎勵向量，我們可以用一個偏好參數${\omega}={(\omega_i)}^K_{i=1}$，來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──凸組合$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Posts",
+      "item": "https://take72k.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記",
+      "item": "https://take72k.github.io/posts/eda/morlplace/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記",
+  "name": "Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記",
+  "description": "用於晶片擺置的靈活性多目標強化學習  link to paper\n  為了EDA Workshop看的。\n 本篇的亮點\\貢獻：  提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL) 提出選取STD CELL叢集尺寸的方法 改編policy gradient，使其能適用在MORL上  目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。\n相關研究 基本上本篇的作法和google這篇類似，可以看一下。\n問題定義 混和尺寸擺置 我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。 node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。 流程是這樣的：\n 輸入檔案(LEF/DEF/RTL) 擺置 EDA Tool算出QoRs  google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。\n多目標強化學習 先定義MDP為($\\mathcal{S},\\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。 定義multi-objective MDP(MOMDP) $\\mathcal{M}$為具有state $\\mathcal{S}$、action $\\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\\textbf{r}=r^{(i)}$表示。\n對於這樣的獎勵向量，我們可以用一個偏好參數${\\omega}={(\\omega_i)}^K_{i=1}$，來使MOMDP$\\mathcal{M}$ 塌縮為標準的MDP$\\mathcal{M}^\\omega$，也就是把獎勵復原為單一的值──凸組合$r_\\omega=\\text{R}(\\textbf{r},\\omega)=\\sum_{i=1}^{K}r^{(i)}\\omega_i$。",
+  "keywords": [
+    "Floorplanning", "reinforcement learning"
+  ],
+  "articleBody": "用於晶片擺置的靈活性多目標強化學習  link to paper\n  為了EDA Workshop看的。\n 本篇的亮點\\貢獻：  提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL) 提出選取STD CELL叢集尺寸的方法 改編policy gradient，使其能適用在MORL上  目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。\n相關研究 基本上本篇的作法和google這篇類似，可以看一下。\n問題定義 混和尺寸擺置 我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。 node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。 流程是這樣的：\n 輸入檔案(LEF/DEF/RTL) 擺置 EDA Tool算出QoRs  google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。\n多目標強化學習 先定義MDP為($\\mathcal{S},\\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。 定義multi-objective MDP(MOMDP) $\\mathcal{M}$為具有state $\\mathcal{S}$、action $\\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\\textbf{r}=r^{(i)}$表示。\n對於這樣的獎勵向量，我們可以用一個偏好參數${\\omega}={(\\omega_i)}^K_{i=1}$，來使MOMDP$\\mathcal{M}$ 塌縮為標準的MDP$\\mathcal{M}^\\omega$，也就是把獎勵復原為單一的值──凸組合$r_\\omega=\\text{R}(\\textbf{r},\\omega)=\\sum_{i=1}^{K}r^{(i)}\\omega_i$。\n",
+  "wordCount" : "40",
+  "inLanguage": "en",
+  "datePublished": "2022-12-03T21:01:00Z",
+  "dateModified": "2022-12-03T21:01:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://take72k.github.io/posts/eda/morlplace/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "竹林七閒",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://take72k.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+<noscript>
+    <style type="text/css">
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: #1d1e20;
+                --entry: #2e2e33;
+                --primary: rgba(255, 255, 255, 0.84);
+                --secondary: rgba(255, 255, 255, 0.56);
+                --tertiary: rgba(255, 255, 255, 0.16);
+                --content: rgba(255, 255, 255, 0.74);
+                --hljs-bg: #2e2e33;
+                --code-bg: #37383e;
+                --border: #333;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://take72k.github.io" accesskey="h" title="竹林七閒 (Alt + H)">竹林七閒</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記
+    </h1>
+    <div class="post-meta">December 3, 2022
+</div>
+  </header> 
+  <div class="post-content"><h1 id="用於晶片擺置的靈活性多目標強化學習">用於晶片擺置的靈活性多目標強化學習<a hidden class="anchor" aria-hidden="true" href="#用於晶片擺置的靈活性多目標強化學習">#</a></h1>
+<blockquote>
+<p><a href="https://arxiv.org/abs/2204.06407">link to paper</a></p>
+</blockquote>
+<blockquote>
+<p><em>為了EDA Workshop看的。</em></p>
+</blockquote>
+<h2 id="本篇的亮點貢獻">本篇的亮點\貢獻：<a hidden class="anchor" aria-hidden="true" href="#本篇的亮點貢獻">#</a></h2>
+<ol>
+<li>提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</li>
+<li>提出選取STD CELL叢集尺寸的方法</li>
+<li>改編policy gradient，使其能適用在MORL上</li>
+</ol>
+<p>目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。</p>
+<h2 id="相關研究">相關研究<a hidden class="anchor" aria-hidden="true" href="#相關研究">#</a></h2>
+<p>基本上本篇的作法和<a href="https://take72k.github.io/EDA/placementByRL/">google這篇</a>類似，可以看一下。</p>
+<h2 id="問題定義">問題定義<a hidden class="anchor" aria-hidden="true" href="#問題定義">#</a></h2>
+<h3 id="混和尺寸擺置">混和尺寸擺置<a hidden class="anchor" aria-hidden="true" href="#混和尺寸擺置">#</a></h3>
+<p>我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。
+node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。
+流程是這樣的：</p>
+<ol>
+<li>輸入檔案(LEF/DEF/RTL)</li>
+<li>擺置</li>
+<li>EDA Tool算出QoRs</li>
+</ol>
+<p>google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。</p>
+<h3 id="多目標強化學習">多目標強化學習<a hidden class="anchor" aria-hidden="true" href="#多目標強化學習">#</a></h3>
+<p>先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。
+定義<em>multi-objective MDP(MOMDP)</em> $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。<br>
+對於這樣的獎勵向量，我們可以用一個偏好參數${\omega}={(\omega_i)}^K_{i=1}$，來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──凸組合$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。</p>
+
+
+  </div>
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://take72k.github.io/tags/eda/">eda</a></li>
+      <li><a href="https://take72k.github.io/tags/ai/">AI</a></li>
+      <li><a href="https://take72k.github.io/tags/reinforcement-learning/">Reinforcement Learning</a></li>
+      <li><a href="https://take72k.github.io/tags/floorplan/">Floorplan</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    <footer class="footer">
+    <span>&copy; 2022 <a href="https://take72k.github.io">竹林七閒</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
+    <button class="top-link" id="top-link" type="button" accesskey="g">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z" />
+        </svg>
+    </button>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
