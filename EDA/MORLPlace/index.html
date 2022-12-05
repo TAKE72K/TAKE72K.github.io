@@ -138,7 +138,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -180,7 +180,36 @@ node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/�
 <h3 id="多目標強化學習">多目標強化學習</h3>
 <p>先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。
 定義<em>multi-objective MDP(MOMDP)</em> $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。<br>
-對於這樣的獎勵向量，我們可以用一個偏好參數${\omega}={(\omega_i)}^K_{i=1}$，來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──凸組合$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$。</p>
+對於這樣的獎勵向量，我們可以用一個偏好參數： ${\omega}={(\omega_i)}^K_{i=1}$，<br>
+來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──定義凸組合：<br>
+$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$，$\omega\in(\Omega^K, \mu)$，也就是K維的單純型(simplex)與機率測度$\mu$。<br>
+MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\omega)$、$(a,\omega)$。<br>
+<br>
+接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。<br>
+我們將這樣的策略組稱為：<strong>parametric policy family</strong>，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。</p>
+<h2 id="方法">方法</h2>
+<h3 id="目標與估計">目標與估計</h3>
+<p>這篇聚焦的目標除了線長、擁擠度和時序之外，還加入使用者自訂的錨定區域距離限制。也就是使其能處理fence region或datapath。<br>
+HPWL: $l_{WL}=-\sum\limits_n(\max\limits_{pin_i,pin_j,\in n}\lvert x_i-x_j\rvert + \max\limits_{pin_i,pin_j\in n}\lvert y_i-y_j\rvert)$<br>
+Congestion: $l_C=-\frac{ACE(k)}{4},k\in 0.5,1,2,5$，$ACE(k)$會取k%的壅擠值<br>
+User Anchor: $l_A=-\sum\limits_ia_i\sqrt{(X_i-x_i)^2+(Y_i-y_i)^2}$，$(X_i,Y_i)$是使用者自定義的目標位置，$(x_i,y_i)$則是macro的中心位置，$a_i$是權重。<br>
+定義EDA目標: $l_{EDA}=\alpha l_{WL}+\beta l_C+\delta l_A$。</p>
+<blockquote>
+<p>但fence可以用density mask擋掉、datapath=connectivity高?應該還是可以最佳化?<br>
+再來每個設計anchor一定不一樣，這樣會不會失一般性?<br>
+不過這個做法比較要EDA domain knowledge才想得出來</p>
+</blockquote>
+<h3 id="用policy-gradient解momdp">用policy gradient解MOMDP</h3>
+<h3 id="實作與網路架構">實作與網路架構</h3>
+<p>基於google那篇，做兩點改動：</p>
+<ol>
+<li>將$\omega$加入state表示，維度維持32。</li>
+<li>value函數複製K次，並允許獨立最佳化。</li>
+</ol>
+<h2 id="實驗">實驗</h2>
+<h3 id="moppo訓練">MOPPO訓練</h3>
+<h3 id="資料">資料</h3>
+<p>用<strong>ICCAD2015 Superblue</strong>訓練，macro數量84~294不等、std cell則有770k~1930k，並聚焦於superblue10跟superblue18這兩組只有長方形的資料。(但其他的資料結果品質也相近。)</p>
 
 </section>
 
@@ -427,6 +456,19 @@ node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/�
       <ol>
         <li><a href="#混和尺寸擺置">混和尺寸擺置</a></li>
         <li><a href="#多目標強化學習">多目標強化學習</a></li>
+      </ol>
+    </li>
+    <li><a href="#方法">方法</a>
+      <ol>
+        <li><a href="#目標與估計">目標與估計</a></li>
+        <li><a href="#用policy-gradient解momdp">用policy gradient解MOMDP</a></li>
+        <li><a href="#實作與網路架構">實作與網路架構</a></li>
+      </ol>
+    </li>
+    <li><a href="#實驗">實驗</a>
+      <ol>
+        <li><a href="#moppo訓練">MOPPO訓練</a></li>
+        <li><a href="#資料">資料</a></li>
       </ol>
     </li>
   </ol>
