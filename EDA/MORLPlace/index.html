@@ -138,7 +138,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    4 minute read
+                    5 minute read
                 </time>
             </div>
         
@@ -187,6 +187,8 @@ MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\ome
 <br>
 接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。<br>
 我們將這樣的策略組稱為：<strong>parametric policy family</strong>，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。</p>
+<p>在接下去之前，先介紹一個概念：Pareto optimality，這是一種每一項指標都最適化的情況，無法在不減少任何一個指標的前提下進一步優化。
+如果我們針對多目標的最佳化，每一個在平面上滿足Pareto optimalty的點會組成一條邊界，我們稱為Pareto frontier。</p>
 <h2 id="方法">方法</h2>
 <h3 id="目標與估計">目標與估計</h3>
 <p>這篇聚焦的目標除了線長、擁擠度和時序之外，還加入使用者自訂的錨定區域距離限制。也就是使其能處理fence region或datapath。<br>
@@ -200,6 +202,9 @@ User Anchor: $l_A=-\sum\limits_ia_i\sqrt{(X_i-x_i)^2+(Y_i-y_i)^2}$，$(X_i,Y_i)$
 不過這個做法比較要EDA domain knowledge才想得出來</p>
 </blockquote>
 <h3 id="用policy-gradient解momdp">用policy gradient解MOMDP</h3>
+<p>TL;DR</p>
+<p>我們的目標函數$\hat{J}(\theta) = \mathbb{E}_{\omega}[J(\theta;\omega)]$最佳化之後，便可以產生一個最佳的輪廓，但不能保證$\epsilon$最適性。<br>
+$\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確定。</p>
 <h3 id="實作與網路架構">實作與網路架構</h3>
 <p>基於google那篇，做兩點改動：</p>
 <ol>
@@ -209,7 +214,9 @@ User Anchor: $l_A=-\sum\limits_ia_i\sqrt{(X_i-x_i)^2+(Y_i-y_i)^2}$，$(X_i,Y_i)$
 <h2 id="實驗">實驗</h2>
 <h3 id="moppo訓練">MOPPO訓練</h3>
 <h3 id="資料">資料</h3>
-<p>用<strong>ICCAD2015 Superblue</strong>訓練，macro數量84~294不等、std cell則有770k~1930k，並聚焦於superblue10跟superblue18這兩組只有長方形的資料。(但其他的資料結果品質也相近。)</p>
+<p>用<strong>ICCAD2015 Superblue</strong>訓練，macro數量84-294不等、std cell則有770k-1930k，並聚焦於superblue10跟superblue18這兩組只有長方形的資料。(但其他的資料結果品質也相近。)</p>
+<h3 id="獎勵訓練">獎勵訓練</h3>
+<h3 id="結果">結果</h3>
 
 </section>
 
@@ -469,6 +476,8 @@ User Anchor: $l_A=-\sum\limits_ia_i\sqrt{(X_i-x_i)^2+(Y_i-y_i)^2}$，$(X_i,Y_i)$
       <ol>
         <li><a href="#moppo訓練">MOPPO訓練</a></li>
         <li><a href="#資料">資料</a></li>
+        <li><a href="#獎勵訓練">獎勵訓練</a></li>
+        <li><a href="#結果">結果</a></li>
       </ol>
     </li>
   </ol>
