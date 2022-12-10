@@ -50,8 +50,11 @@
 &lt;li&gt;如何挖出空間與樓梯&lt;/li&gt;
 &lt;li&gt;如何設置房間與工坊&lt;/li&gt;
 &lt;li&gt;如何生產些基本資源與蒐集它們
-有一個我們沒提到的是如何儲存遊戲！算是小失誤？只要按&lt;code&gt;Esc&lt;/code&gt;並選擇&lt;code&gt;Save Game&lt;/code&gt;。&lt;/li&gt;
+有一個我們沒提到的是如何儲存遊戲！算是小失誤？只要按&lt;code&gt;Esc&lt;/code&gt;並選擇&lt;code&gt;Save Game&lt;/code&gt;。但先別急，&lt;code&gt;Save Game&lt;/code&gt;預設你要離開遊戲，所以會把你帶回主畫面。不論如何，&lt;strong&gt;千萬別選&lt;/strong&gt;&lt;code&gt;Abandon the Fortress&lt;/code&gt;，會直接結束遊戲！&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;需要注意存檔可能會混淆，如果你總是依賴每季的自動儲存，存檔的名字會變很長並且不一定會照你想得排序。當你回到矮人要塞並按下&lt;code&gt;Continue the Game&lt;/code&gt;，最後一個存檔不一定是你最近玩的那個。你可能得看看你的&lt;code&gt;&amp;lt;DF&amp;gt;/data/save/&lt;/code&gt;資料夾並看看哪個存檔是最近編輯的。然後你或許得刪掉或重新命名舊的那個。&lt;/p&gt;
+&lt;p&gt;如果你選到錯的存檔，你有兩個選擇：你可以照常儲存並回到主目錄；或是用DFHack命令&lt;code&gt;die&lt;/code&gt;來強制離開矮人要塞。你可以在遊戲內的控制台(按&lt;code&gt;Ctrl&lt;/code&gt;-&lt;code&gt;P&lt;/code&gt;)來叫出它，但注意，這會直接離開而不儲存！&lt;/p&gt;
+&lt;p&gt;祝好運！讓我們繼續吧&amp;hellip;&lt;/p&gt;
 </description>
         </item>
         <item>
