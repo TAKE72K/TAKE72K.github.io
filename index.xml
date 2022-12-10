@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sat, 03 Dec 2022 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Dec 2022 23:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -25,13 +25,32 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap01-setup-starting&#34; &gt;壹、整裝待發&lt;/a&gt; (完成)&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap02-workshops-digging&#34; &gt;貳、工坊、家具與階梯&lt;/a&gt; (完成)&lt;/li&gt;
-&lt;li&gt;參、從洞窟到家園&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://take72k.github.io/DwarfFortress/Walkthrough/chap03-recap-home&#34; &gt;參、從洞窟到家園&lt;/a&gt; (WORKING)&lt;/li&gt;
 &lt;li&gt;肆、幾乎上軌道了！&lt;/li&gt;
 &lt;li&gt;伍、工業革命&lt;/li&gt;
 &lt;li&gt;陸、陷阱！&lt;/li&gt;
 &lt;li&gt;柒、貴族&lt;/li&gt;
 &lt;li&gt;捌、軍隊與兵士&lt;/li&gt;
 &lt;li&gt;玖、弓兵與野獸、哥布林控制&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>矮人要塞Walkthrough教學：第三章、從洞窟到家園</title>
+        <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap03-recap-home/</link>
+        <pubDate>Sat, 10 Dec 2022 23:18:00 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/DwarfFortress/Walkthrough/chap03-recap-home/</guid>
+        <description>&lt;h1 id=&#34;參從洞窟到家園&#34;&gt;參、從洞窟到家園&lt;/h1&gt;
+&lt;p&gt;在這份教學中，我們來為矮人們設置更多生活空間、工坊與倉庫吧。這次會比較短，因為作者會給你幾個DIY小任務，準備好接受挑戰了嗎!?來吧！&lt;/p&gt;
+&lt;h2 id=&#34;一回顧時間&#34;&gt;一、回顧時間&lt;/h2&gt;
+&lt;p&gt;目前為止我們講了許多，如果你跟著玩並且仍在讀這文章，你已經在成為矮人要塞大師的康莊大道上了。讓我們看看都學了什麼：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何四處探索與找出你正在看什麼&lt;/li&gt;
+&lt;li&gt;如何挖出空間與樓梯&lt;/li&gt;
+&lt;li&gt;如何設置房間與工坊&lt;/li&gt;
+&lt;li&gt;如何生產些基本資源與蒐集它們
+有一個我們沒提到的是如何儲存遊戲！算是小失誤？只要按&lt;code&gt;Esc&lt;/code&gt;並選擇&lt;code&gt;Save Game&lt;/code&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -79,7 +98,7 @@ $r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$，$\omega\i
 MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\omega)$、$(a,\omega)$。&lt;br&gt;
 &lt;br&gt;
 接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。&lt;br&gt;
-我們將這樣的策略組稱為：&lt;strong&gt;parametric policy family&lt;/strong&gt;，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
+我們將這樣的策略組稱為：**parametric policy family**，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
 &lt;p&gt;在接下去之前，先介紹一個概念：Pareto optimality，這是一種每一項指標都最適化的情況，無法在不減少任何一個指標的前提下進一步優化。
 如果我們針對多目標的最佳化，每一個在平面上滿足Pareto optimalty的點會組成一條邊界，我們稱為Pareto frontier。&lt;/p&gt;
 &lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
@@ -3557,8 +3576,8 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
 攻擊發起前準備：面對伸出龍爪手的8+9，我方右手握40CM假屌根部，左手將另一端夾於我虎口。
 此時8+9開始衝刺，我在龍爪手觸擊身體的前一瞬間左為支點右手用力壓下，左手壓住8+9右手、右手持假屌狠尻8+9左手，踏進一步，踹其下體。&lt;!-- raw HTML omitted --&gt;
 呼~~
-本技的重點是：在等到&lt;strong&gt;最接近一瞬間&lt;/strong&gt;才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
-打擊左手之後還繼續踹蛋蛋，是因為&lt;strong&gt;單手斬斷人體&lt;/strong&gt;需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
+本技的重點是：在等到**最接近一瞬間**才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
+打擊左手之後還繼續踹蛋蛋，是因為**單手斬斷人體**需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://i.imgur.com/0k3CBv8.png&#34; &gt;
