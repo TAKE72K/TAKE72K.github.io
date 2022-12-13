@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Sat, 10 Dec 2022 23:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 13 Dec 2022 21:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -36,6 +36,85 @@
 </description>
         </item>
         <item>
+        <title>安裝docker</title>
+        <link>https://take72k.github.io/note/dockerInstall/</link>
+        <pubDate>Tue, 13 Dec 2022 21:18:00 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/note/dockerInstall/</guid>
+        <description>&lt;h1 id=&#34;docker-feat-centos-7&#34;&gt;Docker feat. CentOS 7&lt;/h1&gt;
+&lt;h2 id=&#34;安裝&#34;&gt;安裝&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum repolist -v #Now you can observe the packages available from the docker-ce repo
+sudo yum install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el7.x86_64.rpm
+sudo yum install docker-ce -y
+sudo systemctl --now enable docker
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;測試安裝&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo docker run --rm hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;應該輸出:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &amp;quot;hello-world&amp;quot; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;免除sudo&#34;&gt;免除sudo&lt;/h2&gt;
+&lt;p&gt;預設每次要用docker都要sudo，可以將用戶加入群組。
+但注意&lt;strong&gt;安全性問題&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;重新登入帳號以更新群組，
+測試&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;docker run hello-world
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;在centos-7上設定docker--gpu&#34;&gt;在CentOS 7上設定docker + GPU&lt;/h2&gt;
+&lt;p&gt;安裝NVIDIA Container Toolkit
+加入儲存庫位址&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt; distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+   &amp;amp;&amp;amp; curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;清除緩存&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo yum clean expire-cache
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安裝toolkit&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo yum install -y nvidia-docker2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;重啟並測試docker&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-bash=&#34; data-lang=&#34;bash=&#34;&gt;sudo docker run --rm --gpus all nvidia/cuda:11.6.2-base-ubuntu20.04 nvidia-smi
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果印出&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;+-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla T4            Off  | 00000000:37:00.0 Off |                    0 |
+| N/A   65C    P8    17W /  70W |      2MiB / 15360MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;就成功了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>矮人要塞Walkthrough教學：第三章、從洞窟到家園</title>
         <link>https://take72k.github.io/DwarfFortress/Walkthrough/chap03-recap-home/</link>
         <pubDate>Sat, 10 Dec 2022 23:18:00 +0800</pubDate>
@@ -55,6 +134,10 @@
 &lt;p&gt;需要注意存檔可能會混淆，如果你總是依賴每季的自動儲存，存檔的名字會變很長並且不一定會照你想得排序。當你回到矮人要塞並按下&lt;code&gt;Continue the Game&lt;/code&gt;，最後一個存檔不一定是你最近玩的那個。你可能得看看你的&lt;code&gt;&amp;lt;DF&amp;gt;/data/save/&lt;/code&gt;資料夾並看看哪個存檔是最近編輯的。然後你或許得刪掉或重新命名舊的那個。&lt;/p&gt;
 &lt;p&gt;如果你選到錯的存檔，你有兩個選擇：你可以照常儲存並回到主目錄；或是用DFHack命令&lt;code&gt;die&lt;/code&gt;來強制離開矮人要塞。你可以在遊戲內的控制台(按&lt;code&gt;Ctrl&lt;/code&gt;-&lt;code&gt;P&lt;/code&gt;)來叫出它，但注意，這會直接離開而不儲存！&lt;/p&gt;
 &lt;p&gt;祝好運！讓我們繼續吧&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;二&#34;&gt;二、&lt;/h2&gt;
+&lt;p&gt;我們來試著讓這地方舒適宜(矮)人。首先，他們真的很需要一個好地方來吃飯。拿放在地上的食物來吃不太優，矮人想要美輪美奐的廳堂讓他們乾杯與吃貓餅乾(cat biscuits)(對，你可以用貓來做餅乾，嘔嘔嘔)。讓我們幫他們建一個。&lt;/p&gt;
+&lt;p&gt;現在我們要在新挖出來空間的附近建造。我也會挖一堆二乘二的房間，會當作矮人的永久臥室。沒有要追求完美，我們先追求正確的功能，你可以在你的下個要塞煩惱完美的設計。&lt;/p&gt;
+&lt;p&gt;This is how I set things up:&lt;/p&gt;
 </description>
         </item>
         <item>

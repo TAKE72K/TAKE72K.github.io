@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>note on 竹林七閑</title>
+    <link>https://take72k.github.io/categories/note/</link>
+    <description>Recent content in note on 竹林七閑</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 13 Dec 2022 21:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安裝docker</title>
+      <link>https://take72k.github.io/note/dockerInstall/</link>
+      <pubDate>Tue, 13 Dec 2022 21:18:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/note/dockerInstall/</guid>
+      <description>Docker feat. CentOS 7 安裝 sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo sudo yum repolist -v #Now you can observe the packages available from the docker-ce repo sudo yum install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el7.x86_64.rpm sudo yum install docker-ce -y sudo systemctl --now enable docker 測試安裝 sudo docker run --rm hello-world 應該輸出: Hello from Docker! This message shows that your installation appears to be working correctly. To generate this</description>
+    </item>
+    
+  </channel>
+</rss>
