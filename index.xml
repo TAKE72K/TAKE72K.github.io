@@ -134,10 +134,29 @@ newgrp docker
 &lt;p&gt;需要注意存檔可能會混淆，如果你總是依賴每季的自動儲存，存檔的名字會變很長並且不一定會照你想得排序。當你回到矮人要塞並按下&lt;code&gt;Continue the Game&lt;/code&gt;，最後一個存檔不一定是你最近玩的那個。你可能得看看你的&lt;code&gt;&amp;lt;DF&amp;gt;/data/save/&lt;/code&gt;資料夾並看看哪個存檔是最近編輯的。然後你或許得刪掉或重新命名舊的那個。&lt;/p&gt;
 &lt;p&gt;如果你選到錯的存檔，你有兩個選擇：你可以照常儲存並回到主目錄；或是用DFHack命令&lt;code&gt;die&lt;/code&gt;來強制離開矮人要塞。你可以在遊戲內的控制台(按&lt;code&gt;Ctrl&lt;/code&gt;-&lt;code&gt;P&lt;/code&gt;)來叫出它，但注意，這會直接離開而不儲存！&lt;/p&gt;
 &lt;p&gt;祝好運！讓我們繼續吧&amp;hellip;&lt;/p&gt;
-&lt;h2 id=&#34;二&#34;&gt;二、&lt;/h2&gt;
+&lt;h2 id=&#34;二洞穴為家&#34;&gt;二、洞穴為家&lt;/h2&gt;
 &lt;p&gt;我們來試著讓這地方舒適宜(矮)人。首先，他們真的很需要一個好地方來吃飯。拿放在地上的食物來吃不太優，矮人想要美輪美奐的廳堂讓他們乾杯與吃貓餅乾(cat biscuits)(對，你可以用貓來做餅乾，嘔嘔嘔)。讓我們幫他們建一個。&lt;/p&gt;
 &lt;p&gt;現在我們要在新挖出來空間的附近建造。我也會挖一堆二乘二的房間，會當作矮人的永久臥室。沒有要追求完美，我們先追求正確的功能，你可以在你的下個要塞煩惱完美的設計。&lt;/p&gt;
-&lt;p&gt;This is how I set things up:&lt;/p&gt;
+&lt;p&gt;以下是我設計的方法：&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/03-dig.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/03-dig.png&#34; loading=&#34;lazy&#34; alt=&#34;floorplan&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;好，在挖了。記得向木匠下一堆床的訂單，以及叫石匠做門、桌子與椅子。等你的房間挖好、有一堆家具與門、椅子之後再來找我。&lt;/p&gt;
+&lt;p&gt;&amp;hellip;噢，你好了？水啦！&lt;br&gt;
+現在，你得把床放在每個房間、門裝在房門口、桌椅在餐廳。你應該知道該怎麼做，&lt;code&gt;b&lt;/code&gt;來&lt;code&gt;Build&lt;/code&gt;、&lt;code&gt;d&lt;/code&gt;選擇&lt;code&gt;Door&lt;/code&gt;(門)、&lt;code&gt;t&lt;/code&gt;是&lt;code&gt;Table&lt;/code&gt;(桌子)、&lt;code&gt;c&lt;/code&gt;是&lt;code&gt;Chair&lt;/code&gt;(椅子)&amp;hellip;呃石匠會叫它&lt;code&gt;Throne&lt;/code&gt;。對，同樣的東西可能因為材料的不同而有不同的名字，這也是用快捷鍵的原因，減少捲動的麻煩。&lt;/p&gt;
+&lt;p&gt;這是我的房間半成品，仔細看，有個懶鬼在打瞌睡。&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://take72k.github.io/images/03-beds-layout.png&#34;&gt;
+        &lt;img src=&#34;https://take72k.github.io/images/03-beds-layout.png&#34; loading=&#34;lazy&#34; alt=&#34;floorplan&#34;&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;你可以看出我的床、桌椅和門嗎？很整齊吧？你可能有注意到很多地圖上的點在閃，別擔心，那只是顯示這格空間裡有多個物件。但是這堆東西確實讓房間看起來很雜亂。如果你有潔癖，放棄吧！矮人要塞常充斥石頭與垃圾。&lt;br&gt;
+雖然你的確可以做一些努力去改善，但我們先不考慮這些。我們來挖個餐廳吧！&lt;/p&gt;
+&lt;h2 id=&#34;三那啥歐該死&#34;&gt;三、那啥？歐該死！&lt;/h2&gt;
 </description>
         </item>
         <item>
