@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macro placement on 竹林七閑</title>
+    <link>https://take72k.github.io/tags/macro-placement/</link>
+    <description>Recent content in macro placement on 竹林七閑</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 21 Mar 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/tags/macro-placement/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</title>
+      <link>https://take72k.github.io/EDA/RTL-MP/</link>
+      <pubDate>Tue, 21 Mar 2023 21:01:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/RTL-MP/</guid>
+      <description>RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記 原文link 引言 《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》 這是篇來自2022 ISPD的論文，當時su</description>
+    </item>
+    
+  </channel>
+</rss>

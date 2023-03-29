@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一種新的VLSI layout資料結構'><title>Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記 原文link 引言 《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》 這是篇來自2022 ISPD的論文，當時su'><title>RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</title>
 
-<link rel='canonical' href='https://take72k.github.io/EDA/corner_stitching/'>
+<link rel='canonical' href='https://take72k.github.io/EDA/RTL-MP/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools'>
-<meta property='og:description' content='一種新的VLSI layout資料結構'>
-<meta property='og:url' content='https://take72k.github.io/EDA/corner_stitching/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記'>
+<meta property='og:description' content='RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記 原文link 引言 《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》 這是篇來自2022 ISPD的論文，當時su'>
+<meta property='og:url' content='https://take72k.github.io/EDA/RTL-MP/'>
 <meta property='og:site_name' content='竹林七閑'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='paper' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='placement' /><meta property='article:published_time' content='2021-05-04T00:40:43&#43;08:00'/><meta property='article:modified_time' content='2021-05-04T00:40:43&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='macro placement' /><meta property='article:published_time' content='2023-03-21T21:01:00&#43;08:00'/><meta property='article:modified_time' content='2023-03-21T21:01:00&#43;08:00'/>
 <meta name="twitter:site" content="@hyes94107">
-    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools">
-<meta name="twitter:description" content="一種新的VLSI layout資料結構">
+    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記">
+<meta name="twitter:description" content="RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記 原文link 引言 《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》 這是篇來自2022 ISPD的論文，當時su">
     <link rel="shortcut icon" href="/ico/sword.png" />
 
 <script type="application/javascript">
@@ -105,13 +105,9 @@ if (!doNotTrack) {
     
 
     <h2 class="article-title">
-        <a href="/EDA/corner_stitching/">Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</a>
+        <a href="/EDA/RTL-MP/">RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</a>
     </h2>
 
-    
-    <h3 class="article-subtitle">
-        一種新的VLSI layout資料結構
-    </h3>
     
 
     
@@ -127,7 +123,7 @@ if (!doNotTrack) {
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 04, 2021</time>
+                <time class="article-time--published">Mar 21, 2023</time>
             </div>
         
 
@@ -152,20 +148,29 @@ if (!doNotTrack) {
 </header>
 
     <section class="article-content">
-    <h1 id="corner-stitching-a-data-structuring-technique--for-vlsi-layout-tools">Corner Stitching: A Data-Structuring Technique  for VLSI Layout Tools</h1>
-<h2 id="abstract">Abstract</h2>
-<p>Corner stitching是用來表現2D長方形的方法，有兩個優點：</p>
+    <h1 id="rtl-mp-toward-practical-human-quality-chip-planning-and-macro-placement-閱讀筆記">RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</h1>
+<blockquote>
+<p><a class="link" href="https://vlsicad.ucsd.edu/Publications/Conferences/389/c389.pdf"  target="_blank" rel="noopener"
+    >原文link</a></p>
+</blockquote>
+<h2 id="引言">引言</h2>
+<p>《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》<br>
+這是篇來自2022 ISPD的論文，當時survey時有看到，但因為種種原因略過沒看，最近因為投稿被噴要求比較，又翻出來報。<br>
+當時第一眼的印象就是：這什麼大雜燴？實際上這篇涵蓋了現在macro placement考慮的幾乎所有東西，全部尬在一起。可以說是非機器學習placer的極限也不為過。<br>
+所以那些審稿的非要跟這篇比較也是無可厚非，除了runtime，可以說RTL-MP是目前非機器學習的state-of-art。<br>
+話不多說──</p>
+<h2 id="核心理念">核心理念</h2>
+<p>其他Placer常把目標定在更加優化某些指標，例如線長(wirelength)、可繞度(routability)、timing等，但這篇的核心目標比較像是模仿，模仿人類處理Macro Placement的方式。即使這個領域已經有十幾年的歷史、數不清的研究，但仍無法脫離人類操作做到自動化。那只要<strong>模仿工程師的習慣或許就能獲得好的結果了</strong>，對吧？<br>
+那麼，人類工程師有什麼習慣or會考慮什麼呢？\</p>
 <ol>
-<li>能明確表現free space</li>
-<li>將cell組織在一起</li>
+<li>設計階層</li>
+<li>形狀的整齊性</li>
+<li>資料流與timing</li>
+<li>偏好區域</li>
+<li>IO的可繞度</li>
+<li>障礙物</li>
+<li>死區避免</li>
 </ol>
-<p>而能使演算法達到linear的時間，而易於實作可互動的VLSI layout工具。</p>
-<h2 id="introduction">Introduction</h2>
-<h2 id="existing-mechanisms">Existing Mechanisms</h2>
-<p>這邊介紹一些現有的結構</p>
-<p>Linked list</p>
-<p>Bins</p>
-<p>Neighbor Pointers</p>
 
 </section>
 
@@ -174,11 +179,9 @@ if (!doNotTrack) {
     
     <section class="article-tags">
         
-            <a href="/tags/paper/">paper</a>
-        
             <a href="/tags/eda/">eda</a>
         
-            <a href="/tags/placement/">placement</a>
+            <a href="/tags/macro-placement/">macro placement</a>
         
     </section>
 
@@ -233,18 +236,6 @@ if (!doNotTrack) {
                 
                     
 <article class="">
-    <a href="/EDA/RTL-MP/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/EDA/MORLPlace/">
         
         
@@ -287,6 +278,18 @@ if (!doNotTrack) {
 
         <div class="article-details">
             <h2 class="article-title">trouble shooting of Concert exception--has not been extracted by IloAlgorithm</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/EDA/corner_stitching/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</h2>
         </div>
     </a>
 </article>
@@ -416,9 +419,8 @@ if (!doNotTrack) {
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#abstract">Abstract</a></li>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#existing-mechanisms">Existing Mechanisms</a></li>
+    <li><a href="#引言">引言</a></li>
+    <li><a href="#核心理念">核心理念</a></li>
   </ol>
 </nav>
                 </div>

@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Tue, 13 Dec 2022 21:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 21 Mar 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -33,6 +33,37 @@
 &lt;li&gt;捌、軍隊與兵士&lt;/li&gt;
 &lt;li&gt;玖、弓兵與野獸、哥布林控制&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</title>
+        <link>https://take72k.github.io/EDA/RTL-MP/</link>
+        <pubDate>Tue, 21 Mar 2023 21:01:00 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/EDA/RTL-MP/</guid>
+        <description>&lt;h1 id=&#34;rtl-mp-toward-practical-human-quality-chip-planning-and-macro-placement-閱讀筆記&#34;&gt;RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://vlsicad.ucsd.edu/Publications/Conferences/389/c389.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原文link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;p&gt;《RTL-MP: 邁向實用、人類品質的晶片規劃與模塊擺置》&lt;br&gt;
+這是篇來自2022 ISPD的論文，當時survey時有看到，但因為種種原因略過沒看，最近因為投稿被噴要求比較，又翻出來報。&lt;br&gt;
+當時第一眼的印象就是：這什麼大雜燴？實際上這篇涵蓋了現在macro placement考慮的幾乎所有東西，全部尬在一起。可以說是非機器學習placer的極限也不為過。&lt;br&gt;
+所以那些審稿的非要跟這篇比較也是無可厚非，除了runtime，可以說RTL-MP是目前非機器學習的state-of-art。&lt;br&gt;
+話不多說──&lt;/p&gt;
+&lt;h2 id=&#34;核心理念&#34;&gt;核心理念&lt;/h2&gt;
+&lt;p&gt;其他Placer常把目標定在更加優化某些指標，例如線長(wirelength)、可繞度(routability)、timing等，但這篇的核心目標比較像是模仿，模仿人類處理Macro Placement的方式。即使這個領域已經有十幾年的歷史、數不清的研究，但仍無法脫離人類操作做到自動化。那只要&lt;strong&gt;模仿工程師的習慣或許就能獲得好的結果了&lt;/strong&gt;，對吧？&lt;br&gt;
+那麼，人類工程師有什麼習慣or會考慮什麼呢？\&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;設計階層&lt;/li&gt;
+&lt;li&gt;形狀的整齊性&lt;/li&gt;
+&lt;li&gt;資料流與timing&lt;/li&gt;
+&lt;li&gt;偏好區域&lt;/li&gt;
+&lt;li&gt;IO的可繞度&lt;/li&gt;
+&lt;li&gt;障礙物&lt;/li&gt;
+&lt;li&gt;死區避免&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>
