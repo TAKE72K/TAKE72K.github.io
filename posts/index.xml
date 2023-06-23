@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 21 Mar 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
       <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://take72k.github.io/DwarfFortress/tutorialIndex/</guid>
       <description>矮人要塞(Dwarf Fortress, DF)是我見過一款最不可思議的遊戲，簡樸的外表下潛藏著無比豐富而真實的內容，與其說是遊戲，玩家更像是在譜寫敘事詩的矮人</description>
+    </item>
+    
+    <item>
+      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
+      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
+      <pubDate>Fri, 23 Jun 2023 21:01:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
+      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
     </item>
     
     <item>
@@ -354,15 +363,6 @@
       
       <guid>https://take72k.github.io/%E5%89%A3%E9%81%93/%E5%8D%87%E6%AE%B5/</guid>
       <description>審查通過，論文還是現場抄的。 劍道型沒出錯、對打也還可，所以應該過八。</description>
-    </item>
-    
-    <item>
-      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
-      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
-      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
     </item>
     
   </channel>

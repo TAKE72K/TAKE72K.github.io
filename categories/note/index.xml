@@ -6,7 +6,16 @@
     <description>Recent content in note on 竹林七閑</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 13 Dec 2022 21:18:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/categories/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
+      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
+      <pubDate>Fri, 23 Jun 2023 21:01:00 +0800</pubDate>
+      
+      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
+      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
+    </item>
+    
     <item>
       <title>安裝docker</title>
       <link>https://take72k.github.io/note/dockerInstall/</link>
@@ -14,15 +23,6 @@
       
       <guid>https://take72k.github.io/note/dockerInstall/</guid>
       <description>Docker feat. CentOS 7 安裝 sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo sudo yum repolist -v #Now you can observe the packages available from the docker-ce repo sudo yum install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.4.3-3.1.el7.x86_64.rpm sudo yum install docker-ce -y sudo systemctl --now enable docker 測試安裝 sudo docker run --rm hello-world 應該輸出: Hello from Docker! This message shows that your installation appears to be working correctly. To generate this</description>
-    </item>
-    
-    <item>
-      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
-      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
-      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
     </item>
     
   </channel>
