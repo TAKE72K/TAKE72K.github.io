@@ -164,7 +164,7 @@ if (!doNotTrack) {
 <p>要用這個流派來畫魔法陣，基底是</p>
 <pre tabindex="0"><code>\usepackage{algorithm} 
 \usepackage{algpseudocode}
-</code></pre><p><code>algorithm</code>讓你可以幫魔法陣下標題，<code>algpseudocode</code>則掌管魔法陣本體。
+</code></pre><p><code>algorithm</code>讓你可以幫魔法陣下標題，<code>algpseudocode</code>則掌管魔法陣本體。<br>
 我們先來寫一段：</p>
 <pre tabindex="0"><code class="language-LaTex=" data-lang="LaTex=">\begin{algorithmic}
 \State $MP \gets 50$
@@ -177,6 +177,33 @@ if (!doNotTrack) {
 	>
 	<a href="/images/latexalgo1.png" >
 		<img src="/images/latexalgo1.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>不過這樣好像少了什麼&hellip;沒錯，帥氣的名字！<br>
+這時便是使用algorithm的時刻：</p>
+<pre tabindex="0"><code class="language-Latex=" data-lang="Latex=">\begin{algorithm}
+\caption{FireBall}\label{fireball}
+\begin{algorithmic}
+
+\State $MP \gets 50$
+
+\While{$MP \ge 0$}
+    \State $Cast FireBall(MonsterTargets)$
+\EndWhile
+
+\end{algorithmic}
+\end{algorithm}
+</code></pre><p>灌入魔力後會變成這樣：
+<figure 
+	>
+	<a href="/images/latexalgo2.png" >
+		<img src="/images/latexalgo2.png"
 			
 			
 			

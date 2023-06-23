@@ -57,7 +57,7 @@
 &lt;p&gt;要用這個流派來畫魔法陣，基底是&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\usepackage{algorithm} 
 \usepackage{algpseudocode}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。&lt;br&gt;
 我們先來寫一段：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-LaTex=&#34; data-lang=&#34;LaTex=&#34;&gt;\begin{algorithmic}
 \State $MP \gets 50$
@@ -70,6 +70,33 @@
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/latexalgo1.png&#34; &gt;
 		&lt;img src=&#34;https://take72k.github.io/images/latexalgo1.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不過這樣好像少了什麼&amp;hellip;沒錯，帥氣的名字！&lt;br&gt;
+這時便是使用algorithm的時刻：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Latex=&#34; data-lang=&#34;Latex=&#34;&gt;\begin{algorithm}
+\caption{FireBall}\label{fireball}
+\begin{algorithmic}
+
+\State $MP \gets 50$
+
+\While{$MP \ge 0$}
+    \State $Cast FireBall(MonsterTargets)$
+\EndWhile
+
+\end{algorithmic}
+\end{algorithm}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;灌入魔力後會變成這樣：
+&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://take72k.github.io/images/latexalgo2.png&#34; &gt;
+		&lt;img src=&#34;https://take72k.github.io/images/latexalgo2.png&#34;
 			
 			
 			
