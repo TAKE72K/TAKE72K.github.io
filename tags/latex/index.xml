@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Latex on 竹林七閑</title>
+    <link>https://take72k.github.io/tags/Latex/</link>
+    <description>Recent content in Latex on 竹林七閑</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language><atom:link href="https://take72k.github.io/tags/Latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
+      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
+      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
+    </item>
+    
+  </channel>
+</rss>

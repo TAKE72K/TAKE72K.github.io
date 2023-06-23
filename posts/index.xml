@@ -356,5 +356,14 @@
       <description>審查通過，論文還是現場抄的。 劍道型沒出錯、對打也還可，所以應該過八。</description>
     </item>
     
+    <item>
+      <title>紅魔族LateX符文記事簿-pseudo code篇</title>
+      <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
+      <description>紅魔族$\LaTeX{}$符文記事簿-pseudo code篇 注意，這是一篇紅魔族式的$\LaTeX{}$筆記。 請不要在公開場合對筆者朗誦，可</description>
+    </item>
+    
   </channel>
 </rss>
