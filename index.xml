@@ -59,12 +59,20 @@
 &lt;p&gt;本文主要會講 &lt;code&gt;algpseudocode&lt;/code&gt; 流，因為這是本大魔法師所在的區域最常用的咒文~~&lt;/p&gt;
 &lt;h2 id=&#34;algorithm--algpseudocode&#34;&gt;algorithm + algpseudocode&lt;/h2&gt;
 &lt;p&gt;要用這個流派來畫魔法陣，基底是&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\usepackage{algorithm} 
-\usepackage{algpseudocode}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTeX&#34; data-lang=&#34;LaTeX&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; 
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algpseudocode&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。&lt;/p&gt;
 &lt;h3 id=&#34;基本知識&#34;&gt;基本知識&lt;/h3&gt;
-&lt;p&gt;一節咒文的構成有固定格式：&lt;/p&gt;
-&lt;p&gt;我們先來寫一段：&lt;/p&gt;
+&lt;p&gt;一節咒文的構成有固定格式，必須由 &lt;code&gt;\begin{algorithmic}[l]&lt;/code&gt; 的詠唱來開始魔法陣的繪製，這邊的參數 &lt;code&gt;[l]&lt;/code&gt; ，會決定每 &lt;code&gt;l&lt;/code&gt; 行標示一次行號，增加你的魔法陣可讀性。完成咒文本體後，加上 &lt;code&gt;\end{algorithmic}&lt;/code&gt; 象徵魔法的終焉。如果用錯了，就發動不了。&lt;br&gt;
+我們先來寫一段：\&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -78,8 +86,8 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTex&#34; data-lang=&#34;LaTex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1] &lt;span class=&#34;c&#34;&gt;% 後面接 [1] 會產生行號，增加你魔法陣的可讀性。 [n] 裡面的數字 n，可以決定每 n 行標示一次行號。
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTeX&#34; data-lang=&#34;LaTeX&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]
+
 &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\While&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Cast&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; FireBall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
@@ -103,20 +111,38 @@
 	
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;不過這樣好像少了什麼&amp;hellip;沒錯，帥氣的名字！&lt;br&gt;
-這時便是使用algorithm的時刻：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-Latex=&#34; data-lang=&#34;Latex=&#34;&gt;\begin{algorithm}
-\caption{FireBall}\label{fireball} % \caption{演算法標題}
-\begin{algorithmic}[1] % 後面接[1]會產生行號
+這時便是使用 &lt;code&gt;algorithm&lt;/code&gt; 咒文的時刻：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTeX&#34; data-lang=&#34;LaTeX&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;FireBall&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fireball&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% \caption{演算法標題}
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1] &lt;span class=&#34;c&#34;&gt;% 後面接[1]會產生行號
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
 
-\State $MP \gets 50$
+&lt;span class=&#34;k&#34;&gt;\While&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Cast FireBall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MonsterTargets&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\EndWhile&lt;/span&gt;
 
-\While{$MP \ge 0$}
-    \State $Cast FireBall(MonsterTargets)$
-\EndWhile
-
-\end{algorithmic}
-\end{algorithm}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;灌入魔力後會變成這樣：
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;灌入魔力後會變成這樣：
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/latexalgo2.png&#34; &gt;
