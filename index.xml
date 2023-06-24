@@ -36,14 +36,14 @@
 </description>
         </item>
         <item>
-        <title>紅魔族LateX符文記事簿-pseudo code篇</title>
+        <title>紅魔族LaTeX符文記事簿-pseudo code篇</title>
         <link>https://take72k.github.io/note/LaTexPseudoCode/</link>
         <pubDate>Fri, 23 Jun 2023 21:01:00 +0800</pubDate>
         
         <guid>https://take72k.github.io/note/LaTexPseudoCode/</guid>
-        <description>&lt;h1 id=&#34;紅魔族latex符文記事簿-pseudo-code篇&#34;&gt;紅魔族$\LaTeX{}$符文記事簿-pseudo code篇&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;紅魔族latex符文記事簿-pseudo-code篇&#34;&gt;紅魔族$\LaTeX$符文記事簿-pseudo code篇&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;注意，這是一篇紅魔族式的$\LaTeX{}$筆記。
+&lt;p&gt;注意，這是一篇紅魔族式的$\LaTeX$筆記。
 請不要在公開場合對筆者朗誦，可能會造成極大的精神創傷。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;簡介必讀&#34;&gt;簡介(必讀!!!)&lt;/h2&gt;
@@ -52,12 +52,15 @@
 &lt;li&gt;無印流: algorithm + (algpseudocode 或 algcompatible 或 algorithmic)&lt;/li&gt;
 &lt;li&gt;2e流: algorithm2e&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;寫$\TeX{}$魔法陣時千萬不要搞錯了，不同流派的寫法是不能混用的，不然可是會&lt;strong&gt;爆炸&lt;/strong&gt;(error)的！&lt;/p&gt;
+&lt;p&gt;寫$\TeX{}$魔法陣時千萬不要搞錯了，不同流派的寫法是不能混用的，不然可是會&lt;strong&gt;爆炸&lt;/strong&gt;(error)的！&lt;br&gt;
+怎麼個爆法呢?&lt;br&gt;
+首先&lt;code&gt;algpseudocode&lt;/code&gt; 或 &lt;code&gt;algcompatible&lt;/code&gt; 或 &lt;code&gt;algorithmic&lt;/code&gt;這三種咒文來自同一個體系，但有個主要的不同，&lt;code&gt;algcompatible&lt;/code&gt; 或&lt;code&gt;algorithmic&lt;/code&gt;的咒文全是大寫的，但&lt;code&gt;algpseudocode&lt;/code&gt;只有首字大寫。&lt;br&gt;
+&lt;code&gt;algorithm2e&lt;/code&gt;則設計給 $\LaTeX2e$ 使用，是完全不同的東西。&lt;/p&gt;
 &lt;h2 id=&#34;algorithm--algpseudocode&#34;&gt;algorithm + algpseudocode&lt;/h2&gt;
 &lt;p&gt;要用這個流派來畫魔法陣，基底是&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\usepackage{algorithm} 
 \usepackage{algpseudocode}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。&lt;br&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。
 我們先來寫一段：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-LaTex=&#34; data-lang=&#34;LaTex=&#34;&gt;\begin{algorithmic}
 \State $MP \gets 50$
@@ -315,7 +318,7 @@ $r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$，$\omega\i
 MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\omega)$、$(a,\omega)$。&lt;br&gt;
 &lt;br&gt;
 接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。&lt;br&gt;
-我們將這樣的策略組稱為：**parametric policy family**，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
+我們將這樣的策略組稱為：&lt;strong&gt;parametric policy family&lt;/strong&gt;，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
 &lt;p&gt;在接下去之前，先介紹一個概念：Pareto optimality，這是一種每一項指標都最適化的情況，無法在不減少任何一個指標的前提下進一步優化。
 如果我們針對多目標的最佳化，每一個在平面上滿足Pareto optimalty的點會組成一條邊界，我們稱為Pareto frontier。&lt;/p&gt;
 &lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
@@ -3793,8 +3796,8 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
 攻擊發起前準備：面對伸出龍爪手的8+9，我方右手握40CM假屌根部，左手將另一端夾於我虎口。
 此時8+9開始衝刺，我在龍爪手觸擊身體的前一瞬間左為支點右手用力壓下，左手壓住8+9右手、右手持假屌狠尻8+9左手，踏進一步，踹其下體。&lt;!-- raw HTML omitted --&gt;
 呼~~
-本技的重點是：在等到**最接近一瞬間**才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
-打擊左手之後還繼續踹蛋蛋，是因為**單手斬斷人體**需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
+本技的重點是：在等到&lt;strong&gt;最接近一瞬間&lt;/strong&gt;才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
+打擊左手之後還繼續踹蛋蛋，是因為&lt;strong&gt;單手斬斷人體&lt;/strong&gt;需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://i.imgur.com/0k3CBv8.png&#34; &gt;
