@@ -169,15 +169,35 @@ if (!doNotTrack) {
 <p>要用這個流派來畫魔法陣，基底是</p>
 <pre tabindex="0"><code>\usepackage{algorithm} 
 \usepackage{algpseudocode}
-</code></pre><p><code>algorithm</code>讓你可以幫魔法陣下標題，<code>algpseudocode</code>則掌管魔法陣本體。
-我們先來寫一段：</p>
-<pre tabindex="0"><code class="language-LaTex=" data-lang="LaTex=">\begin{algorithmic}
-\State $MP \gets 50$
-\While{$MP \ge 0$}
-    \State $Cast FireBall(MonsterTargets)$
-\EndWhile
-\end{algorithmic}
-</code></pre><p>灌入魔力後會變成這樣：
+</code></pre><p><code>algorithm</code>讓你可以幫魔法陣下標題，<code>algpseudocode</code>則掌管魔法陣本體。</p>
+<h3 id="基本知識">基本知識</h3>
+<p>一節咒文的構成有固定格式：</p>
+<p>我們先來寫一段：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-LaTex" data-lang="LaTex"><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1] <span class="c">% 後面接 [1] 會產生行號，增加你魔法陣的可讀性。 [n] 裡面的數字 n，可以決定每 n 行標示一次行號。
+</span><span class="c"></span>
+<span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span>
+<span class="k">\While</span><span class="nb">{</span><span class="s">$</span><span class="nb">MP </span><span class="nv">\ge</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>
+    <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast</span><span class="nv">\ </span><span class="nb"> FireBall</span><span class="o">(</span><span class="nb">Target</span><span class="o">)</span><span class="s">$</span>
+    <span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> MP</span><span class="o">-</span><span class="m">1</span><span class="s">$</span>
+<span class="k">\EndWhile</span>
+
+<span class="k">\end</span><span class="nb">{</span>algorithmic<span class="nb">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>灌入魔力後會變成這樣：
 <figure 
 	>
 	<a href="/images/latexalgo1.png" >
@@ -416,7 +436,11 @@ if (!doNotTrack) {
                     <nav id="TableOfContents">
   <ol>
     <li><a href="#簡介必讀">簡介(必讀!!!)</a></li>
-    <li><a href="#algorithm--algpseudocode">algorithm + algpseudocode</a></li>
+    <li><a href="#algorithm--algpseudocode">algorithm + algpseudocode</a>
+      <ol>
+        <li><a href="#基本知識">基本知識</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
                 </div>

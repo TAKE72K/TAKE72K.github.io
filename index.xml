@@ -61,15 +61,35 @@
 &lt;p&gt;要用這個流派來畫魔法陣，基底是&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\usepackage{algorithm} 
 \usepackage{algpseudocode}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。
-我們先來寫一段：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-LaTex=&#34; data-lang=&#34;LaTex=&#34;&gt;\begin{algorithmic}
-\State $MP \gets 50$
-\While{$MP \ge 0$}
-    \State $Cast FireBall(MonsterTargets)$
-\EndWhile
-\end{algorithmic}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;灌入魔力後會變成這樣：
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;algorithm&lt;/code&gt;讓你可以幫魔法陣下標題，&lt;code&gt;algpseudocode&lt;/code&gt;則掌管魔法陣本體。&lt;/p&gt;
+&lt;h3 id=&#34;基本知識&#34;&gt;基本知識&lt;/h3&gt;
+&lt;p&gt;一節咒文的構成有固定格式：&lt;/p&gt;
+&lt;p&gt;我們先來寫一段：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTex&#34; data-lang=&#34;LaTex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1] &lt;span class=&#34;c&#34;&gt;% 後面接 [1] 會產生行號，增加你魔法陣的可讀性。 [n] 裡面的數字 n，可以決定每 n 行標示一次行號。
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\While&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Cast&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; FireBall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; MP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\EndWhile&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;灌入魔力後會變成這樣：
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/latexalgo1.png&#34; &gt;
