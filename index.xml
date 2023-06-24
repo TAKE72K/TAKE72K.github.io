@@ -56,6 +56,7 @@
 怎麼個爆法呢?&lt;br&gt;
 首先&lt;code&gt;algpseudocode&lt;/code&gt; 或 &lt;code&gt;algcompatible&lt;/code&gt; 或 &lt;code&gt;algorithmic&lt;/code&gt;這三種咒文來自同一個體系，但有個主要的不同，&lt;code&gt;algorithmic&lt;/code&gt; 的咒文全是大寫的(例如： &lt;code&gt;\WHILE&lt;/code&gt; 、 &lt;code&gt;\ENDWHILE&lt;/code&gt; 、 &lt;code&gt;\STATE&lt;/code&gt;)，但 &lt;code&gt;algpseudocode&lt;/code&gt; 的咒文只有首字要大寫(&lt;code&gt;\While&lt;/code&gt; 、 &lt;code&gt;\EndWhile&lt;/code&gt; 、 &lt;code&gt;\State&lt;/code&gt;)。 &lt;code&gt;algcompatible&lt;/code&gt; 則是設計成兩種咒文皆能使用，但&amp;hellip;有時會不靈光，所以──你知道ㄉ&lt;br&gt;
 &lt;code&gt;algorithm2e&lt;/code&gt; 則設計給 $\LaTeX2e$ 使用，是完全不同的東西。&lt;/p&gt;
+&lt;p&gt;本文主要會講 &lt;code&gt;algpseudocode&lt;/code&gt; 流，因為這是本大魔法師所在的區域最常用的咒文~~&lt;/p&gt;
 &lt;h2 id=&#34;algorithm--algpseudocode&#34;&gt;algorithm + algpseudocode&lt;/h2&gt;
 &lt;p&gt;要用這個流派來畫魔法陣，基底是&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\usepackage{algorithm} 
