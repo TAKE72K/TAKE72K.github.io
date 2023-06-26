@@ -180,18 +180,21 @@ if (!doNotTrack) {
 </div><p><code>algorithm</code>讓你可以幫魔法陣下標題，<code>algpseudocode</code>則掌管魔法陣本體。</p>
 <h3 id="基本知識">基本知識</h3>
 <p>一節咒文的構成有固定格式，必須由 <code>\begin{algorithmic}[l]</code> 的詠唱來開始魔法陣的繪製，這邊的參數 <code>[l]</code> ，會決定每 <code>l</code> 行標示一次行號，增加你的魔法陣可讀性。完成咒文本體後，加上 <code>\end{algorithmic}</code> 象徵魔法的終焉。如果用錯了，就發動不了。<br>
+如果希望你的咒文有行號，加上 <code>\State</code> 符文，<br>
+反之則使用無垢之符文 <code>\Statex</code> 創造空白。<br>
 我們先來寫一段：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-LaTeX" data-lang="LaTeX"><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1]
@@ -200,6 +203,7 @@ if (!doNotTrack) {
 <span class="k">\While</span><span class="nb">{</span><span class="s">$</span><span class="nb">MP </span><span class="nv">\ge</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>
     <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast</span><span class="nv">\ </span><span class="nb"> FireBall</span><span class="o">(</span><span class="nb">Target</span><span class="o">)</span><span class="s">$</span>
     <span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> MP</span><span class="o">-</span><span class="m">1</span><span class="s">$</span>
+    <span class="k">\Statex</span> Wait until monster die!~
 <span class="k">\EndWhile</span>
 
 <span class="k">\end</span><span class="nb">{</span>algorithmic<span class="nb">}</span>
