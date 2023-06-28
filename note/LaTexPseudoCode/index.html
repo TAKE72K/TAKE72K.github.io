@@ -181,7 +181,7 @@ if (!doNotTrack) {
 <h3 id="基本知識">基本知識</h3>
 <p>一節咒文的構成有固定格式，必須由 <code>\begin{algorithmic}[l]</code> 的詠唱來開始魔法陣的繪製，這邊的參數 <code>[l]</code> ，會決定每 <code>l</code> 行標示一次行號，增加你的魔法陣可讀性。完成咒文本體後，加上 <code>\end{algorithmic}</code> 象徵魔法的終焉。如果用錯了，就發動不了。<br>
 如果希望你的咒文有行號，加上 <code>\State</code> 符文，<br>
-反之則使用無垢之符文 <code>\Statex</code> 創造空白。<br>
+反之則使用<em>無垢之符文</em> <code>\Statex</code> 創造空白。<br>
 我們先來寫一段：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -222,7 +222,7 @@ if (!doNotTrack) {
 	</a>
 	
 </figure></p>
-<p>不過這樣好像少了什麼&hellip;沒錯，帥氣的名字！<br>
+<p>不過這樣好像少了什麼&hellip;沒錯，<strong>帥氣的名字</strong>！<br>
 這時便是使用 <code>algorithm</code> 咒文的時刻：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -238,16 +238,18 @@ if (!doNotTrack) {
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-LaTeX" data-lang="LaTeX"><span class="k">\begin</span><span class="nb">{</span>algorithm<span class="nb">}</span>
-<span class="k">\caption</span><span class="nb">{</span>FireBall<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>fireball<span class="nb">}</span> <span class="c">% \caption{演算法標題}
-</span><span class="c"></span><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1] <span class="c">% 後面接[1]會產生行號
-</span><span class="c"></span>
-<span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span>
+<span class="k">\caption</span><span class="nb">{</span>Fire Ball Machine Gun<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>fireball<span class="nb">}</span> <span class="c">% \caption{演算法標題}
+</span><span class="c"></span><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1] 
 
+<span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span>
 <span class="k">\While</span><span class="nb">{</span><span class="s">$</span><span class="nb">MP </span><span class="nv">\ge</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>
-    <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast FireBall</span><span class="o">(</span><span class="nb">MonsterTargets</span><span class="o">)</span><span class="s">$</span>
+    <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast</span><span class="nv">\ </span><span class="nb"> FireBall</span><span class="o">(</span><span class="nb">Target</span><span class="o">)</span><span class="s">$</span>
+    <span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> MP</span><span class="o">-</span><span class="m">1</span><span class="s">$</span>
+    <span class="k">\Statex</span> Wait until monster die!~
 <span class="k">\EndWhile</span>
 
 <span class="k">\end</span><span class="nb">{</span>algorithmic<span class="nb">}</span>
