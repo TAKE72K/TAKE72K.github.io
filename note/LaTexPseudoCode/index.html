@@ -183,33 +183,17 @@ if (!doNotTrack) {
 如果希望你的咒文有行號，加上 <code>\State</code> 符文，<br>
 反之則使用<em>無垢之符文</em> <code>\Statex</code> 創造空白。<br>
 我們先來寫一段：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-LaTeX" data-lang="LaTeX"><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1]
+<pre tabindex="0"><code>\begin{algorithmic}[1]
 
-<span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span>
-<span class="k">\While</span><span class="nb">{</span><span class="s">$</span><span class="nb">MP </span><span class="nv">\ge</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>
-    <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast</span><span class="nv">\ </span><span class="nb"> FireBall</span><span class="o">(</span><span class="nb">Target</span><span class="o">)</span><span class="s">$</span>
-    <span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> MP</span><span class="o">-</span><span class="m">1</span><span class="s">$</span>
-    <span class="k">\Statex</span> Wait until monster die!~
-<span class="k">\EndWhile</span>
+\State $MP \gets 50$
+\While{$MP \ge 0$}
+    \State $Cast\  FireBall(Target)$
+    \State $MP \gets MP-1$
+    \Statex Wait until monster die!~
+\EndWhile
 
-<span class="k">\end</span><span class="nb">{</span>algorithmic<span class="nb">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>灌入魔力後會變成這樣：
+\end{algorithmic}
+</code></pre><p>灌入魔力後會變成這樣：
 <figure 
 	>
 	<a href="/images/latexalgo1.png" >
@@ -224,39 +208,20 @@ if (!doNotTrack) {
 </figure></p>
 <p>不過這樣好像少了什麼&hellip;沒錯，<strong>帥氣的名字</strong>！<br>
 這時便是使用 <code>algorithm</code> 咒文的時刻：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-LaTeX" data-lang="LaTeX"><span class="k">\begin</span><span class="nb">{</span>algorithm<span class="nb">}</span>
-<span class="k">\caption</span><span class="nb">{</span>Fire Ball Machine Gun<span class="nb">}</span><span class="k">\label</span><span class="nb">{</span>fireball<span class="nb">}</span> <span class="c">% \caption{演算法標題}
-</span><span class="c"></span><span class="k">\begin</span><span class="nb">{</span>algorithmic<span class="nb">}</span>[1] 
+<pre tabindex="0"><code>\begin{algorithm}
+\caption{Fire Ball Machine Gun}\label{fireball} % \caption{演算法標題}
+\begin{algorithmic}[1] 
 
-<span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span>
-<span class="k">\While</span><span class="nb">{</span><span class="s">$</span><span class="nb">MP </span><span class="nv">\ge</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span><span class="nb">}</span>
-    <span class="k">\State</span> <span class="s">$</span><span class="nb">Cast</span><span class="nv">\ </span><span class="nb"> FireBall</span><span class="o">(</span><span class="nb">Target</span><span class="o">)</span><span class="s">$</span>
-    <span class="k">\State</span> <span class="s">$</span><span class="nb">MP </span><span class="nv">\gets</span><span class="nb"> MP</span><span class="o">-</span><span class="m">1</span><span class="s">$</span>
-    <span class="k">\Statex</span> Wait until monster die!~
-<span class="k">\EndWhile</span>
+\State $MP \gets 50$
+\While{$MP \ge 0$}
+    \State $Cast\  FireBall(Target)$
+    \State $MP \gets MP-1$
+    \Statex Wait until monster die!~
+\EndWhile
 
-<span class="k">\end</span><span class="nb">{</span>algorithmic<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>algorithm<span class="nb">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>灌入魔力後會變成這樣：
+\end{algorithmic}
+\end{algorithm}
+</code></pre><p>灌入魔力後會變成這樣：
 <figure 
 	>
 	<a href="/images/latexalgo2.png" >
@@ -269,7 +234,56 @@ if (!doNotTrack) {
 	</a>
 	
 </figure></p>
-
+<p>接下來是所有特殊符文的紀錄！</p>
+<h4 id="魔法的定義function">魔法的定義(Function)</h4>
+<p>如果你創造or編寫了一個新的小魔法，你可以用 <code>\Function</code> 或是 <code>\Procedure</code> 給它起個名字。(看你是哪一派的)<br>
+用法是這樣子的：</p>
+<pre tabindex="0"><code>\begin{algorithmic}[1]
+\Function{Fire\_Ball}{Target}
+    \State Use Mana
+\EndFunction
+\Statex
+\Procedure{Wind\_Cut}{Target}
+    \State Kaze yo!
+\EndProcedure
+\end{algorithmic}
+</code></pre><p><figure 
+	>
+	<a href="/images/latexalgo3.png" >
+		<img src="/images/latexalgo3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="魔法的召喚">魔法的召喚</h4>
+<p>如果你在編寫魔法時，想要偷懶──不<strong>重造</strong>魔法，你可以用召喚的──<br>
+Systemcall! 不對──，是 <code>\Call</code>。</p>
+<pre tabindex="0"><code>\begin{algorithmic}[1]
+\Function{Fire\_Ball}{Target}
+    \State Use Mana
+\EndFunction
+\Statex
+\State Here I Cast \Call{Fire\_Ball}{Target} !
+\end{algorithmic}
+</code></pre><p><figure 
+	>
+	<a href="/images/latexalgo3.png" >
+		<img src="/images/latexalgo3.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h4 id="if">If</h4>
+<pre tabindex="0"><code>\If
+</code></pre>
 </section>
 
 
@@ -470,7 +484,13 @@ if (!doNotTrack) {
     <li><a href="#簡介必讀">簡介(必讀!!!)</a></li>
     <li><a href="#algorithm--algpseudocode">algorithm + algpseudocode</a>
       <ol>
-        <li><a href="#基本知識">基本知識</a></li>
+        <li><a href="#基本知識">基本知識</a>
+          <ol>
+            <li><a href="#魔法的定義function">魔法的定義(Function)</a></li>
+            <li><a href="#魔法的召喚">魔法的召喚</a></li>
+            <li><a href="#if">If</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>

@@ -75,33 +75,17 @@
 如果希望你的咒文有行號，加上 &lt;code&gt;\State&lt;/code&gt; 符文，&lt;br&gt;
 反之則使用&lt;em&gt;無垢之符文&lt;/em&gt; &lt;code&gt;\Statex&lt;/code&gt; 創造空白。&lt;br&gt;
 我們先來寫一段：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTeX&#34; data-lang=&#34;LaTeX&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{algorithmic}[1]
 
-&lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\While&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Cast&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; FireBall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; MP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\Statex&lt;/span&gt; Wait until monster die!~
-&lt;span class=&#34;k&#34;&gt;\EndWhile&lt;/span&gt;
+\State $MP \gets 50$
+\While{$MP \ge 0$}
+    \State $Cast\  FireBall(Target)$
+    \State $MP \gets MP-1$
+    \Statex Wait until monster die!~
+\EndWhile
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;灌入魔力後會變成這樣：
+\end{algorithmic}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;灌入魔力後會變成這樣：
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/latexalgo1.png&#34; &gt;
@@ -116,39 +100,20 @@
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;不過這樣好像少了什麼&amp;hellip;沒錯，&lt;strong&gt;帥氣的名字&lt;/strong&gt;！&lt;br&gt;
 這時便是使用 &lt;code&gt;algorithm&lt;/code&gt; 咒文的時刻：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-LaTeX&#34; data-lang=&#34;LaTeX&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Fire Ball Machine Gun&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fireball&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% \caption{演算法標題}
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1] 
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{algorithm}
+\caption{Fire Ball Machine Gun}\label{fireball} % \caption{演算法標題}
+\begin{algorithmic}[1] 
 
-&lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\While&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Cast&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\ &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; FireBall&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\State&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;MP &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gets&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; MP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;\Statex&lt;/span&gt; Wait until monster die!~
-&lt;span class=&#34;k&#34;&gt;\EndWhile&lt;/span&gt;
+\State $MP \gets 50$
+\While{$MP \ge 0$}
+    \State $Cast\  FireBall(Target)$
+    \State $MP \gets MP-1$
+    \Statex Wait until monster die!~
+\EndWhile
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithmic&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;algorithm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;灌入魔力後會變成這樣：
+\end{algorithmic}
+\end{algorithm}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;灌入魔力後會變成這樣：
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://take72k.github.io/images/latexalgo2.png&#34; &gt;
@@ -161,7 +126,56 @@
 	&lt;/a&gt;
 	
 &lt;/figure&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;接下來是所有特殊符文的紀錄！&lt;/p&gt;
+&lt;h4 id=&#34;魔法的定義function&#34;&gt;魔法的定義(Function)&lt;/h4&gt;
+&lt;p&gt;如果你創造or編寫了一個新的小魔法，你可以用 &lt;code&gt;\Function&lt;/code&gt; 或是 &lt;code&gt;\Procedure&lt;/code&gt; 給它起個名字。(看你是哪一派的)&lt;br&gt;
+用法是這樣子的：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{algorithmic}[1]
+\Function{Fire\_Ball}{Target}
+    \State Use Mana
+\EndFunction
+\Statex
+\Procedure{Wind\_Cut}{Target}
+    \State Kaze yo!
+\EndProcedure
+\end{algorithmic}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://take72k.github.io/images/latexalgo3.png&#34; &gt;
+		&lt;img src=&#34;https://take72k.github.io/images/latexalgo3.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;魔法的召喚&#34;&gt;魔法的召喚&lt;/h4&gt;
+&lt;p&gt;如果你在編寫魔法時，想要偷懶──不&lt;strong&gt;重造&lt;/strong&gt;魔法，你可以用召喚的──&lt;br&gt;
+Systemcall! 不對──，是 &lt;code&gt;\Call&lt;/code&gt;。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{algorithmic}[1]
+\Function{Fire\_Ball}{Target}
+    \State Use Mana
+\EndFunction
+\Statex
+\State Here I Cast \Call{Fire\_Ball}{Target} !
+\end{algorithmic}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
+	&gt;
+	&lt;a href=&#34;https://take72k.github.io/images/latexalgo3.png&#34; &gt;
+		&lt;img src=&#34;https://take72k.github.io/images/latexalgo3.png&#34;
+			
+			
+			
+			loading=&#34;lazy&#34;
+			&gt;
+	&lt;/a&gt;
+	
+&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&#34;if&#34;&gt;If&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\If
+&lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         <item>
         <title>RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</title>
@@ -371,7 +385,7 @@ $r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$，$\omega\i
 MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\omega)$、$(a,\omega)$。&lt;br&gt;
 &lt;br&gt;
 接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。&lt;br&gt;
-我們將這樣的策略組稱為：&lt;strong&gt;parametric policy family&lt;/strong&gt;，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
+我們將這樣的策略組稱為：**parametric policy family**，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。&lt;/p&gt;
 &lt;p&gt;在接下去之前，先介紹一個概念：Pareto optimality，這是一種每一項指標都最適化的情況，無法在不減少任何一個指標的前提下進一步優化。
 如果我們針對多目標的最佳化，每一個在平面上滿足Pareto optimalty的點會組成一條邊界，我們稱為Pareto frontier。&lt;/p&gt;
 &lt;h2 id=&#34;方法&#34;&gt;方法&lt;/h2&gt;
@@ -3849,8 +3863,8 @@ WIKI：金的（きんてき）とは武道、格闘技における攻撃対象�
 攻擊發起前準備：面對伸出龍爪手的8+9，我方右手握40CM假屌根部，左手將另一端夾於我虎口。
 此時8+9開始衝刺，我在龍爪手觸擊身體的前一瞬間左為支點右手用力壓下，左手壓住8+9右手、右手持假屌狠尻8+9左手，踏進一步，踹其下體。&lt;!-- raw HTML omitted --&gt;
 呼~~
-本技的重點是：在等到&lt;strong&gt;最接近一瞬間&lt;/strong&gt;才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
-打擊左手之後還繼續踹蛋蛋，是因為&lt;strong&gt;單手斬斷人體&lt;/strong&gt;需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
+本技的重點是：在等到**最接近一瞬間**才打落的膽識與經驗。如果太早打落、敵人的身體還未完全為了突刺伸展，其便能很快地拉回劍、重整態勢，甚至可能打空。
+打擊左手之後還繼續踹蛋蛋，是因為**單手斬斷人體**需要很高的技巧，不是人人能做到(更別提不是拿著刀、而是拿著假屌棒狀物體的你)。
 &lt;figure 
 	&gt;
 	&lt;a href=&#34;https://i.imgur.com/0k3CBv8.png&#34; &gt;
