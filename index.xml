@@ -6,7 +6,7 @@
         <description>Recent content on 竹林七閑</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
-        <lastBuildDate>Fri, 23 Jun 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 14 Aug 2023 21:01:00 +0800</lastBuildDate><atom:link href="https://take72k.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>矮人要塞教學教程／參考資料收集 中文翻譯</title>
         <link>https://take72k.github.io/DwarfFortress/tutorialIndex/</link>
         <pubDate>Fri, 03 Sep 2021 11:22:51 +0800</pubDate>
@@ -33,6 +33,56 @@
 &lt;li&gt;捌、軍隊與兵士&lt;/li&gt;
 &lt;li&gt;玖、弓兵與野獸、哥布林控制&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>EDA一些開源東西</title>
+        <link>https://take72k.github.io/EDA/EDAOpen/</link>
+        <pubDate>Mon, 14 Aug 2023 21:01:00 +0800</pubDate>
+        
+        <guid>https://take72k.github.io/EDA/EDAOpen/</guid>
+        <description>&lt;h1 id=&#34;eda開源東西&#34;&gt;EDA開源東西&lt;/h1&gt;
+&lt;p&gt;不定時更新找到的EDA開源，主要集中placement。
+基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少受國家扶植去開發能擺脫美國貿易禁令的Tool。畢竟只要掐住C、S的license，晶片就不用做了。&lt;/p&gt;
+&lt;h2 id=&#34;rtl-to-gds-flow&#34;&gt;RTL-to-GDS flow&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://theopenroadproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;OpenROAD Project&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;synthesis&#34;&gt;Synthesis&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/The-OpenROAD-Project/yosys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Yosys: open source synthesis tool&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/mflowgen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mflowgen: flow generator&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;pdk&#34;&gt;PDK&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/freepdk-45nm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Freepdk 45nm(with mflowgen)&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/skywater-130nm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Skywater 130nm(with mflowgen)&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/skywater-pdk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Skywater pdk&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/The-OpenROAD-Project/asap7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;asap7nm&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;placement&#34;&gt;Placement&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/limbo018/DREAMPlace&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;dreamplace&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVlabs/AutoDMP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;autodmp&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/TILOS-AI-Institute/MacroPlacement&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;macroplacement&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/google-research/circuit_training&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;circuittraining&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;benchmark&#34;&gt;benchmark&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;DAC2005&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/openhwgroup/cva6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ariane&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/pulp-platform/mempool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MemPool&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://github.com/black-parrot/black-parrot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BlackParrot&lt;/a&gt;
+&lt;a class=&#34;link&#34; href=&#34;http://opencelerity.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Coyote RISC-V Rocketcore&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;routing&#34;&gt;Routing&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://people.cs.nctu.edu.tw/~whliu/NCTU-GR.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NCTU-GR&lt;/a&gt;(學界only)&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -4162,56 +4212,6 @@ PEACE HOSTEL的BAR，剛好有抽積木大賽，獎品啤酒一壺。
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;審查通過，論文還是現場抄的。
 劍道型沒出錯、對打也還可，所以應該過八。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>EDA一些開源東西</title>
-        <link>https://take72k.github.io/EDA/EDAOpen/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://take72k.github.io/EDA/EDAOpen/</guid>
-        <description>&lt;h1 id=&#34;eda開源東西&#34;&gt;EDA開源東西&lt;/h1&gt;
-&lt;p&gt;不定時更新找到的EDA開源，主要集中placement。
-基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少受國家扶植去開發能擺脫美國貿易禁令的Tool。畢竟只要掐住C、S的license，晶片就不用做了。&lt;/p&gt;
-&lt;h2 id=&#34;rtl-to-gds-flow&#34;&gt;RTL-to-GDS flow&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://theopenroadproject.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;OpenROAD Project&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;synthesis&#34;&gt;Synthesis&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/The-OpenROAD-Project/yosys&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Yosys: open source synthesis tool&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/mflowgen&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;mflowgen: flow generator&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;pdk&#34;&gt;PDK&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/freepdk-45nm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Freepdk 45nm(with mflowgen)&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/mflowgen/skywater-130nm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Skywater 130nm(with mflowgen)&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/google/skywater-pdk&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Skywater pdk&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/The-OpenROAD-Project/asap7&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;asap7nm&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;placement&#34;&gt;Placement&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/limbo018/DREAMPlace&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;dreamplace&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/NVlabs/AutoDMP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;autodmp&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/TILOS-AI-Institute/MacroPlacement&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;macroplacement&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/google-research/circuit_training&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;circuittraining&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;benchmark&#34;&gt;benchmark&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;DAC2005&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/openhwgroup/cva6&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;ariane&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/pulp-platform/mempool&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;MemPool&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://github.com/black-parrot/black-parrot&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;BlackParrot&lt;/a&gt;
-&lt;a class=&#34;link&#34; href=&#34;http://opencelerity.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Coyote RISC-V Rocketcore&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;routing&#34;&gt;Routing&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://people.cs.nctu.edu.tw/~whliu/NCTU-GR.htm&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;NCTU-GR&lt;/a&gt;(學界only)&lt;/p&gt;
 </description>
         </item>
         
