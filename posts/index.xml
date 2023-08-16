@@ -365,5 +365,14 @@
       <description>審查通過，論文還是現場抄的。 劍道型沒出錯、對打也還可，所以應該過八。</description>
     </item>
     
+    <item>
+      <title>EDA一些開源東西</title>
+      <link>https://take72k.github.io/EDA/EDAOpen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://take72k.github.io/EDA/EDAOpen/</guid>
+      <description>EDA開源東西 不定時更新找到的EDA開源，主要集中placement。 基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少</description>
+    </item>
+    
   </channel>
 </rss>

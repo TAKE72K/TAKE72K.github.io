@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)'><title>Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='EDA開源東西 不定時更新找到的EDA開源，主要集中placement。 基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少'><title>EDA一些開源東西</title>
 
-<link rel='canonical' href='https://take72k.github.io/EDA/MORLPlace/'>
+<link rel='canonical' href='https://take72k.github.io/EDA/EDAOpen/'>
 
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記'>
-<meta property='og:description' content='用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)'>
-<meta property='og:url' content='https://take72k.github.io/EDA/MORLPlace/'>
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='EDA一些開源東西'>
+<meta property='og:description' content='EDA開源東西 不定時更新找到的EDA開源，主要集中placement。 基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少'>
+<meta property='og:url' content='https://take72k.github.io/EDA/EDAOpen/'>
 <meta property='og:site_name' content='竹林七閑'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Reinforcement Learning' /><meta property='article:tag' content='Floorplan' /><meta property='article:published_time' content='2022-12-03T21:01:00&#43;08:00'/><meta property='article:modified_time' content='2022-12-03T21:01:00&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='eda' />
 <meta name="twitter:site" content="@hyes94107">
-    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記">
-<meta name="twitter:description" content="用於晶片擺置的靈活性多目標強化學習 link to paper 為了EDA Workshop看的。 本篇的亮點\貢獻： 提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)">
+    <meta name="twitter:creator" content="@hyes94107"><meta name="twitter:title" content="EDA一些開源東西">
+<meta name="twitter:description" content="EDA開源東西 不定時更新找到的EDA開源，主要集中placement。 基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少">
     <link rel="shortcut icon" href="/ico/sword.png" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLK0L2ZM78"></script>
@@ -106,26 +106,13 @@ if (!doNotTrack) {
     
 
     <h2 class="article-title">
-        <a href="/EDA/MORLPlace/">Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</a>
+        <a href="/EDA/EDAOpen/">EDA一些開源東西</a>
     </h2>
 
     
 
     
     <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Dec 03, 2022</time>
-            </div>
         
 
         
@@ -139,7 +126,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    1 minute read
                 </time>
             </div>
         
@@ -149,75 +136,48 @@ if (!doNotTrack) {
 </header>
 
     <section class="article-content">
-    <h1 id="用於晶片擺置的靈活性多目標強化學習">用於晶片擺置的靈活性多目標強化學習</h1>
-<blockquote>
-<p><a class="link" href="https://arxiv.org/abs/2204.06407"  target="_blank" rel="noopener"
-    >link to paper</a></p>
-</blockquote>
-<blockquote>
-<p><em>為了EDA Workshop看的。</em></p>
-</blockquote>
-<h2 id="本篇的亮點貢獻">本篇的亮點\貢獻：</h2>
-<ol>
-<li>提出彈性多目標的強化學習(flexible multiple-objective reinforcement learning, MORL)</li>
-<li>提出選取STD CELL叢集尺寸的方法</li>
-<li>改編policy gradient，使其能適用在MORL上</li>
-</ol>
-<p>目前RL多半都只針對一個固定的目標進行訓練，但實際上工程師需要的是多樣的選擇，來應對設計時多變而不同的需求。而這篇論文便是希望做到這點，也就是產生出一群policy，形成一個Pareto frontier。</p>
-<h2 id="相關研究">相關研究</h2>
-<p>基本上本篇的作法和<a class="link" href="https://take72k.github.io/EDA/placementByRL/"  target="_blank" rel="noopener"
-    >google這篇</a>類似，可以看一下。</p>
-<h2 id="問題定義">問題定義</h2>
-<h3 id="混和尺寸擺置">混和尺寸擺置</h3>
-<p>我們可以將現代VLSI擺置問題定義為擺放一群node到尺寸不一的平面，並最小化cost──例如線長、繞線壅擠、時序違反、耗能等等。
-node可能包含不同尺寸的macro(可移動或不可)與標準邏輯元件/叢集。我們的問題只討論可移動的macro與標準邏輯元件/叢集。
-流程是這樣的：</p>
-<ol>
-<li>輸入檔案(LEF/DEF/RTL)</li>
-<li>擺置</li>
-<li>EDA Tool算出QoRs</li>
-</ol>
-<p>google團隊將這個問題轉化為RL的最佳化問題，透過policy逐個擺放macro，並使用估計的PPA當作獎勵。</p>
-<h3 id="多目標強化學習">多目標強化學習</h3>
-<p>先定義MDP為($\mathcal{S},\mathcal{A},p,r$)的tuple，接下來把他擴展成多目標的multi-objective MDP(MOMDP)。
-定義<em>multi-objective MDP(MOMDP)</em> $\mathcal{M}$為具有state $\mathcal{S}$、action $\mathcal{A}$及固定轉場$p$的MDP，但他的獎勵是以$i$為索引的獎勵集合。第$i$個獎勵以$\textbf{r}=r^{(i)}$表示。<br>
-對於這樣的獎勵向量，我們可以用一個偏好參數： ${\omega}={(\omega_i)}^K_{i=1}$，<br>
-來使MOMDP$\mathcal{M}$ 塌縮為標準的MDP$\mathcal{M}^\omega$，也就是把獎勵復原為單一的值──定義凸組合：<br>
-$r_\omega=\text{R}(\textbf{r},\omega)=\sum_{i=1}^{K}r^{(i)}\omega_i$，$\omega\in(\Omega^K, \mu)$，也就是K維的單純型(simplex)與機率測度$\mu$。<br>
-MDP$\mathcal{M}^\omega$中的action與state則可以用$\omega$索引：$(s;\omega)$、$(a,\omega)$。<br>
-<br>
-接下來討論MOMDP的解，解一個MOMDP相等於解每個獨立的MDP$\mathcal{M}^\omega$，亦即找出使初始狀態value，$J(\omega,\pi_\omega)=V_{\pi_\omega}(s_0;\omega)$，最大的一組策略$\pi_\omega$。<br>
-我們將這樣的策略組稱為：<strong>parametric policy family</strong>，定義為由$\theta$連續參數的一組策略集$\pi_{\omega,\theta}$。</p>
-<p>在接下去之前，先介紹一個概念：Pareto optimality，這是一種每一項指標都最適化的情況，無法在不減少任何一個指標的前提下進一步優化。
-如果我們針對多目標的最佳化，每一個在平面上滿足Pareto optimalty的點會組成一條邊界，我們稱為Pareto frontier。</p>
-<h2 id="方法">方法</h2>
-<h3 id="目標與估計">目標與估計</h3>
-<p>這篇聚焦的目標除了線長、擁擠度和時序之外，還加入使用者自訂的錨定區域距離限制。也就是使其能處理fence region或datapath。<br>
-HPWL: $l_{WL}=-\sum\limits_n(\max\limits_{pin_i,pin_j,\in n}\lvert x_i-x_j\rvert + \max\limits_{pin_i,pin_j\in n}\lvert y_i-y_j\rvert)$<br>
-Congestion: $l_C=-\frac{ACE(k)}{4},k\in 0.5,1,2,5$，$ACE(k)$會取k%的壅擠值<br>
-User Anchor: $l_A=-\sum\limits_ia_i\sqrt{(X_i-x_i)^2+(Y_i-y_i)^2}$，$(X_i,Y_i)$是使用者自定義的目標位置，$(x_i,y_i)$則是macro的中心位置，$a_i$是權重。<br>
-定義EDA目標: $l_{EDA}=\alpha l_{WL}+\beta l_C+\delta l_A$。</p>
-<blockquote>
-<p>但fence可以用density mask擋掉、datapath=connectivity高?應該還是可以最佳化?<br>
-再來每個設計anchor一定不一樣，這樣會不會失一般性?<br>
-不過這個做法比較要EDA domain knowledge才想得出來</p>
-</blockquote>
-<h3 id="用policy-gradient解momdp">用policy gradient解MOMDP</h3>
-<p>TL;DR</p>
-<p>我們的目標函數$\hat{J}(\theta) = \mathbb{E}_{\omega}[J(\theta;\omega)]$最佳化之後，便可以產生一個最佳的輪廓，但不能保證$\epsilon$最適性。<br>
-$\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確定。</p>
-<h3 id="實作與網路架構">實作與網路架構</h3>
-<p>基於google那篇，做兩點改動：</p>
-<ol>
-<li>將$\omega$加入state表示，維度維持32。</li>
-<li>value函數複製K次，並允許獨立最佳化。</li>
-</ol>
-<h2 id="實驗">實驗</h2>
-<h3 id="moppo訓練">MOPPO訓練</h3>
-<h3 id="資料">資料</h3>
-<p>用<strong>ICCAD2015 Superblue</strong>訓練，macro數量84-294不等、std cell則有770k-1930k，並聚焦於superblue10跟superblue18這兩組只有長方形的資料。(但其他的資料結果品質也相近。)</p>
-<h3 id="獎勵訓練">獎勵訓練</h3>
-<h3 id="結果">結果</h3>
+    <h1 id="eda開源東西">EDA開源東西</h1>
+<p>不定時更新找到的EDA開源，主要集中placement。
+基本上這領域貢獻者會是美國與中國，美國有很長的開源歷史，而中國則是多少受國家扶植去開發能擺脫美國貿易禁令的Tool。畢竟只要掐住C、S的license，晶片就不用做了。</p>
+<h2 id="rtl-to-gds-flow">RTL-to-GDS flow</h2>
+<p><a class="link" href="https://theopenroadproject.org/"  target="_blank" rel="noopener"
+    >OpenROAD Project</a></p>
+<h2 id="synthesis">Synthesis</h2>
+<p><a class="link" href="https://github.com/The-OpenROAD-Project/yosys"  target="_blank" rel="noopener"
+    >Yosys: open source synthesis tool</a></p>
+<p><a class="link" href="https://github.com/mflowgen/mflowgen"  target="_blank" rel="noopener"
+    >mflowgen: flow generator</a></p>
+<h3 id="pdk">PDK</h3>
+<p><a class="link" href="https://github.com/mflowgen/freepdk-45nm"  target="_blank" rel="noopener"
+    >Freepdk 45nm(with mflowgen)</a>
+<a class="link" href="https://github.com/mflowgen/skywater-130nm"  target="_blank" rel="noopener"
+    >Skywater 130nm(with mflowgen)</a>
+<a class="link" href="https://github.com/google/skywater-pdk"  target="_blank" rel="noopener"
+    >Skywater pdk</a>
+<a class="link" href="https://github.com/The-OpenROAD-Project/asap7"  target="_blank" rel="noopener"
+    >asap7nm</a></p>
+<h2 id="placement">Placement</h2>
+<p><a class="link" href="https://github.com/limbo018/DREAMPlace"  target="_blank" rel="noopener"
+    >dreamplace</a>
+<a class="link" href="https://github.com/NVlabs/AutoDMP"  target="_blank" rel="noopener"
+    >autodmp</a>
+<a class="link" href="https://github.com/TILOS-AI-Institute/MacroPlacement"  target="_blank" rel="noopener"
+    >macroplacement</a>
+<a class="link" href="https://github.com/google-research/circuit_training"  target="_blank" rel="noopener"
+    >circuittraining</a></p>
+<h3 id="benchmark">benchmark</h3>
+<p><a class="link" href="" >DAC2005</a>
+<a class="link" href="https://github.com/openhwgroup/cva6"  target="_blank" rel="noopener"
+    >ariane</a>
+<a class="link" href="https://github.com/pulp-platform/mempool"  target="_blank" rel="noopener"
+    >MemPool</a>
+<a class="link" href="https://github.com/black-parrot/black-parrot"  target="_blank" rel="noopener"
+    >BlackParrot</a>
+<a class="link" href="http://opencelerity.org/"  target="_blank" rel="noopener"
+    >Coyote RISC-V Rocketcore</a></p>
+<h2 id="routing">Routing</h2>
+<p><a class="link" href="https://people.cs.nctu.edu.tw/~whliu/NCTU-GR.htm"  target="_blank" rel="noopener"
+    >NCTU-GR</a>(學界only)</p>
 
 </section>
 
@@ -227,12 +187,6 @@ $\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確
     <section class="article-tags">
         
             <a href="/tags/eda/">eda</a>
-        
-            <a href="/tags/AI/">AI</a>
-        
-            <a href="/tags/Reinforcement-Learning/">Reinforcement Learning</a>
-        
-            <a href="/tags/Floorplan/">Floorplan</a>
         
     </section>
 
@@ -287,6 +241,30 @@ $\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確
                 
                     
 <article class="">
+    <a href="/EDA/RTL-MP/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/EDA/MORLPlace/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Flexible Multiple-Objective Reinforcement Learning for Chip Placement 閱讀筆記</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
     <a href="/EDA/placementByRL/">
         
         
@@ -311,36 +289,12 @@ $\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確
                 
                     
 <article class="">
-    <a href="/EDA/RTL-MP/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">RTL-MP: Toward Practical, Human-Quality Chip Planning and Macro Placement 閱讀筆記</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
     <a href="/EDA/cplexTroubleshooting/">
         
         
 
         <div class="article-details">
             <h2 class="article-title">trouble shooting of Concert exception--has not been extracted by IloAlgorithm</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/EDA/corner_stitching/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Corner Stitching---A Data-Structuring Technique for VLSI Layout Tools</h2>
         </div>
     </a>
 </article>
@@ -470,29 +424,18 @@ $\epsilon$最適性必須透過$\pi_{\theta, \omega}$的結構以及參數來確
                 <div class="widget--toc">
                     <nav id="TableOfContents">
   <ol>
-    <li><a href="#本篇的亮點貢獻">本篇的亮點\貢獻：</a></li>
-    <li><a href="#相關研究">相關研究</a></li>
-    <li><a href="#問題定義">問題定義</a>
+    <li><a href="#rtl-to-gds-flow">RTL-to-GDS flow</a></li>
+    <li><a href="#synthesis">Synthesis</a>
       <ol>
-        <li><a href="#混和尺寸擺置">混和尺寸擺置</a></li>
-        <li><a href="#多目標強化學習">多目標強化學習</a></li>
+        <li><a href="#pdk">PDK</a></li>
       </ol>
     </li>
-    <li><a href="#方法">方法</a>
+    <li><a href="#placement">Placement</a>
       <ol>
-        <li><a href="#目標與估計">目標與估計</a></li>
-        <li><a href="#用policy-gradient解momdp">用policy gradient解MOMDP</a></li>
-        <li><a href="#實作與網路架構">實作與網路架構</a></li>
+        <li><a href="#benchmark">benchmark</a></li>
       </ol>
     </li>
-    <li><a href="#實驗">實驗</a>
-      <ol>
-        <li><a href="#moppo訓練">MOPPO訓練</a></li>
-        <li><a href="#資料">資料</a></li>
-        <li><a href="#獎勵訓練">獎勵訓練</a></li>
-        <li><a href="#結果">結果</a></li>
-      </ol>
-    </li>
+    <li><a href="#routing">Routing</a></li>
   </ol>
 </nav>
                 </div>
